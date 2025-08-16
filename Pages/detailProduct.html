@@ -24,7 +24,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="/Assets/css/navbar.css" />
-    <link rel="stylesheet" href="./Assets/css/main.css" />
+    <link rel="stylesheet" href="/Assets/css/main.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -43,37 +43,15 @@
         cursor: pointer;
         display: none;
       }
-        .filter-blue {
+       .filter-blue {
   filter: invert(35%) sepia(90%) saturate(5000%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
     </style>
-    <!-- product cards -->
-    <style>
-      /* Make card horizontal on small screens */
-@media (max-width: 576px) {
-  .card-horizontal {
-    display: flex;
-    flex-direction: row; /* Content on right, image on left */
-    align-items: center;
-  }
-  .card-horizontal .card-img-top {
-    width: 40%; /* adjust image width */
-    height: auto;
-    object-fit: cover;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .card-horizontal .card-body {
-    width: 60%; /* content takes the rest */
-    padding: 1rem;
-  }
-}
-    </style>
   </head>
-  <body style="background-color: whitesmoke;">
-    <!-- Navbar 1 -->
+  <body>
+    <!-- Navbar 1-->
 
-     <nav
+    <nav
       style="background-color: #f1f5f9"
       class="navbar navbar-expand-lg top-bar py-2"
     >
@@ -230,7 +208,7 @@
 
     <!-- Navbar 2 -->
 
-   <nav class="relative bg-white shadow-sm">
+ <nav class="relative bg-white shadow-sm">
       <div class="container-fluid mx-auto flex items-center justify-between px-6 py-3">
         <div class="flex items-center">
           <a href="/index.html" class="mr-8">
@@ -542,379 +520,106 @@
       </div>
     </nav>
 
-  <!-- Filter  -->
- <div class="max-w-7xl mx-auto mt-3">
 
-        <!-- Header Section -->
-        <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 md:mb-8">
-            <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2 md:mb-0">Custom Kids Shirts</h1>
-            <p class="text-sm sm:text-base text-gray-500 max-w-lg text-right">Design personalized kid's t-shirts, long sleeve tees, and more</p>
-        </header>
-
-        <!-- Filter and Sort Section -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-4">
-            
-            <!-- Filters Group -->
-            <div class="flex flex-wrap items-center gap-2 sm:gap-4 w-full md:w-auto">
+  <!-- Main Content Container -->
+   <div class="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl p-8 flex flex-col lg:flex-row gap-12 font-sans">
+    
+        <div class="lg:w-1/2 flex flex-col items-center">
+            <div class="relative w-full aspect-square rounded-3xl flex items-center justify-center overflow-hidden">
+                <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" alt="Carhartt Cooler Main Image" class="w-full h-auto object-cover">
                 
-                <!-- Color Filter -->
-                <div class="relative inline-block text-left">
-                    <button id="color-btn" class="inline-flex justify-center items-center gap-1.5 rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Color
-                        <svg class="-mr-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                    <!-- Dropdown menu content (hidden by default) -->
-                    <div id="color-menu" class="hidden origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-10">
-                        <div class="py-1">
-                            <!-- Dropdown items will be added here -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Price Filter -->
-                <div class="relative inline-block text-left">
-                    <button id="price-btn" class="inline-flex justify-center items-center gap-1.5 rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Price
-                        <svg class="-mr-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                    <div id="price-menu" class="hidden origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-10">
-                        <div class="py-1">
-                            <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                <input type="checkbox" class="mr-2"> Budget (31)
-                            </label>
-                            <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                <input type="checkbox" class="mr-2"> Moderate (25)
-                            </label>
-                            <label class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                <input type="checkbox" class="mr-2"> Premium (7)
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Brand Filter -->
-                <button class="inline-flex justify-center items-center gap-1.5 rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Brand
-                    <svg class="-mr-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-
-                <!-- Fit Filter -->
-                <button class="inline-flex justify-center items-center gap-1.5 rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Fit
-                    <svg class="-mr-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-
-                <!-- Material Filter -->
-                <button class="inline-flex justify-center items-center gap-1.5 rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Material
-                    <svg class="-mr-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-
-                <!-- All Filters Button -->
-                <button class="inline-flex justify-center items-center gap-1.5 rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    All Filters
-                    <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h6m4.5-6h7.5m-7.5 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-7.5 0h3.75" />
-                    </svg>
-                </button>
+             
             </div>
-
-            <!-- Recommended Sort -->
-            <button class="inline-flex justify-center items-center gap-1.5 rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full md:w-auto">
-                Recommended
-                <svg class="-mr-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-            </button>
+            
+            <div class="flex flex-row mt-6 space-x-4 w-full justify-start">
+                <img src="https://i.ibb.co/68fDfqS/image-061487.png" alt="Thumbnail 1" class="w-16 h-16 rounded-xl border-2 border-[#3c82f6] cursor-pointer transition-all duration-300">
+                <img src="https://i.ibb.co/r763b3M/image-061487-2.png" alt="Thumbnail 2" class="w-16 h-16 rounded-xl border-2 border-transparent hover:border-[#3c82f6] transition-all duration-300 cursor-pointer">
+                <img src="https://i.ibb.co/VMyhG8Y/image-061487-3.png" alt="Thumbnail 3" class="w-16 h-16 rounded-xl border-2 border-transparent hover:border-[#3c82f6] transition-all duration-300 cursor-pointer">
+                <img src="https://i.ibb.co/2d1H3P2/image-061487-4.png" alt="Thumbnail 4" class="w-16 h-16 rounded-xl border-2 border-transparent hover:border-[#3c82f6] transition-all duration-300 cursor-pointer">
+            </div>
         </div>
- <hr>
-        <!-- Product Grid Section -->
-       <div class="min-h-screen p-2 sm:p-6 lg:p-8">
-     
-     
-      
-      <!-- Product Grid Container -->
-
-
-<div class="container mt-2 ">
-  <div class="row g-4">
-
-  <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-  <a href="./detailProduct.html" class="text-decoration-none">
-    <div class="card h-100 shadow-sm position-relative border-0 card-horizontal cursor-pointer">
-      <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark">Top Seller</span>
-
-      <img 
-        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" 
-        class="card-img-top" 
-        alt="T-Shirt"
-      >
-
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">RushOrderTees Classic Tee</h5>
-        <div class="d-flex align-items-center mb-2">
-          <div class="text-warning me-2">★★★★★</div>
-          <small class="text-muted">3,045 reviews</small>
-        </div>
-        <div class="d-flex align-items-center mb-2">
-          <span class="d-inline-block rounded-circle border border-secondary bg-dark me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-white me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-secondary me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-danger me-2" style="width:16px; height:16px;"></span>
-          <span class="text-muted small">+84 colors</span>
-        </div>
-        <p class="text-muted small mb-1">9 - 5XL | No Minimum</p>
-        <p class="fw-bold mb-0">
-          $10.41 <span class="fw-normal text-muted small">each for 50 items</span>
-        </p>
-      </div>
+    
+        <div class="lg:w-1/2">
+            <div class="mb-6">
+                <h1 class="text-3xl font-semibold text-[#1f2937] leading-tight">Carhartt Lunch 6-Can Cooler</h1>
+                <p class="text-sm text-[#6b7280] mt-1">Style: CT89251601</p>
+            </div>
+    
+            <div class="mb-6">
+                <p class="text-sm font-medium text-[#4b5563] mb-2">Selected Color: <span class="font-normal text-[#1f2937]">Black</span></p>
+                <div class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-[#1f2937] color-swatch-ring cursor-pointer"></div>
+                    <div class="w-6 h-6 rounded-full bg-[#374151] ring-2 ring-[#e5e7eb] cursor-pointer"></div>
+                    <div class="w-6 h-6 rounded-full bg-[#925420] ring-2 ring-[#e5e7eb] cursor-pointer"></div>
+                </div>
+            </div>
+    
+            <div class="mb-8">
+                <p class="text-sm font-medium text-[#4b5563] mb-2">Decoration Method:</p>
+                <div class="flex items-center space-x-2">
+                    <button class="bg-[#e0f2fe] text-[#3c82f6] px-4 py-2 rounded-lg font-medium text-sm transition-colors hover:bg-[#cbe6fd]">
+                        Printing
+                    </button>
+                    <span class="text-xs text-[#9ca3af]">No Minimum</span>
+                </div>
+            </div>
+    
+           <button class="w-auto bg-[#3c82f6] text-white text-xs font-semibold px-4 py-3 rounded-lg shadow-lg hover:bg-[#2563eb] transition">
+    Start Designing
+</button>
+    
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+  <!-- Feature Item -->
+  <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+    <div class="flex-shrink-0 p-3 rounded-full bg-gray-200">
+      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+      </svg>
     </div>
-  </a>
-</div>
-
-    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-  <a href="#" class="text-decoration-none">
-    <div class="card h-100 shadow-sm position-relative border-0 card-horizontal cursor-pointer">
-      <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark">Top Seller</span>
-
-      <img 
-        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" 
-        class="card-img-top" 
-        alt="T-Shirt"
-      >
-
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">RushOrderTees Classic Tee</h5>
-        <div class="d-flex align-items-center mb-2">
-          <div class="text-warning me-2">★★★★★</div>
-          <small class="text-muted">3,045 reviews</small>
-        </div>
-        <div class="d-flex align-items-center mb-2">
-          <span class="d-inline-block rounded-circle border border-secondary bg-dark me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-white me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-secondary me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-danger me-2" style="width:16px; height:16px;"></span>
-          <span class="text-muted small">+84 colors</span>
-        </div>
-        <p class="text-muted small mb-1">9 - 5XL | No Minimum</p>
-        <p class="fw-bold mb-0">
-          $10.41 <span class="fw-normal text-muted small">each for 50 items</span>
-        </p>
-      </div>
+    <div>
+      <p class="text-sm font-semibold text-gray-800">Free Delivery</p>
+      <p class="text-xs text-gray-500">As soon as Fri Aug 29</p>
     </div>
-  </a>
-</div>
-    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-  <a href="#" class="text-decoration-none">
-    <div class="card h-100 shadow-sm position-relative border-0 card-horizontal cursor-pointer">
-      <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark">Top Seller</span>
+  </div>
 
-      <img 
-        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" 
-        class="card-img-top" 
-        alt="T-Shirt"
-      >
-
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">RushOrderTees Classic Tee</h5>
-        <div class="d-flex align-items-center mb-2">
-          <div class="text-warning me-2">★★★★★</div>
-          <small class="text-muted">3,045 reviews</small>
-        </div>
-        <div class="d-flex align-items-center mb-2">
-          <span class="d-inline-block rounded-circle border border-secondary bg-dark me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-white me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-secondary me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-danger me-2" style="width:16px; height:16px;"></span>
-          <span class="text-muted small">+84 colors</span>
-        </div>
-        <p class="text-muted small mb-1">9 - 5XL | No Minimum</p>
-        <p class="fw-bold mb-0">
-          $10.41 <span class="fw-normal text-muted small">each for 50 items</span>
-        </p>
-      </div>
+  <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+    <div class="flex-shrink-0 p-3 rounded-full bg-gray-200">
+      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+      </svg>
     </div>
-  </a>
-</div>
-    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-  <a href="#" class="text-decoration-none">
-    <div class="card h-100 shadow-sm position-relative border-0 card-horizontal cursor-pointer">
-      <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark">Top Seller</span>
-
-      <img 
-        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" 
-        class="card-img-top" 
-        alt="T-Shirt"
-      >
-
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">RushOrderTees Classic Tee</h5>
-        <div class="d-flex align-items-center mb-2">
-          <div class="text-warning me-2">★★★★★</div>
-          <small class="text-muted">3,045 reviews</small>
-        </div>
-        <div class="d-flex align-items-center mb-2">
-          <span class="d-inline-block rounded-circle border border-secondary bg-dark me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-white me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-secondary me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-danger me-2" style="width:16px; height:16px;"></span>
-          <span class="text-muted small">+84 colors</span>
-        </div>
-        <p class="text-muted small mb-1">9 - 5XL | No Minimum</p>
-        <p class="fw-bold mb-0">
-          $10.41 <span class="fw-normal text-muted small">each for 50 items</span>
-        </p>
-      </div>
+    <div>
+      <p class="text-sm font-semibold text-gray-800">Rush Delivery</p>
+      <p class="text-xs text-gray-500">Guaranteed by Wed Aug 20</p>
     </div>
-  </a>
-</div>
-     <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-  <a href="#" class="text-decoration-none">
-    <div class="card h-100 shadow-sm position-relative border-0 card-horizontal cursor-pointer">
-      <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark">Top Seller</span>
+  </div>
 
-      <img 
-        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" 
-        class="card-img-top" 
-        alt="T-Shirt"
-      >
-
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">RushOrderTees Classic Tee</h5>
-        <div class="d-flex align-items-center mb-2">
-          <div class="text-warning me-2">★★★★★</div>
-          <small class="text-muted">3,045 reviews</small>
-        </div>
-        <div class="d-flex align-items-center mb-2">
-          <span class="d-inline-block rounded-circle border border-secondary bg-dark me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-white me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-secondary me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-danger me-2" style="width:16px; height:16px;"></span>
-          <span class="text-muted small">+84 colors</span>
-        </div>
-        <p class="text-muted small mb-1">9 - 5XL | No Minimum</p>
-        <p class="fw-bold mb-0">
-          $10.41 <span class="fw-normal text-muted small">each for 50 items</span>
-        </p>
-      </div>
+  <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+    <div class="flex-shrink-0 p-3 rounded-full bg-gray-200">
+      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5V12h2v5.5zm0-7.5V6.5h2V10z"></path>
+      </svg>
     </div>
-  </a>
-</div>
-     <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-  <a href="#" class="text-decoration-none">
-    <div class="card h-100 shadow-sm position-relative border-0 card-horizontal cursor-pointer">
-      <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark">Top Seller</span>
-
-      <img 
-        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" 
-        class="card-img-top" 
-        alt="T-Shirt"
-      >
-
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">RushOrderTees Classic Tee</h5>
-        <div class="d-flex align-items-center mb-2">
-          <div class="text-warning me-2">★★★★★</div>
-          <small class="text-muted">3,045 reviews</small>
-        </div>
-        <div class="d-flex align-items-center mb-2">
-          <span class="d-inline-block rounded-circle border border-secondary bg-dark me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-white me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-secondary me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-danger me-2" style="width:16px; height:16px;"></span>
-          <span class="text-muted small">+84 colors</span>
-        </div>
-        <p class="text-muted small mb-1">9 - 5XL | No Minimum</p>
-        <p class="fw-bold mb-0">
-          $10.41 <span class="fw-normal text-muted small">each for 50 items</span>
-        </p>
-      </div>
+    <div>
+      <p class="text-sm font-semibold text-gray-800">Material</p>
+      <p class="text-xs text-gray-500">100% Polyester</p>
     </div>
-  </a>
-</div>
-     <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-  <a href="#" class="text-decoration-none">
-    <div class="card h-100 shadow-sm position-relative border-0 card-horizontal cursor-pointer">
-      <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark">Top Seller</span>
+  </div>
 
-      <img 
-        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" 
-        class="card-img-top" 
-        alt="T-Shirt"
-      >
-
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">RushOrderTees Classic Tee</h5>
-        <div class="d-flex align-items-center mb-2">
-          <div class="text-warning me-2">★★★★★</div>
-          <small class="text-muted">3,045 reviews</small>
-        </div>
-        <div class="d-flex align-items-center mb-2">
-          <span class="d-inline-block rounded-circle border border-secondary bg-dark me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-white me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-secondary me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-danger me-2" style="width:16px; height:16px;"></span>
-          <span class="text-muted small">+84 colors</span>
-        </div>
-        <p class="text-muted small mb-1">9 - 5XL | No Minimum</p>
-        <p class="fw-bold mb-0">
-          $10.41 <span class="fw-normal text-muted small">each for 50 items</span>
-        </p>
-      </div>
+  <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+    <div class="flex-shrink-0 p-3 rounded-full bg-gray-200">
+      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12c-2.76 0-5 2.24-5 5h2c0-1.66 1.34-3 3-3s3 1.34 3 3-1.34 3-3 3h-2v2h2c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
+      </svg>
     </div>
-  </a>
-</div>
-     <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-  <a href="#" class="text-decoration-none">
-    <div class="card h-100 shadow-sm position-relative border-0 card-horizontal cursor-pointer">
-      <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark">Top Seller</span>
-
-      <img 
-        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" 
-        class="card-img-top" 
-        alt="T-Shirt"
-      >
-
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">RushOrderTees Classic Tee</h5>
-        <div class="d-flex align-items-center mb-2">
-          <div class="text-warning me-2">★★★★★</div>
-          <small class="text-muted">3,045 reviews</small>
-        </div>
-        <div class="d-flex align-items-center mb-2">
-          <span class="d-inline-block rounded-circle border border-secondary bg-dark me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-white me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-secondary me-1" style="width:16px; height:16px;"></span>
-          <span class="d-inline-block rounded-circle border border-secondary bg-danger me-2" style="width:16px; height:16px;"></span>
-          <span class="text-muted small">+84 colors</span>
-        </div>
-        <p class="text-muted small mb-1">9 - 5XL | No Minimum</p>
-        <p class="fw-bold mb-0">
-          $10.41 <span class="fw-normal text-muted small">each for 50 items</span>
-        </p>
-      </div>
+    <div>
+      <p class="text-sm font-semibold text-gray-800">Price</p>
+      <p class="text-xs text-gray-500">Premium</p>
     </div>
-  </a>
-</div>
-
   </div>
 </div>
 
-
-
-      
-    </div>
-
+        </div>
     </div>
 
 
@@ -925,7 +630,26 @@
 
 
 
- <!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- Footer -->
 
     <footer class="bg-[#0e1628] text-white py-12">
       <div class="container mx-auto px-4">
@@ -1172,7 +896,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./Assets/js/swiper.js"></script>
+    <script src="/Assets/js/swiper.js"></script>
     <script src="/Assets/js/dropdown.js"></script>
 
     <!-- Bootstrap Icons -->

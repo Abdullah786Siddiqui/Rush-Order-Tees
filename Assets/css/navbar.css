@@ -1,63 +1,71 @@
-/* Mega dropdown styling */
-.mega-dropdown {
-  display: none;
-  position: fixed; /* absolute → fixed */
-  left: 50%; /* screen ke center se start karega */
-  transform: translateX(-50%); /* perfect horizontal center alignment */
-  top: 120px; /* navbar height ke hisab se adjust karo */
-  margin-top: 0; /* fixed me margin-top ki zarurat nahi */
-  width: 100vw;
-  max-width: 80rem; /* similar to screenshot */
-  padding: 2rem 2.5rem;
-  background-color: white;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-              0 4px 6px -4px rgb(0 0 0 / 0.1);
-  border-top: 3px solid #2196f3;
-  border-radius: 0 0 0.75rem 0.75rem;
-  z-index: 999; /* fixed me z-index thoda zyada rakhna */
-}
-
-/* Show on hover */
-.group:hover .mega-dropdown {
-  display: block;
-}
-
-/* Category headings */
-.mega-dropdown h6 {
-  font-weight: bold;
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
-  color: #333;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.3rem;
-}
-
-/* Links */
-.mega-dropdown a {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.875rem;
-  color: #555;
-  padding: 0.2rem 0;
-  transition: color 0.2s ease;
-}
-.mega-dropdown a:hover {
-  color: #2196f3;
-}
-
-/* Popular badge */
-.badge-popular {
-  background: #2196f3;
-  color: white;
-  font-size: 0.7rem;
-  padding: 0.15rem 0.4rem;
-  border-radius: 0.3rem;
-  margin-left: 0.4rem;
-}
-
-/* Mobile hide dropdown */
-@media (max-width: 1023px) {
   .mega-dropdown {
-    display: none !important;
-  }
-}
+        display: none;
+        position: absolute;
+        top: 100%;
+         left: 0;
+  transform: none;
+        margin-top: 13px;
+        width: max-content;
+        padding: 2rem 2.5rem;
+        background-color: white;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        border-top: 3px solid #2196f3;
+        border-radius: 0 0 0.75rem 0.75rem;
+        z-index: 999;
+      }
+      /* Show on click */
+      .is-open {
+        display: block;
+      }
+      /* Category headings */
+      .mega-dropdown h6 {
+        font-weight: bold;
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+        color: #333;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.3rem;
+      }
+      /* Links */
+      .mega-dropdown a {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.875rem;
+        color: #555;
+        padding: 0.2rem 0;
+        transition: color 0.2s ease;
+      }
+      .mega-dropdown a:hover {
+        color: #2196f3;
+      }
+      /* Popular badge */
+      .badge-popular {
+        background: #2196f3;
+        color: white;
+        font-size: 0.7rem;
+        padding: 0.15rem 0.4rem;
+        border-radius: 0.3rem;
+        margin-left: 0.4rem;
+      }
+      /* Mobile hide dropdown */
+      @media (max-width: 1023px) {
+        .mega-dropdown {
+          display: none !important;
+        }
+      }
+      /* Custom styles for the "Design Now" button */
+      .btn-outline-primary {
+        border: 1px solid #2196f3;
+        color: #2196f3;
+        transition: all 0.2s ease-in-out;
+      }
+      .btn-outline-primary:hover {
+        background-color: #2196f3;
+        color: white;
+      }
+      .text-primary {
+        color: #2196f3;
+      }
+      .text-muted {
+        color: #6c757d;
+      }
