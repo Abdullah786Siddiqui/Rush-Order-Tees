@@ -57,7 +57,7 @@
       }
     </style>
   </head>
-  <body style="background-color: whitesmoke">
+  <body>
     <nav
       style="background-color: #f1f5f9"
       class="navbar navbar-expand-lg top-bar py-2"
@@ -71,20 +71,196 @@
         <!-- Right section always aligned right -->
         <div class="ms-auto d-flex align-items-center gap-3">
           <!-- Search (Large screens only) -->
-          <div class="position-relative d-none d-lg-block">
-            <i
-              class="bi bi-search search-icon position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"
-            ></i>
-            <input
-              type="search"
-              class="form-control custom-height rounded-4 ps-5 pe-5 shadow-sm border-secondary-subtle"
-              placeholder="Search for products..."
-              aria-label="Search"
-            />
-            <i
-              class="bi bi-x clear-icon position-absolute top-50 end-0 fs-5 translate-middle-y pe-3 text-muted"
-            ></i>
+      <div class="position-relative d-none d-lg-block">
+  <i
+    class="bi bi-search search-icon position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"
+  ></i>
+
+  <!-- Search Input -->
+  <input
+    type="search"
+    id="searchInput"
+    class="form-control custom-height rounded-4 ps-5 pe-5 shadow-sm border-secondary-subtle"
+    placeholder="Search for products..."
+    aria-label="Search"
+  />
+
+  <i
+    class="bi bi-x clear-icon position-absolute top-50 end-0 fs-5 translate-middle-y pe-3 text-muted"
+  ></i>
+
+  <!-- Toggle Div with animation -->
+  <div
+  id="searchDropdown"
+  class="dropdown-animate position-fixed h-100 "
+  style="z-index: 1000; top: 55px; left: 0; right: 0; background-color: #F1F5F9;"
+>
+
+    <div class="grid grid-cols-12 gap-6 p-10 py-10 ">
+    <!-- Left Sidebar -->
+<div class="col-span-3 mb-10">
+  <!-- Section Heading -->
+  <h3 class="text-base font-semibold text-gray-700 mb-3 tracking-wide">
+    Trending Categories
+  </h3>
+
+  <!-- Trending Categories List -->
+  <ul class="space-y-2 text-gray-800 text-[15px] leading-relaxed">
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         T-Shirts
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Short Sleeve T-Shirts
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Performance Shirts
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Hoodies
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         All T-Shirts
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Hats
+      </a>
+    </li>
+    <li>
+      <a href="#" class="font-semibold text-blue-600 hover:underline">
+        View All Categories
+      </a>
+    </li>
+  </ul>
+
+  <!-- Helpful Links Section -->
+  <h3 class="text-base font-semibold text-gray-700 mt-8 mb-3 tracking-wide">
+    Helpful Links
+  </h3>
+  <ul class="space-y-2 text-gray-800 text-[15px] leading-relaxed">
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         My Account
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Saved Designs
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Order History
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+    <!-- Right Products -->
+    <div class="col-span-9">
+      <h3 class="text-sm font-semibold text-gray-500 mb-4">Trending Products</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product Card -->
+        <div class="bg-white shadow rounded-lg p-3 hover:shadow-md transition">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Tee" class="mx-auto mb-2">
+          <p class="text-sm font-medium text-center">RushOrderTees Classic Tee</p>
+          <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+            ★★★★☆
           </div>
+          <p class="text-xs text-gray-500 text-center">2,832 reviews</p>
+        </div>
+
+        <!-- Product Card -->
+        <div class="bg-white shadow rounded-lg p-3 hover:shadow-md transition">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Tee" class="mx-auto mb-2">
+          <p class="text-sm font-medium text-center">Bella + Canvas Tri-Blend T-Shirt</p>
+          <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+            ★★★★☆
+          </div>
+          <p class="text-xs text-gray-500 text-center">391 reviews</p>
+        </div>
+
+        <!-- Product Card -->
+        <div class="bg-white shadow rounded-lg p-3 hover:shadow-md transition">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Long Sleeve" class="mx-auto mb-2">
+          <p class="text-sm font-medium text-center">Gildan Long Sleeve Ultra Cotton</p>
+          <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+            ★★★★☆
+          </div>
+          <p class="text-xs text-gray-500 text-center">674 reviews</p>
+        </div>
+
+        <!-- Product Card -->
+        <div class="bg-white shadow rounded-lg p-3 hover:shadow-md transition">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Hoodie" class="mx-auto mb-2">
+          <p class="text-sm font-medium text-center">Gildan Heavy Blend Hoodie</p>
+          <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+            ★★★★☆
+          </div>
+          <p class="text-xs text-gray-500 text-center">1,072 reviews</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+  /* Start hidden */
+  .dropdown-animate {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Show with fade-in */
+  .dropdown-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const searchDropdown = document.getElementById("searchDropdown");
+
+  // Toggle with animation
+  searchInput.addEventListener("click", (e) => {
+    e.stopPropagation();
+    searchDropdown.classList.toggle("show");
+  });
+
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (!searchDropdown.contains(e.target) && !searchInput.contains(e.target)) {
+      searchDropdown.classList.remove("show");
+    }
+  });
+</script>
+
+
           <!-- Account -->
           <!-- Header navigation element to simulate the My Account link -->
           <div class="relative">
@@ -131,7 +307,7 @@
             <!-- Dropdown menu content -->
             <div
               id="dropdown-menu"
-              class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 z-10 ring-1 ring-gray-200"
+              class=" z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200"
             >
               <!-- Dropdown Title -->
               <h2 class="text-lg font-semibold mb-4 text-center text-gray-800">
@@ -256,7 +432,7 @@
             <!-- Cart Dropdown menu content -->
             <div
               id="dropdown-menu-cart"
-              class="absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300 z-10"
+              class=" z-[9999]  absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300 "
             >
               <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2>
               <div class="text-center text-gray-500 mb-4">
@@ -276,618 +452,458 @@
 
     <!-- Navbar 2 -->
 
-    <nav class="relative shadow-sm">
-      <div
-        class="container-fluid mx-auto flex items-center justify-between px-6 py-3"
-      >
-        <div class="flex items-center">
-          <a href="/index.html" class="mr-8">
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/3ae1c16d3ec64699ef9fe2b86e6fbda1b358cade-300x120.png"
-              class="h-10"
-              alt="Logo"
-            />
-          </a>
-          <ul class="hidden xl:flex gap-8">
-            <li class="relative group">
-              <a
-                href="#"
-                class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
-              >
-                Custom Apparel
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </a>
-              <div class="mega-dropdown">
-                <div class="grid grid-cols-4 gap-10">
-                  <div>
-                    <h6>Sweatshirts</h6>
-                    <a href="#"
-                      >Hoodies <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="./Pages/product.html">T Shirts</a><br />
-                    <a href="#">Zip Up Hoodies</a><br />
-                    <a href="#">Quarter Zip Ups</a><br />
-                    <a href="#">Carhartt Hoodies</a><br />
-                    <a href="#">Women's Sweatshirts</a><br />
-                    <a href="#">Kids Sweatshirts</a><br />
-                    <a href="#">Safety Hoodies</a><br />
-                    <a href="#">View All Sweatshirts</a>
-                  </div>
-                  <div>
-                    <h6>Polo Shirts</h6>
-                    <a href="#">Embroidered Polos</a><br />
-                    <a href="#"
-                      >Performance Polos
-                      <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Golf Polos</a><br />
-                    <a href="#">Nike Polos</a>
-                    <h6 class="mt-4">Hats</h6>
-                    <a href="#"
-                      >Baseball Hats
-                      <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Trucker Hats</a><br />
-                    <a href="#">Richardson Hats</a><br />
-                    <a href="#">Bucket Hats</a>
-                  </div>
-                  <div>
-                    <h6>Apparel</h6>
-                    <a href="#"
-                      >Activewear <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Aprons</a><br />
-                    <a href="#">Athleisure Wear</a><br />
-                    <a href="#">Business Apparel</a><br />
-                    <a href="#">Jackets</a><br />
-                    <a href="#">Pants & Shorts</a><br />
-                    <a href="#">Safety</a><br />
-                    <a href="#">Team Uniforms</a><br />
-                    <a href="#">Workwear</a>
-                  </div>
-                  <div>
-                    <h6>More Categories</h6>
-                    <a href="#">Big & Tall</a><br />
-                    <a href="#">Cropped Apparel</a><br />
-                    <a href="#">Embroidered</a><br />
-                    <a href="#">Golf</a><br />
-                    <a href="#"
-                      >Kids <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Premium</a><br />
-                    <a href="#">Sustainable</a><br />
-                    <a href="#">Womens</a><br />
-                    <a href="#">New Arrivals</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="relative group">
-              <a
-                href="#"
-                class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
-              >
-                Custom Apparel
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </a>
-              <div class="mega-dropdown">
-                <div class="grid grid-cols-4 gap-10">
-                  <div>
-                    <h6>Sweatshirts</h6>
-                    <a href="#"
-                      >Hoodies <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="./Pages/product.html">T Shirts</a><br />
-                    <a href="#">Zip Up Hoodies</a><br />
-                    <a href="#">Quarter Zip Ups</a><br />
-                    <a href="#">Carhartt Hoodies</a><br />
-                    <a href="#">Women's Sweatshirts</a><br />
-                    <a href="#">Kids Sweatshirts</a><br />
-                    <a href="#">Safety Hoodies</a><br />
-                    <a href="#">View All Sweatshirts</a>
-                  </div>
-                  <div>
-                    <h6>Polo Shirts</h6>
-                    <a href="#">Embroidered Polos</a><br />
-                    <a href="#"
-                      >Performance Polos
-                      <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Golf Polos</a><br />
-                    <a href="#">Nike Polos</a>
-                    <h6 class="mt-4">Hats</h6>
-                    <a href="#"
-                      >Baseball Hats
-                      <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Trucker Hats</a><br />
-                    <a href="#">Richardson Hats</a><br />
-                    <a href="#">Bucket Hats</a>
-                  </div>
-                  <div>
-                    <h6>Apparel</h6>
-                    <a href="#"
-                      >Activewear <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Aprons</a><br />
-                    <a href="#">Athleisure Wear</a><br />
-                    <a href="#">Business Apparel</a><br />
-                    <a href="#">Jackets</a><br />
-                    <a href="#">Pants & Shorts</a><br />
-                    <a href="#">Safety</a><br />
-                    <a href="#">Team Uniforms</a><br />
-                    <a href="#">Workwear</a>
-                  </div>
-                  <div>
-                    <h6>More Categories</h6>
-                    <a href="#">Big & Tall</a><br />
-                    <a href="#">Cropped Apparel</a><br />
-                    <a href="#">Embroidered</a><br />
-                    <a href="#">Golf</a><br />
-                    <a href="#"
-                      >Kids <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Premium</a><br />
-                    <a href="#">Sustainable</a><br />
-                    <a href="#">Womens</a><br />
-                    <a href="#">New Arrivals</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="relative group group-right">
-              <a
-                href="#"
-                class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
-              >
-                Custom Apparel
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </a>
-              <div class="mega-dropdown">
-                <div class="grid grid-cols-4 gap-10">
-                  <div>
-                    <h6>Sweatshirts</h6>
-                    <a href="#"
-                      >Hoodies <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="./Pages/product.html">T Shirts</a><br />
-                    <a href="#">Zip Up Hoodies</a><br />
-                    <a href="#">Quarter Zip Ups</a><br />
-                    <a href="#">Carhartt Hoodies</a><br />
-                    <a href="#">Women's Sweatshirts</a><br />
-                    <a href="#">Kids Sweatshirts</a><br />
-                    <a href="#">Safety Hoodies</a><br />
-                    <a href="#">View All Sweatshirts</a>
-                  </div>
-                  <div>
-                    <h6>Polo Shirts</h6>
-                    <a href="#">Embroidered Polos</a><br />
-                    <a href="#"
-                      >Performance Polos
-                      <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Golf Polos</a><br />
-                    <a href="#">Nike Polos</a>
-                    <h6 class="mt-4">Hats</h6>
-                    <a href="#"
-                      >Baseball Hats
-                      <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Trucker Hats</a><br />
-                    <a href="#">Richardson Hats</a><br />
-                    <a href="#">Bucket Hats</a>
-                  </div>
-                  <div>
-                    <h6>Apparel</h6>
-                    <a href="#"
-                      >Activewear <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Aprons</a><br />
-                    <a href="#">Athleisure Wear</a><br />
-                    <a href="#">Business Apparel</a><br />
-                    <a href="#">Jackets</a><br />
-                    <a href="#">Pants & Shorts</a><br />
-                    <a href="#">Safety</a><br />
-                    <a href="#">Team Uniforms</a><br />
-                    <a href="#">Workwear</a>
-                  </div>
-                  <div>
-                    <h6>More Categories</h6>
-                    <a href="#">Big & Tall</a><br />
-                    <a href="#">Cropped Apparel</a><br />
-                    <a href="#">Embroidered</a><br />
-                    <a href="#">Golf</a><br />
-                    <a href="#"
-                      >Kids <span class="badge-popular">Popular</span></a
-                    ><br />
-                    <a href="#">Premium</a><br />
-                    <a href="#">Sustainable</a><br />
-                    <a href="#">Womens</a><br />
-                    <a href="#">New Arrivals</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="relative group group-right">
-              <a
-                href="#"
-                class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
-              >
-                Brands
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </a>
-              <div class="mega-dropdown brands-dropdown">
-                <div class="flex justify-center items-center gap-8">
-                  <img
-                    src="https://cdn.sanity.io/images/2ahps9jc/production/68e9867b4a48e9e3e8db11e9e0cc715f3f294abd-200x150.png?w=256&q=75&fit=min&auto=format"
-                    alt="Nike"
-                    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                  />
+<nav class="relative bg-white shadow-sm">
+  <div class="container-fluid mx-auto flex items-center justify-between px-6 py-3">
+    <div class="flex items-center">
+      <a href="/index.html" class="mr-8">
+        <img
+          src="https://cdn.sanity.io/images/2ahps9jc/production/3ae1c16d3ec64699ef9fe2b86e6fbda1b358cade-300x120.png"
+          class="h-10"
+          alt="Logo"
+        />
+      </a>
+      <ul class="hidden xl:flex gap-8">
+      
+      <li class="relative group">
+  <a
+    href="./Pages/product.html"
+    class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
+  >
+    Custom T-Sirts
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </a>
+  <div class="mega-dropdown">
+    <div class="grid grid-cols-4 gap-10">
+      <div>
+        <h6>Sweatshirts</h6>
+        <a href="./Pages/product.html">Hoodies <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">T Shirts</a><br />
+        <a href="./Pages/product.html">Zip Up Hoodies</a><br />
+        <a href="./Pages/product.html">Quarter Zip Ups</a><br />
+        <a href="./Pages/product.html">Carhartt Hoodies</a><br />
+        <a href="./Pages/product.html">Women's Sweatshirts</a><br />
+        <a href="./Pages/product.html">Kids Sweatshirts</a><br />
+        <a href="./Pages/product.html">Safety Hoodies</a><br />
+        <a href="./Pages/product.html">View All Sweatshirts</a>
+      </div>
+      <div>
+        <h6>Polo Shirts</h6>
+        <a href="./Pages/product.html">Embroidered Polos</a><br />
+        <a href="./Pages/product.html">Performance Polos <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Golf Polos</a><br />
+        <a href="./Pages/product.html">Nike Polos</a>
+        <h6 class="mt-4">Hats</h6>
+        <a href="./Pages/product.html">Baseball Hats <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Trucker Hats</a><br />
+        <a href="./Pages/product.html">Richardson Hats</a><br />
+        <a href="./Pages/product.html">Bucket Hats</a>
+      </div>
+      <div>
+        <h6>Apparel</h6>
+        <a href="./Pages/product.html">Activewear <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Aprons</a><br />
+        <a href="./Pages/product.html">Athleisure Wear</a><br />
+        <a href="./Pages/product.html">Business Apparel</a><br />
+        <a href="./Pages/product.html">Jackets</a><br />
+        <a href="./Pages/product.html">Pants & Shorts</a><br />
+        <a href="./Pages/product.html">Safety</a><br />
+        <a href="./Pages/product.html">Team Uniforms</a><br />
+        <a href="./Pages/product.html">Workwear</a>
+      </div>
+      <div>
+        <h6>More Categories</h6>
+        <a href="./Pages/product.html">Big & Tall</a><br />
+        <a href="./Pages/product.html">Cropped Apparel</a><br />
+        <a href="./Pages/product.html">Embroidered</a><br />
+        <a href="./Pages/product.html">Golf</a><br />
+        <a href="./Pages/product.html">Kids <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Premium</a><br />
+        <a href="./Pages/product.html">Sustainable</a><br />
+        <a href="./Pages/product.html">Womens</a><br />
+        <a href="./Pages/product.html">New Arrivals</a>
+      </div>
+    </div>
+  </div>
+</li>
+   <li class="relative group">
+  <a
+    href="./Pages/product.html"
+    class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
+  >
+    Custom Apparel
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </a>
+  <div class="mega-dropdown">
+    <div class="grid grid-cols-4 gap-10">
+      <div>
+        <h6>Sweatshirts</h6>
+        <a href="./Pages/product.html">Hoodies <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">T Shirts</a><br />
+        <a href="./Pages/product.html">Zip Up Hoodies</a><br />
+        <a href="./Pages/product.html">Quarter Zip Ups</a><br />
+        <a href="./Pages/product.html">Carhartt Hoodies</a><br />
+        <a href="./Pages/product.html">Women's Sweatshirts</a><br />
+        <a href="./Pages/product.html">Kids Sweatshirts</a><br />
+        <a href="./Pages/product.html">Safety Hoodies</a><br />
+        <a href="./Pages/product.html">View All Sweatshirts</a>
+      </div>
+      <div>
+        <h6>Polo Shirts</h6>
+        <a href="./Pages/product.html">Embroidered Polos</a><br />
+        <a href="./Pages/product.html">Performance Polos <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Golf Polos</a><br />
+        <a href="./Pages/product.html">Nike Polos</a>
+        <h6 class="mt-4">Hats</h6>
+        <a href="./Pages/product.html">Baseball Hats <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Trucker Hats</a><br />
+        <a href="./Pages/product.html">Richardson Hats</a><br />
+        <a href="./Pages/product.html">Bucket Hats</a>
+      </div>
+      <div>
+        <h6>Apparel</h6>
+        <a href="./Pages/product.html">Activewear <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Aprons</a><br />
+        <a href="./Pages/product.html">Athleisure Wear</a><br />
+        <a href="./Pages/product.html">Business Apparel</a><br />
+        <a href="./Pages/product.html">Jackets</a><br />
+        <a href="./Pages/product.html">Pants & Shorts</a><br />
+        <a href="./Pages/product.html">Safety</a><br />
+        <a href="./Pages/product.html">Team Uniforms</a><br />
+        <a href="./Pages/product.html">Workwear</a>
+      </div>
+      <div>
+        <h6>More Categories</h6>
+        <a href="./Pages/product.html">Big & Tall</a><br />
+        <a href="./Pages/product.html">Cropped Apparel</a><br />
+        <a href="./Pages/product.html">Embroidered</a><br />
+        <a href="./Pages/product.html">Golf</a><br />
+        <a href="./Pages/product.html">Kids <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Premium</a><br />
+        <a href="./Pages/product.html">Sustainable</a><br />
+        <a href="./Pages/product.html">Womens</a><br />
+        <a href="./Pages/product.html">New Arrivals</a>
+      </div>
+    </div>
+  </div>
+</li>
 
-                  <img
-                    src="https://cdn.sanity.io/images/2ahps9jc/production/65b923e79e305b886b5106c32183ec305bc7268f-200x150.png?w=256&q=75&fit=min&auto=format"
-                    alt="Under Armour"
-                    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                  />
+    <li class="relative group group-right">
+  <a
+    href="./Pages/product.html"
+    class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
+  >
+   Promo Products
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </a>
+  <div class="mega-dropdown">
+    <div class="grid grid-cols-4 gap-10">
+      <div>
+        <h6>Sweatshirts</h6>
+        <a href="./Pages/product.html">Hoodies <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">T Shirts</a><br />
+        <a href="./Pages/product.html">Zip Up Hoodies</a><br />
+        <a href="./Pages/product.html">Quarter Zip Ups</a><br />
+        <a href="./Pages/product.html">Carhartt Hoodies</a><br />
+        <a href="./Pages/product.html">Women's Sweatshirts</a><br />
+        <a href="./Pages/product.html">Kids Sweatshirts</a><br />
+        <a href="./Pages/product.html">Safety Hoodies</a><br />
+        <a href="./Pages/product.html">View All Sweatshirts</a>
+      </div>
+      <div>
+        <h6>Polo Shirts</h6>
+        <a href="./Pages/product.html">Embroidered Polos</a><br />
+        <a href="./Pages/product.html">Performance Polos <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Golf Polos</a><br />
+        <a href="./Pages/product.html">Nike Polos</a>
+        <h6 class="mt-4">Hats</h6>
+        <a href="./Pages/product.html">Baseball Hats <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Trucker Hats</a><br />
+        <a href="./Pages/product.html">Richardson Hats</a><br />
+        <a href="./Pages/product.html">Bucket Hats</a>
+      </div>
+      <div>
+        <h6>Apparel</h6>
+        <a href="./Pages/product.html">Activewear <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Aprons</a><br />
+        <a href="./Pages/product.html">Athleisure Wear</a><br />
+        <a href="./Pages/product.html">Business Apparel</a><br />
+        <a href="./Pages/product.html">Jackets</a><br />
+        <a href="./Pages/product.html">Pants & Shorts</a><br />
+        <a href="./Pages/product.html">Safety</a><br />
+        <a href="./Pages/product.html">Team Uniforms</a><br />
+        <a href="./Pages/product.html">Workwear</a>
+      </div>
+      <div>
+        <h6>More Categories</h6>
+        <a href="./Pages/product.html">Big & Tall</a><br />
+        <a href="./Pages/product.html">Cropped Apparel</a><br />
+        <a href="./Pages/product.html">Embroidered</a><br />
+        <a href="./Pages/product.html">Golf</a><br />
+        <a href="./Pages/product.html">Kids <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Premium</a><br />
+        <a href="./Pages/product.html">Sustainable</a><br />
+        <a href="./Pages/product.html">Womens</a><br />
+        <a href="./Pages/product.html">New Arrivals</a>
+      </div>
+    </div>
+  </div>
+</li>
 
-                  <img
-                    src="https://cdn.sanity.io/images/2ahps9jc/production/dff5a2e74cc6c5a332da47cd9cad96090df0c9c5-200x150.png?w=256&q=75&fit=min&auto=format"
-                    alt="Carhartt"
-                    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                  />
+        <li class="relative group group-right">
+            <a href="#" class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1">
+              Brands
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <div class="mega-dropdown brands-dropdown">
+  <div class="flex justify-center items-center gap-8 ">
+  <img 
+    src="https://cdn.sanity.io/images/2ahps9jc/production/68e9867b4a48e9e3e8db11e9e0cc715f3f294abd-200x150.png?w=256&q=75&fit=min&auto=format" 
+    alt="Nike" 
+    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer" 
+  />
 
-                  <img
-                    src="https://cdn.sanity.io/images/2ahps9jc/production/4dc9662f60f2cca9390a06ed9558cb0c94cf9787-200x150.png?w=256&q=75&fit=min&auto=format"
-                    alt="The North Face"
-                    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                  />
+  <img 
+    src="https://cdn.sanity.io/images/2ahps9jc/production/65b923e79e305b886b5106c32183ec305bc7268f-200x150.png?w=256&q=75&fit=min&auto=format" 
+    alt="Under Armour" 
+    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer" 
+  />
 
-                  <img
-                    src="https://cdn.sanity.io/images/2ahps9jc/production/d65be0b68b7b43841c11f789796661027faaa964-200x150.png?w=256&q=75&fit=min&auto=format"
-                    alt="Champion"
-                    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                  />
+  <img 
+    src="https://cdn.sanity.io/images/2ahps9jc/production/dff5a2e74cc6c5a332da47cd9cad96090df0c9c5-200x150.png?w=256&q=75&fit=min&auto=format" 
+    alt="Carhartt" 
+    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer" 
+  />
 
-                  <img
-                    src="https://cdn.sanity.io/images/2ahps9jc/production/82a633e7adae679c55d4d7b5425f9719d9fdbdab-200x150.png?w=256&q=75&fit=min&auto=format"
-                    alt="Adidas"
-                    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                  />
-                </div>
+  <img 
+    src="https://cdn.sanity.io/images/2ahps9jc/production/4dc9662f60f2cca9390a06ed9558cb0c94cf9787-200x150.png?w=256&q=75&fit=min&auto=format" 
+    alt="The North Face" 
+    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer" 
+  />
 
-                <hr class="border-gray-200 mb-8" />
+  <img 
+    src="https://cdn.sanity.io/images/2ahps9jc/production/d65be0b68b7b43841c11f789796661027faaa964-200x150.png?w=256&q=75&fit=min&auto=format" 
+    alt="Champion" 
+    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer" 
+  />
 
-                <div
-                  class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-2 gap-x-12 text-sm"
-                >
-                  <a
-                    href="./Pages/brand.html"
-                    class="text-gray-600 hover:text-blue-600"
-                    >Adidas</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Champion</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Hanes</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Next Level</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Skullcandy</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >American Giant</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Columbia</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Helly Hansen</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600">Nike</a>
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Sport-Tek</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >American Apparel</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Comfort Colors</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Hydro Flask</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Oakley</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Spyder</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Arctic Zone</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >CornerStone</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600">JBL</a>
-                  <a href="#" class="text-gray-600 hover:text-blue-600">OGIO</a>
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Stanley</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Bella + Canvas</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Cotopaxi</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Jerzees</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Outdoor Research</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600">Stio</a>
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Berne</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Cutter & Buck</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Koozie</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Patagonia</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Team 365</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Brooks Brothers</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Dickies</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Marine Layer</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Peter Millar</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >The North Face</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600">Bose</a>
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >District</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Marmot</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Port Authority</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >TravisMathew</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Bullet</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Eddie Bauer</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Mophie</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600">Puma</a>
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Under Armour</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >CamelBak</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >G/FORE</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Nautica</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Richardson</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Vineyard Vines</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Carhartt</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Gildan</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >New Era</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600"
-                    >Russell Athletic</a
-                  >
-                  <a href="#" class="text-gray-600 hover:text-blue-600">YETI</a>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+  <img 
+    src="https://cdn.sanity.io/images/2ahps9jc/production/82a633e7adae679c55d4d7b5425f9719d9fdbdab-200x150.png?w=256&q=75&fit=min&auto=format" 
+    alt="Adidas" 
+    class="h-14 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer" 
+  />
+</div>
 
-        <div class="hidden xl:flex items-center gap-4">
-          <button class="btn btn-outline-primary font-bold rounded-4 px-3 py-2">
-            Design Now
-          </button>
-          <div class="flex flex-col text-sm">
-            <div class="flex items-center gap-1.5 font-bold text-primary">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/7611/7611043.png"
-                class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
-                alt="Live Chat Icon"
-              />
-              <div class="flex flex-col">
-                <span>Live Chat Now</span>
-                <span class="text-xs text-muted -mt-0.5"
-                  >🟢 Chat With an Expert</span
-                >
+
+
+
+              <hr class="border-gray-200 mb-8" />
+
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-2 gap-x-12 text-sm">
+               <a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Adidas</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Champion</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Hanes</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Next Level</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Skullcandy</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">American Giant</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Columbia</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Helly Hansen</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Nike</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Sport-Tek</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">American Apparel</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Comfort Colors</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Hydro Flask</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Oakley</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Spyder</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Arctic Zone</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">CornerStone</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">JBL</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">OGIO</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Stanley</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Bella + Canvas</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Cotopaxi</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Jerzees</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Outdoor Research</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Stio</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Berne</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Cutter & Buck</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Koozie</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Patagonia</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Team 365</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Brooks Brothers</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Dickies</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Marine Layer</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Peter Millar</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">The North Face</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Bose</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">District</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Marmot</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Port Authority</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">TravisMathew</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Bullet</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Eddie Bauer</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Mophie</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Puma</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Under Armour</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">CamelBak</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">G/FORE</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Nautica</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Richardson</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Vineyard Vines</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Carhartt</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Gildan</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">New Era</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Russell Athletic</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">YETI</a>
+
               </div>
             </div>
+          </li>
+
+    
+      </ul>
+    </div>
+
+    <div class="hidden xl:flex items-center gap-4">
+      <button class="btn btn-outline-primary font-bold rounded-4 px-3 py-2">
+        Design Now
+      </button>
+      <div class="flex flex-col text-sm">
+        <div class="flex items-center gap-1.5 font-bold text-primary">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/7611/7611043.png"
+            class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
+            alt="Live Chat Icon"
+          />
+          <div class="flex flex-col">
+            <span>Live Chat Now</span>
+            <span class="text-xs text-muted -mt-0.5">🟢 Chat With an Expert</span>
           </div>
-          <div class="vr"></div>
-          <div class="flex flex-col text-sm">
-            <div class="flex items-center gap-1.5 font-bold text-dark">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/1716/1716995.png"
-                class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 filter-blue"
-                alt="Phone Icon"
-              />
-              <div class="flex flex-col">
-                <span>(800) 620-1233</span>
-                <span class="text-xs text-muted -mt-0.5"
-                  >Talk to an Expert</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="flex items-center justify-around gap-3 sm:gap-4 md:gap-6 xl:hidden"
-          id="mobile-icons"
-        >
-          <!-- Search Icon -->
-          <button class="flex flex-col items-center">
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/2801/2801881.png"
-              class="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10"
-              alt="Search Icon"
-            />
-            <span class="text-xs sm:text-sm mt-1">Search</span>
-          </button>
-
-          <!-- Help Icon -->
-          <button class="flex flex-col items-center">
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/7090/7090669.png"
-              class="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10"
-              alt="Help Icon"
-            />
-            <span class="text-xs sm:text-sm mt-1">Help</span>
-          </button>
-
-          <!-- Menu/Hamburger Icon -->
-          <button id="hamburger-btn" class="flex flex-col items-center">
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/2976/2976215.png"
-              class="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10"
-              alt="Menu Icon"
-            />
-            <span class="text-xs sm:text-sm mt-1">Menu</span>
-          </button>
         </div>
       </div>
-
-      <div
-        id="mobile-menu"
-        class="fixed top-0 left-0 w-full h-full bg-white transition-transform duration-300 transform translate-x-full z-[1000] p-6 lg:hidden"
-      >
-        <div class="flex justify-end mb-8">
-          <button id="close-mobile-menu">
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png"
-              class="w-5 h-5"
-              alt="Close Icon"
-            />
-          </button>
-        </div>
-        <ul class="flex flex-col gap-6 text-xl">
-          <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
-              >Custom T-Shirts</a
-            >
-          </li>
-          <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
-              >Custom Apparial</a
-            >
-          </li>
-          <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
-              >Promo Products</a
-            >
-          </li>
-          <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
-              >Brands</a
-            >
-          </li>
-        </ul>
-        <div class="flex flex-col mt-8 gap-4">
-          <button
-            class="btn btn-outline-primary w-full py-2 rounded-5 hover:blue-500"
-          >
-            Design Now
-          </button>
+      <div class="vr"></div>
+      <div class="flex flex-col text-sm">
+        <div class="flex items-center gap-1.5 font-bold text-dark">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1716/1716995.png"
+            class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 filter-blue"
+            alt="Phone Icon"
+          />
+          <div class="flex flex-col">
+            <span>(800) 620-1233</span>
+            <span class="text-xs text-muted -mt-0.5">Talk to an Expert</span>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
+
+ <div 
+  class="flex items-center justify-around 
+         gap-3 sm:gap-4 md:gap-6 xl:hidden" 
+  id="mobile-icons"
+>
+  <!-- Search Icon -->
+  <button class="flex flex-col items-center">
+    <img
+      src="https://cdn-icons-png.flaticon.com/128/2801/2801881.png"
+      class="w-7 h-7 sm:w-9 sm:h-9 md:w-7 md:h-7"
+      alt="Search Icon"
+    />
+    <span class="text-xs sm:text-sm mt-1">Search</span>
+  </button>
+
+  <!-- Help Icon -->
+  <button class="flex flex-col items-center">
+    <img
+      src="https://cdn-icons-png.flaticon.com/128/7090/7090669.png"
+      class="w-7 h-7 sm:w-9 sm:h-9 md:w-7 md:h-7"
+      alt="Help Icon"
+    />
+    <span class="text-xs sm:text-sm mt-1">Help</span>
+  </button>
+
+  <!-- Menu/Hamburger Icon -->
+  <button id="hamburger-btn" class="flex flex-col items-center">
+    <img
+      src="https://cdn-icons-png.flaticon.com/128/2976/2976215.png"
+      class="w-7 h-7 sm:w-9 sm:h-9 md:w-7 md:h-7"
+      alt="Menu Icon"
+    />
+    <span class="text-xs sm:text-sm mt-1">Menu</span>
+  </button>
+</div>
+
+
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="fixed top-0 left-0 w-full h-full bg-white transition-transform duration-300 transform translate-x-full z-[1000] p-6 lg:hidden"
+  >
+    <div class="flex justify-end mb-8">
+      <button id="close-mobile-menu">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png"
+          class="w-5 h-5"
+          alt="Close Icon"
+        />
+      </button>
+    </div>
+    <ul class="flex flex-col gap-6 text-xl ">
+     
+      <li><a href="#" class="font-bold text-gray-800 hover:text-blue-600">Custom T-Shirts</a></li>
+      <li><a href="#" class="font-bold text-gray-800 hover:text-blue-600">Custom Apparial</a></li>
+      <li><a href="#" class="font-bold text-gray-800 hover:text-blue-600">Promo Products</a></li>
+      <li><a href="#" class="font-bold text-gray-800 hover:text-blue-600">Brands</a></li>
+    </ul>
+    <div class="flex flex-col mt-8 gap-4 ">
+      <button class="btn btn-outline-primary w-full py-2 rounded-5 hover:blue-500">Design Now</button>
+   
+    
+    </div>
+  </div>
+</nav>
+
 
     <!-- image area side bar -->
 
@@ -997,9 +1013,9 @@
             </div>
 
             <!-- Image -->
-            <div class="mt-8 md:mt-0 md:ml-10 md-sm-">
+            <div class="mt-8 md:mt-0 md:ml-10 md-sm-10">
               <img
-                src="https://cdn.sanity.io/images/2ahps9jc/production/5eadb8eec00f6a86c9c460065199e0bc23860790-1004x733.png?w=640&q=75&fit=min&auto=format"
+                src="https://cdn.sanity.io/images/2ahps9jc/production/99627a17f9f4a36d7fa50131ce7221a8c09f355e-1004x733.png?w=640&q=75&fit=min&auto=format"
                 alt="Champion Hoodies"
                 class="w-80 md:w-[400px]"
               />
@@ -1008,6 +1024,99 @@
         </section>
 
         <!-- Top Picks -->
+         <div class="bg-gray-100 py-12 px-4 sm:px-6 lg:px-">
+    <h1 class="text-3xl font-bold text-gray-800 leading-relaxed">Top Picks</h1>
+        <p class="text-gray-600 mb-8 font-semibold">Shop best selling Adidas gear</p>
+    <div class="mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
+      <div class="group relative bg-white p-4 rounded-lg shadow-md">
+        <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Blue t-shirt with custom design" class="w-full h-full object-center object-fit-cover  lg:w-full lg:h-full">
+        </div>
+        <div class="mt-4 flex flex-col items-center text-center">
+          <div>
+            <h3 class="text-lg text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Adidas Tees
+              </a>
+            </h3>
+            <div class="flex items-center justify-center mt-1">
+              <div class="flex text-yellow-400">
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+              </div>
+              <p class="mt-0.5 text-sm text-gray-500">(5 reviews)</p>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-gray-500">Sizes S, M, L, XL</p>
+          <p class="text-sm font-medium text-gray-900 mt-1">Min. order 1</p>
+          <p class="text-2xl font-semibold text-gray-900 mt-2">$24.99</p>
+        </div>
+      </div>
+
+      <div class="group relative bg-white p-4 rounded-lg shadow-md">
+        <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Black Adidas polo shirt" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+        </div>
+        <div class="mt-4 flex flex-col items-center text-center">
+          <div>
+            <h3 class="text-lg text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Adidas Performance Polo
+              </a>
+            </h3>
+            <div class="flex items-center justify-center mt-1">
+              <div class="flex text-yellow-400">
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+              </div>
+              <p class="mt-0.5 text-sm text-gray-500">(3 reviews)</p>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-gray-500">Sizes S, M, L, XL</p>
+          <p class="text-sm font-medium text-gray-900 mt-1">Min. order 1</p>
+          <p class="text-2xl font-semibold text-gray-900 mt-2">$34.99</p>
+        </div>
+      </div>
+
+      <div class="group relative bg-white p-4 rounded-lg shadow-md">
+        <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Black Adidas quarter-zip shirt" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+        </div>
+        <div class="mt-4 flex flex-col items-center text-center">
+          <div>
+            <h3 class="text-lg text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Adidas 3-Stripes Quarter-Zip
+              </a>
+            </h3>
+            <div class="flex items-center justify-center mt-1">
+              <div class="flex text-yellow-400">
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+              </div>
+              <p class="mt-0.5 text-sm text-gray-500">(9 reviews)</p>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-gray-500">Sizes S, M, L, XL</p>
+          <p class="text-sm font-medium text-gray-900 mt-1">Min. order 1</p>
+          <p class="text-2xl font-semibold text-gray-900 mt-2">$49.99</p>
+        </div>
+      </div>
+    </div>
+
+</div>
        <!-- 4 gradient images -->
  <div class="max-w-6xl mx-auto font-sans mt-10 cursor-pointer">
         <h1 class="text-3xl font-bold text-gray-800 leading-relaxed">Shop by Style</h1>
@@ -1048,7 +1157,7 @@
 
 
     <!-- shop by category -->
-      <div class="max-w-6xl mx-auto font-sans my-16">
+      <div class="max-w-6xl mx-auto font-sans ">
         <h1 class="text-3xl font-semibold text-gray-800 mb-2">Shop by Category</h1>
         <p class="text-gray-600 mb-8">Design your own Champion athletic wear</p>
 
@@ -1082,75 +1191,285 @@
             </p>
         </div>
     </div>
-    
+    <!-- text -->
+     <section class="bg-gray-50 py-16 px-6 md:px-16 mt-10">
+  <div class="max-w-4xl mx-auto text-center">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      Design Your Own Adidas Shirts & More
+    </h1>
+    <p class="text-gray-700 text-lg md:text-xl mb-4">
+      Show off your brand with custom Adidas gear built for comfort and performance. From polos and hoodies to jackets and hats, it’s easy to personalize top Adidas styles with your logo.
+    </p>
+    <p class="text-gray-700 text-lg md:text-xl mb-4">
+      Whether you're outfitting a team, planning a company event, or upgrading staff apparel, custom Adidas clothing delivers trusted quality and a professional look.
+    </p>
+    <p class="text-gray-700 text-lg md:text-xl">
+      Enjoy fast turnaround, free shipping, and simple design tools that make it easy to create branded Adidas apparel for any occasion.
+    </p>
+  </div>
+</section>
+
     <!-- review -->
-<div class="flex items-center justify-center min-h-screen bg-gray-100 p-8">
-  <div class="container mx-auto max-w-7xl flex items-stretch justify-center space-x-4">
-    
-    <div class="bg-white rounded-lg shadow-md p-8 max-w-sm flex flex-col justify-between">
-      <div>
-        <div class="flex items-center text-yellow-500 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+
+    <div class="flex items-center justify-center min-h-screen bg-gray-100 p-2 sm:p-4 md:p-6 lg:p-8">
+        <div class="container mx-auto max-w-7xl">
+            <!-- Mobile: 1 column, Tablet: 2 columns, Desktop: 3 columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 place-items-center">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 w-full max-w-sm flex flex-col justify-between h-full">
+                    <div>
+                        <!-- Star Rating -->
+                        <div class="flex items-center text-yellow-500 mb-3 sm:mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Champion Tees</h3>
+                        <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">At the last possible moment we decided to order tees. Not only did we receive these wonderful, self designed tees in time to present at our last game, but we became the envy of the entire league. Thank you for incredible service.</p>
+                    </div>
+                    <div>
+                        <div class="text-gray-800 font-bold mb-2 text-sm sm:text-base">Robert L.</div>
+                        <div class="flex items-center text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span class="text-xs sm:text-sm">Verified Review on Yotpo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 w-full max-w-sm flex flex-col justify-between h-full">
+                    <div>
+                        <!-- Star Rating -->
+                        <div class="flex items-center text-yellow-500 mb-3 sm:mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Great product - easy process</h3>
+                        <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">Ordered a last minute shipment of sweatshirts with custom design work. Quality of the Champion crew neck sweatshirt is fantastic.</p>
+                    </div>
+                    <div>
+                        <div class="text-gray-800 font-bold mb-2 text-sm sm:text-base">Barak B.</div>
+                        <div class="flex items-center text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span class="text-xs sm:text-sm">Verified Review on Yotpo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 w-full max-w-sm flex flex-col justify-between h-full md:col-span-2 xl:col-span-1 md:max-w-md xl:max-w-sm md:mx-auto xl:mx-0">
+                    <div>
+                        <!-- Star Rating -->
+                        <div class="flex items-center text-yellow-500 mb-3 sm:mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Champion Sweatshirts</h3>
+                        <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">Our team had Champion sweatshirts made. We were under time constraints to get them in time for a team function. The representative listened to the details and made it all happen.</p>
+                    </div>
+                    <div>
+                        <div class="text-gray-800 font-bold mb-2 text-sm sm:text-base">Matthew C.</div>
+                        <div class="flex items-center text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span class="text-xs sm:text-sm">Verified Review on Yotpo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <h3 class="text-xl font-bold mb-2">Champion Tees</h3>
-        <p class="text-gray-600 mb-6">At the last possible moment we decided to order tees. Not only did we receive these wonderful, self designed tees in time to present at our last game, but we became the envy of the entire league. Thank you for incredible service.</p>
-      </div>
-      <div>
-        <div class="text-gray-800 font-bold mb-2">Robert L.</div>
-        <div class="flex items-center text-green-600">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          Verified Review on Yotpo
-        </div>
-      </div>
-    </div>
-    
-    <div class="bg-white rounded-lg shadow-md p-8 max-w-sm flex flex-col justify-between">
-      <div>
-        <div class="flex items-center text-yellow-500 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Great product - easy process</h3>
-        <p class="text-gray-600 mb-6">Ordered a last minute shipment of sweatshirts with custom design work. Quality of the Champion crew neck sweatshirt is fantastic.</p>
-      </div>
-      <div>
-        <div class="text-gray-800 font-bold mb-2">Barak B.</div>
-        <div class="flex items-center text-green-600">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          Verified Review on Yotpo
-        </div>
-      </div>
     </div>
 
-    <div class="bg-white rounded-lg shadow-md p-8 max-w-sm flex flex-col justify-between">
-      <div>
-        <div class="flex items-center text-yellow-500 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
+
+    <!-- others -->
+
+    <div class="max-w-4xl mx-auto p-6">
+        
+        <!-- Custom Adidas FAQs Section -->
+        <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Custom Adidas FAQs</h2>
+            
+            <!-- FAQ Items -->
+            <div class="space-y-1">
+                <div class="border-b border-gray-200">
+                    <button class="w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors duration-200 group faq-toggle">
+                        <span class="text-gray-800 font-medium">How much does personalized Adidas apparel cost?</span>
+                        <svg class="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-transform duration-200 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">The cost of personalized Adidas apparel varies depending on the product type, customization method, and quantity ordered. Basic embroidery typically starts at $8-12 per item, while screen printing can range from $5-15 per piece. Premium customization options like heat transfer vinyl or specialty inks may cost more. We offer competitive bulk pricing for larger orders, and there are no setup fees for orders over 12 pieces.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200">
+                    <button class="w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors duration-200 group faq-toggle">
+                        <span class="text-gray-800 font-medium">How can I customize Adidas apparel?</span>
+                        <svg class="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-transform duration-200 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">We offer several customization methods for Adidas apparel: <strong>Embroidery</strong> - Perfect for logos, text, and detailed designs with a premium feel. <strong>Screen Printing</strong> - Ideal for large designs and bulk orders with vibrant colors. <strong>Heat Transfer Vinyl</strong> - Great for names, numbers, and simple graphics. <strong>Direct-to-Garment Printing</strong> - Best for complex, full-color designs and photo-realistic images. Simply upload your design or work with our design team to create custom artwork that meets your specifications.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200">
+                    <button class="w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors duration-200 group faq-toggle">
+                        <span class="text-gray-800 font-medium">Is there a minimum order size?</span>
+                        <svg class="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-transform duration-200 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">No, we don't have minimum order requirements! You can order as few as one piece of customized Adidas apparel. However, we do offer volume discounts for larger orders: 12+ pieces receive a 10% discount, 24+ pieces get 15% off, and orders of 50+ pieces qualify for our best bulk pricing with up to 25% savings. Setup fees may apply for very small orders depending on the customization method chosen.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200">
+                    <button class="w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors duration-200 group faq-toggle">
+                        <span class="text-gray-800 font-medium">How quickly can I get my order?</span>
+                        <svg class="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-transform duration-200 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">Standard production time is 7-10 business days from artwork approval. Rush orders can be completed in 3-5 business days for an additional fee. Express shipping options include: <strong>Standard Shipping</strong> (5-7 days) - Free on orders over $75, <strong>Expedited Shipping</strong> (2-3 days) - $15 flat rate, <strong>Overnight Shipping</strong> (Next business day) - $25 flat rate. Production begins once your design is approved and payment is processed.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3 class="text-xl font-bold mb-2">Champion Sweatshirts</h3>
-        <p class="text-gray-600 mb-6">Our team had Champion sweatshirts made. We were under time constraints to get them in time for a team function. The representative listened to the details and made it all happen.</p>
-      </div>
-      <div>
-        <div class="text-gray-800 font-bold mb-2">Matthew C.</div>
-        <div class="flex items-center text-green-600">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          Verified Review on Yotpo
+
+        <!-- More Brands Section -->
+        <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">More Brands Customers Love</h2>
+                <button class="text-sm text-gray-600 hover:text-gray-800 font-medium">Show More Brands</button>
+            </div>
+            
+            <!-- Brand Logos -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                <!-- Nike -->
+                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200">
+                    <img src="https://cdn.sanity.io/images/2ahps9jc/production/96692d5643123aac52b9d057d065e86703cd4b68-500x250.png?w=640&q=75&fit=min&auto=format" alt="">
+                </div>
+                
+                <!-- Under Armour -->
+                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200">
+                    <img src="https://cdn.sanity.io/images/2ahps9jc/production/e49e15964b9c681e383733712f4412d021813d60-552x276.png?w=640&q=75&fit=min&auto=format" alt="">
+                </div>
+                
+                <!-- Puma -->
+                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200">
+                   <img src="https://cdn.sanity.io/images/2ahps9jc/production/7ce8fea9752c0ba355ab75212e4adef85ca9a130-500x250.png?w=640&q=75&fit=min&auto=format" alt="">
+                </div>
+                
+                <!-- Champion -->
+                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200">
+                   <img src="https://cdn.sanity.io/images/2ahps9jc/production/efdb42916e67c914e1df2334e335c237dd15e645-500x250.png?w=640&q=75&fit=min&auto=format" alt="">
+                </div>
+                
+                <!-- Oakley -->
+                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200 col-span-2 sm:col-span-1">
+                  <img src="https://cdn.sanity.io/images/2ahps9jc/production/b9d86b0f96e867165bb28e3291301987e91e1e79-500x250.png?w=640&q=75&fit=min&auto=format" alt="">
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- The Leader Section -->
+        <div class="bg-white rounded-lg shadow-sm p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">The Leader In Custom Apparel</h2>
+            
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- No Minimums -->
+                <div class="text-center">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">No Minimums</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">We are committed to quality, priced products, meaning you can order as little as you need with no restrictions.</p>
+                </div>
+
+                <!-- 20 Years Experience -->
+                <div class="text-center">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">20 Years Experience</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">We've been growing businesses and perfecting custom apparel for more than two decades.</p>
+                </div>
+
+                <!-- Free & Fast Shipping -->
+                <div class="text-center">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Free & Fast Shipping</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">We're fast and right options for people on-the-go. Fast as two days.</p>
+                </div>
+
+                <!-- Satisfaction Guarantee -->
+                <div class="text-center">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Satisfaction Guarantee</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Each order is inspected - we want and ensure you're 100% happy with your order.</p>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-  </div>
-</div>
+
+ <script>
+  // Select all FAQ toggle buttons
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', function() {
+      const answer = this.nextElementSibling; // the div.faq-answer
+      const arrow = this.querySelector('.arrow');
+
+      // Toggle the answer visibility
+      if (answer) {
+        answer.classList.toggle('hidden');
+      }
+
+      // Rotate the arrow
+      if (arrow) {
+        arrow.classList.toggle('rotate-180');
+      }
+    });
+  });
+</script>
+
 
 
     </div>

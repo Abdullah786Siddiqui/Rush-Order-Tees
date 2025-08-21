@@ -43,15 +43,22 @@
         cursor: pointer;
         display: none;
       }
-       .filter-blue {
-  filter: invert(35%) sepia(90%) saturate(5000%) hue-rotate(180deg) brightness(95%) contrast(90%);
-}
+      /* Custom styles for the verified icon */
+      .verified-icon {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        vertical-align: middle;
+        margin-right: 0.25rem;
+      }
+      .filter-blue {
+        filter: invert(35%) sepia(90%) saturate(5000%) hue-rotate(180deg)
+          brightness(95%) contrast(90%);
+      }
     </style>
   </head>
   <body>
-    <!-- Navbar 1-->
-
-     <nav
+    <nav
       style="background-color: #f1f5f9"
       class="navbar navbar-expand-lg top-bar py-2"
     >
@@ -64,20 +71,196 @@
         <!-- Right section always aligned right -->
         <div class="ms-auto d-flex align-items-center gap-3">
           <!-- Search (Large screens only) -->
-          <div class="position-relative d-none d-lg-block">
-            <i
-              class="bi bi-search search-icon position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"
-            ></i>
-            <input
-              type="search"
-              class="form-control custom-height rounded-4 ps-5 pe-5 shadow-sm border-secondary-subtle"
-              placeholder="Search for products..."
-              aria-label="Search"
-            />
-            <i
-              class="bi bi-x clear-icon position-absolute top-50 end-0 fs-5 translate-middle-y pe-3 text-muted"
-            ></i>
+      <div class="position-relative d-none d-lg-block">
+  <i
+    class="bi bi-search search-icon position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"
+  ></i>
+
+  <!-- Search Input -->
+  <input
+    type="search"
+    id="searchInput"
+    class="form-control custom-height rounded-4 ps-5 pe-5 shadow-sm border-secondary-subtle"
+    placeholder="Search for products..."
+    aria-label="Search"
+  />
+
+  <i
+    class="bi bi-x clear-icon position-absolute top-50 end-0 fs-5 translate-middle-y pe-3 text-muted"
+  ></i>
+
+  <!-- Toggle Div with animation -->
+  <div
+  id="searchDropdown"
+  class="dropdown-animate position-fixed h-100 "
+  style="z-index: 1000; top: 55px; left: 0; right: 0; background-color: #F1F5F9;"
+>
+
+    <div class="grid grid-cols-12 gap-6 p-10 py-10 ">
+    <!-- Left Sidebar -->
+<div class="col-span-3 mb-10">
+  <!-- Section Heading -->
+  <h3 class="text-base font-semibold text-gray-700 mb-3 tracking-wide">
+    Trending Categories
+  </h3>
+
+  <!-- Trending Categories List -->
+  <ul class="space-y-2 text-gray-800 text-[15px] leading-relaxed">
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         T-Shirts
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Short Sleeve T-Shirts
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Performance Shirts
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Hoodies
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         All T-Shirts
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Hats
+      </a>
+    </li>
+    <li>
+      <a href="#" class="font-semibold text-blue-600 hover:underline">
+        View All Categories
+      </a>
+    </li>
+  </ul>
+
+  <!-- Helpful Links Section -->
+  <h3 class="text-base font-semibold text-gray-700 mt-8 mb-3 tracking-wide">
+    Helpful Links
+  </h3>
+  <ul class="space-y-2 text-gray-800 text-[15px] leading-relaxed">
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         My Account
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Saved Designs
+      </a>
+    </li>
+    <li>
+      <a href="#" 
+         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium">
+         Order History
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+    <!-- Right Products -->
+    <div class="col-span-9">
+      <h3 class="text-sm font-semibold text-gray-500 mb-4">Trending Products</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product Card -->
+        <div class="bg-white shadow rounded-lg p-3 hover:shadow-md transition">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Tee" class="mx-auto mb-2">
+          <p class="text-sm font-medium text-center">RushOrderTees Classic Tee</p>
+          <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+            ★★★★☆
           </div>
+          <p class="text-xs text-gray-500 text-center">2,832 reviews</p>
+        </div>
+
+        <!-- Product Card -->
+        <div class="bg-white shadow rounded-lg p-3 hover:shadow-md transition">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Tee" class="mx-auto mb-2">
+          <p class="text-sm font-medium text-center">Bella + Canvas Tri-Blend T-Shirt</p>
+          <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+            ★★★★☆
+          </div>
+          <p class="text-xs text-gray-500 text-center">391 reviews</p>
+        </div>
+
+        <!-- Product Card -->
+        <div class="bg-white shadow rounded-lg p-3 hover:shadow-md transition">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Long Sleeve" class="mx-auto mb-2">
+          <p class="text-sm font-medium text-center">Gildan Long Sleeve Ultra Cotton</p>
+          <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+            ★★★★☆
+          </div>
+          <p class="text-xs text-gray-500 text-center">674 reviews</p>
+        </div>
+
+        <!-- Product Card -->
+        <div class="bg-white shadow rounded-lg p-3 hover:shadow-md transition">
+          <img src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Hoodie" class="mx-auto mb-2">
+          <p class="text-sm font-medium text-center">Gildan Heavy Blend Hoodie</p>
+          <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+            ★★★★☆
+          </div>
+          <p class="text-xs text-gray-500 text-center">1,072 reviews</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+  /* Start hidden */
+  .dropdown-animate {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Show with fade-in */
+  .dropdown-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const searchDropdown = document.getElementById("searchDropdown");
+
+  // Toggle with animation
+  searchInput.addEventListener("click", (e) => {
+    e.stopPropagation();
+    searchDropdown.classList.toggle("show");
+  });
+
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (!searchDropdown.contains(e.target) && !searchInput.contains(e.target)) {
+      searchDropdown.classList.remove("show");
+    }
+  });
+</script>
+
+
           <!-- Account -->
           <!-- Header navigation element to simulate the My Account link -->
           <div class="relative">
@@ -124,7 +307,7 @@
             <!-- Dropdown menu content -->
             <div
               id="dropdown-menu"
-              class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 z-10 ring-1 ring-gray-200"
+              class=" z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200"
             >
               <!-- Dropdown Title -->
               <h2 class="text-lg font-semibold mb-4 text-center text-gray-800">
@@ -249,7 +432,7 @@
             <!-- Cart Dropdown menu content -->
             <div
               id="dropdown-menu-cart"
-              class="absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300 z-10"
+              class=" z-[9999]  absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300 "
             >
               <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2>
               <div class="text-center text-gray-500 mb-4">
@@ -280,243 +463,231 @@
         />
       </a>
       <ul class="hidden xl:flex gap-8">
-        <li class="relative group">
-          <a
-            href="#"
-            class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
-          >
-            Custom Apparel
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </a>
-          <div class="mega-dropdown">
-            <div class="grid grid-cols-4 gap-10">
-              <div>
-                <h6>Sweatshirts</h6>
-                <a href="#">Hoodies <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="./Pages/product.html">T Shirts</a><br />
-                <a href="#">Zip Up Hoodies</a><br />
-                <a href="#">Quarter Zip Ups</a><br />
-                <a href="#">Carhartt Hoodies</a><br />
-                <a href="#">Women's Sweatshirts</a><br />
-                <a href="#">Kids Sweatshirts</a><br />
-                <a href="#">Safety Hoodies</a><br />
-                <a href="#">View All Sweatshirts</a>
-              </div>
-              <div>
-                <h6>Polo Shirts</h6>
-                <a href="#">Embroidered Polos</a><br />
-                <a href="#">Performance Polos <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Golf Polos</a><br />
-                <a href="#">Nike Polos</a>
-                <h6 class="mt-4">Hats</h6>
-                <a href="#">Baseball Hats <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Trucker Hats</a><br />
-                <a href="#">Richardson Hats</a><br />
-                <a href="#">Bucket Hats</a>
-              </div>
-              <div>
-                <h6>Apparel</h6>
-                <a href="#">Activewear <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Aprons</a><br />
-                <a href="#">Athleisure Wear</a><br />
-                <a href="#">Business Apparel</a><br />
-                <a href="#">Jackets</a><br />
-                <a href="#">Pants & Shorts</a><br />
-                <a href="#">Safety</a><br />
-                <a href="#">Team Uniforms</a><br />
-                <a href="#">Workwear</a>
-              </div>
-              <div>
-                <h6>More Categories</h6>
-                <a href="#">Big & Tall</a><br />
-                <a href="#">Cropped Apparel</a><br />
-                <a href="#">Embroidered</a><br />
-                <a href="#">Golf</a><br />
-                <a href="#">Kids <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Premium</a><br />
-                <a href="#">Sustainable</a><br />
-                <a href="#">Womens</a><br />
-                <a href="#">New Arrivals</a>
-              </div>
-            </div>
-          </div>
-        </li>
-       <li class="relative group">
-          <a
-            href="#"
-            class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
-          >
-            Custom Apparel
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </a>
-          <div class="mega-dropdown">
-            <div class="grid grid-cols-4 gap-10">
-              <div>
-                <h6>Sweatshirts</h6>
-                <a href="#">Hoodies <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="./Pages/product.html">T Shirts</a><br />
-                <a href="#">Zip Up Hoodies</a><br />
-                <a href="#">Quarter Zip Ups</a><br />
-                <a href="#">Carhartt Hoodies</a><br />
-                <a href="#">Women's Sweatshirts</a><br />
-                <a href="#">Kids Sweatshirts</a><br />
-                <a href="#">Safety Hoodies</a><br />
-                <a href="#">View All Sweatshirts</a>
-              </div>
-              <div>
-                <h6>Polo Shirts</h6>
-                <a href="#">Embroidered Polos</a><br />
-                <a href="#">Performance Polos <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Golf Polos</a><br />
-                <a href="#">Nike Polos</a>
-                <h6 class="mt-4">Hats</h6>
-                <a href="#">Baseball Hats <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Trucker Hats</a><br />
-                <a href="#">Richardson Hats</a><br />
-                <a href="#">Bucket Hats</a>
-              </div>
-              <div>
-                <h6>Apparel</h6>
-                <a href="#">Activewear <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Aprons</a><br />
-                <a href="#">Athleisure Wear</a><br />
-                <a href="#">Business Apparel</a><br />
-                <a href="#">Jackets</a><br />
-                <a href="#">Pants & Shorts</a><br />
-                <a href="#">Safety</a><br />
-                <a href="#">Team Uniforms</a><br />
-                <a href="#">Workwear</a>
-              </div>
-              <div>
-                <h6>More Categories</h6>
-                <a href="#">Big & Tall</a><br />
-                <a href="#">Cropped Apparel</a><br />
-                <a href="#">Embroidered</a><br />
-                <a href="#">Golf</a><br />
-                <a href="#">Kids <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Premium</a><br />
-                <a href="#">Sustainable</a><br />
-                <a href="#">Womens</a><br />
-                <a href="#">New Arrivals</a>
-              </div>
-            </div>
-          </div>
-        </li>
-       <li class="relative group group-right">
-          <a
-            href="#"
-            class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
-          >
-            Custom Apparel
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </a>
-          <div class="mega-dropdown">
-            <div class="grid grid-cols-4 gap-10">
-              <div>
-                <h6>Sweatshirts</h6>
-                <a href="#">Hoodies <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="./Pages/product.html">T Shirts</a><br />
-                <a href="#">Zip Up Hoodies</a><br />
-                <a href="#">Quarter Zip Ups</a><br />
-                <a href="#">Carhartt Hoodies</a><br />
-                <a href="#">Women's Sweatshirts</a><br />
-                <a href="#">Kids Sweatshirts</a><br />
-                <a href="#">Safety Hoodies</a><br />
-                <a href="#">View All Sweatshirts</a>
-              </div>
-              <div>
-                <h6>Polo Shirts</h6>
-                <a href="#">Embroidered Polos</a><br />
-                <a href="#">Performance Polos <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Golf Polos</a><br />
-                <a href="#">Nike Polos</a>
-                <h6 class="mt-4">Hats</h6>
-                <a href="#">Baseball Hats <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Trucker Hats</a><br />
-                <a href="#">Richardson Hats</a><br />
-                <a href="#">Bucket Hats</a>
-              </div>
-              <div>
-                <h6>Apparel</h6>
-                <a href="#">Activewear <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Aprons</a><br />
-                <a href="#">Athleisure Wear</a><br />
-                <a href="#">Business Apparel</a><br />
-                <a href="#">Jackets</a><br />
-                <a href="#">Pants & Shorts</a><br />
-                <a href="#">Safety</a><br />
-                <a href="#">Team Uniforms</a><br />
-                <a href="#">Workwear</a>
-              </div>
-              <div>
-                <h6>More Categories</h6>
-                <a href="#">Big & Tall</a><br />
-                <a href="#">Cropped Apparel</a><br />
-                <a href="#">Embroidered</a><br />
-                <a href="#">Golf</a><br />
-                <a href="#">Kids <span class="badge-popular">Popular</span></a
-                ><br />
-                <a href="#">Premium</a><br />
-                <a href="#">Sustainable</a><br />
-                <a href="#">Womens</a><br />
-                <a href="#">New Arrivals</a>
-              </div>
-            </div>
-          </div>
-        </li>
+      
+      <li class="relative group">
+  <a
+    href="./Pages/product.html"
+    class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
+  >
+    Custom T-Sirts
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </a>
+  <div class="mega-dropdown">
+    <div class="grid grid-cols-4 gap-10">
+      <div>
+        <h6>Sweatshirts</h6>
+        <a href="./Pages/product.html">Hoodies <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">T Shirts</a><br />
+        <a href="./Pages/product.html">Zip Up Hoodies</a><br />
+        <a href="./Pages/product.html">Quarter Zip Ups</a><br />
+        <a href="./Pages/product.html">Carhartt Hoodies</a><br />
+        <a href="./Pages/product.html">Women's Sweatshirts</a><br />
+        <a href="./Pages/product.html">Kids Sweatshirts</a><br />
+        <a href="./Pages/product.html">Safety Hoodies</a><br />
+        <a href="./Pages/product.html">View All Sweatshirts</a>
+      </div>
+      <div>
+        <h6>Polo Shirts</h6>
+        <a href="./Pages/product.html">Embroidered Polos</a><br />
+        <a href="./Pages/product.html">Performance Polos <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Golf Polos</a><br />
+        <a href="./Pages/product.html">Nike Polos</a>
+        <h6 class="mt-4">Hats</h6>
+        <a href="./Pages/product.html">Baseball Hats <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Trucker Hats</a><br />
+        <a href="./Pages/product.html">Richardson Hats</a><br />
+        <a href="./Pages/product.html">Bucket Hats</a>
+      </div>
+      <div>
+        <h6>Apparel</h6>
+        <a href="./Pages/product.html">Activewear <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Aprons</a><br />
+        <a href="./Pages/product.html">Athleisure Wear</a><br />
+        <a href="./Pages/product.html">Business Apparel</a><br />
+        <a href="./Pages/product.html">Jackets</a><br />
+        <a href="./Pages/product.html">Pants & Shorts</a><br />
+        <a href="./Pages/product.html">Safety</a><br />
+        <a href="./Pages/product.html">Team Uniforms</a><br />
+        <a href="./Pages/product.html">Workwear</a>
+      </div>
+      <div>
+        <h6>More Categories</h6>
+        <a href="./Pages/product.html">Big & Tall</a><br />
+        <a href="./Pages/product.html">Cropped Apparel</a><br />
+        <a href="./Pages/product.html">Embroidered</a><br />
+        <a href="./Pages/product.html">Golf</a><br />
+        <a href="./Pages/product.html">Kids <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Premium</a><br />
+        <a href="./Pages/product.html">Sustainable</a><br />
+        <a href="./Pages/product.html">Womens</a><br />
+        <a href="./Pages/product.html">New Arrivals</a>
+      </div>
+    </div>
+  </div>
+</li>
+   <li class="relative group">
+  <a
+    href="./Pages/product.html"
+    class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
+  >
+    Custom Apparel
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </a>
+  <div class="mega-dropdown">
+    <div class="grid grid-cols-4 gap-10">
+      <div>
+        <h6>Sweatshirts</h6>
+        <a href="./Pages/product.html">Hoodies <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">T Shirts</a><br />
+        <a href="./Pages/product.html">Zip Up Hoodies</a><br />
+        <a href="./Pages/product.html">Quarter Zip Ups</a><br />
+        <a href="./Pages/product.html">Carhartt Hoodies</a><br />
+        <a href="./Pages/product.html">Women's Sweatshirts</a><br />
+        <a href="./Pages/product.html">Kids Sweatshirts</a><br />
+        <a href="./Pages/product.html">Safety Hoodies</a><br />
+        <a href="./Pages/product.html">View All Sweatshirts</a>
+      </div>
+      <div>
+        <h6>Polo Shirts</h6>
+        <a href="./Pages/product.html">Embroidered Polos</a><br />
+        <a href="./Pages/product.html">Performance Polos <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Golf Polos</a><br />
+        <a href="./Pages/product.html">Nike Polos</a>
+        <h6 class="mt-4">Hats</h6>
+        <a href="./Pages/product.html">Baseball Hats <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Trucker Hats</a><br />
+        <a href="./Pages/product.html">Richardson Hats</a><br />
+        <a href="./Pages/product.html">Bucket Hats</a>
+      </div>
+      <div>
+        <h6>Apparel</h6>
+        <a href="./Pages/product.html">Activewear <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Aprons</a><br />
+        <a href="./Pages/product.html">Athleisure Wear</a><br />
+        <a href="./Pages/product.html">Business Apparel</a><br />
+        <a href="./Pages/product.html">Jackets</a><br />
+        <a href="./Pages/product.html">Pants & Shorts</a><br />
+        <a href="./Pages/product.html">Safety</a><br />
+        <a href="./Pages/product.html">Team Uniforms</a><br />
+        <a href="./Pages/product.html">Workwear</a>
+      </div>
+      <div>
+        <h6>More Categories</h6>
+        <a href="./Pages/product.html">Big & Tall</a><br />
+        <a href="./Pages/product.html">Cropped Apparel</a><br />
+        <a href="./Pages/product.html">Embroidered</a><br />
+        <a href="./Pages/product.html">Golf</a><br />
+        <a href="./Pages/product.html">Kids <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Premium</a><br />
+        <a href="./Pages/product.html">Sustainable</a><br />
+        <a href="./Pages/product.html">Womens</a><br />
+        <a href="./Pages/product.html">New Arrivals</a>
+      </div>
+    </div>
+  </div>
+</li>
+
+    <li class="relative group group-right">
+  <a
+    href="./Pages/product.html"
+    class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1"
+  >
+   Promo Products
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-3 h-3 text-gray-500 transition-transform duration-200 group-hover:rotate-180"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </a>
+  <div class="mega-dropdown">
+    <div class="grid grid-cols-4 gap-10">
+      <div>
+        <h6>Sweatshirts</h6>
+        <a href="./Pages/product.html">Hoodies <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">T Shirts</a><br />
+        <a href="./Pages/product.html">Zip Up Hoodies</a><br />
+        <a href="./Pages/product.html">Quarter Zip Ups</a><br />
+        <a href="./Pages/product.html">Carhartt Hoodies</a><br />
+        <a href="./Pages/product.html">Women's Sweatshirts</a><br />
+        <a href="./Pages/product.html">Kids Sweatshirts</a><br />
+        <a href="./Pages/product.html">Safety Hoodies</a><br />
+        <a href="./Pages/product.html">View All Sweatshirts</a>
+      </div>
+      <div>
+        <h6>Polo Shirts</h6>
+        <a href="./Pages/product.html">Embroidered Polos</a><br />
+        <a href="./Pages/product.html">Performance Polos <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Golf Polos</a><br />
+        <a href="./Pages/product.html">Nike Polos</a>
+        <h6 class="mt-4">Hats</h6>
+        <a href="./Pages/product.html">Baseball Hats <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Trucker Hats</a><br />
+        <a href="./Pages/product.html">Richardson Hats</a><br />
+        <a href="./Pages/product.html">Bucket Hats</a>
+      </div>
+      <div>
+        <h6>Apparel</h6>
+        <a href="./Pages/product.html">Activewear <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Aprons</a><br />
+        <a href="./Pages/product.html">Athleisure Wear</a><br />
+        <a href="./Pages/product.html">Business Apparel</a><br />
+        <a href="./Pages/product.html">Jackets</a><br />
+        <a href="./Pages/product.html">Pants & Shorts</a><br />
+        <a href="./Pages/product.html">Safety</a><br />
+        <a href="./Pages/product.html">Team Uniforms</a><br />
+        <a href="./Pages/product.html">Workwear</a>
+      </div>
+      <div>
+        <h6>More Categories</h6>
+        <a href="./Pages/product.html">Big & Tall</a><br />
+        <a href="./Pages/product.html">Cropped Apparel</a><br />
+        <a href="./Pages/product.html">Embroidered</a><br />
+        <a href="./Pages/product.html">Golf</a><br />
+        <a href="./Pages/product.html">Kids <span class="badge-popular">Popular</span></a><br />
+        <a href="./Pages/product.html">Premium</a><br />
+        <a href="./Pages/product.html">Sustainable</a><br />
+        <a href="./Pages/product.html">Womens</a><br />
+        <a href="./Pages/product.html">New Arrivals</a>
+      </div>
+    </div>
+  </div>
+</li>
+
         <li class="relative group group-right">
             <a href="#" class="toggle font-medium text-gray-700 hover:text-blue-600 flex items-center gap-1">
               Brands
@@ -569,61 +740,62 @@
               <hr class="border-gray-200 mb-8" />
 
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-2 gap-x-12 text-sm">
-                <a href="#" class="text-gray-600 hover:text-blue-600">Adidas</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Champion</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Hanes</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Next Level</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Skullcandy</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">American Giant</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Columbia</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Helly Hansen</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Nike</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Sport-Tek</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">American Apparel</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Comfort Colors</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Hydro Flask</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Oakley</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Spyder</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Arctic Zone</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">CornerStone</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">JBL</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">OGIO</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Stanley</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Bella + Canvas</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Cotopaxi</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Jerzees</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Outdoor Research</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Stio</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Berne</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Cutter & Buck</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Koozie</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Patagonia</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Team 365</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Brooks Brothers</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Dickies</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Marine Layer</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Peter Millar</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">The North Face</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Bose</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">District</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Marmot</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Port Authority</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">TravisMathew</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Bullet</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Eddie Bauer</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Mophie</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Puma</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Under Armour</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">CamelBak</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">G/FORE</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Nautica</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Richardson</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Vineyard Vines</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Carhartt</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Gildan</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">New Era</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">Russell Athletic</a>
-                <a href="#" class="text-gray-600 hover:text-blue-600">YETI</a>
+               <a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Adidas</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Champion</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Hanes</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Next Level</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Skullcandy</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">American Giant</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Columbia</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Helly Hansen</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Nike</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Sport-Tek</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">American Apparel</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Comfort Colors</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Hydro Flask</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Oakley</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Spyder</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Arctic Zone</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">CornerStone</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">JBL</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">OGIO</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Stanley</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Bella + Canvas</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Cotopaxi</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Jerzees</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Outdoor Research</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Stio</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Berne</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Cutter & Buck</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Koozie</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Patagonia</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Team 365</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Brooks Brothers</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Dickies</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Marine Layer</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Peter Millar</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">The North Face</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Bose</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">District</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Marmot</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Port Authority</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">TravisMathew</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Bullet</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Eddie Bauer</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Mophie</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Puma</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Under Armour</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">CamelBak</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">G/FORE</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Nautica</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Richardson</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Vineyard Vines</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Carhartt</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Gildan</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">New Era</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">Russell Athletic</a>
+<a href="./Pages/brand.html" class="text-gray-600 hover:text-blue-600">YETI</a>
+
               </div>
             </div>
           </li>
@@ -674,7 +846,7 @@
   <button class="flex flex-col items-center">
     <img
       src="https://cdn-icons-png.flaticon.com/128/2801/2801881.png"
-      class="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10"
+      class="w-7 h-7 sm:w-9 sm:h-9 md:w-7 md:h-7"
       alt="Search Icon"
     />
     <span class="text-xs sm:text-sm mt-1">Search</span>
@@ -684,7 +856,7 @@
   <button class="flex flex-col items-center">
     <img
       src="https://cdn-icons-png.flaticon.com/128/7090/7090669.png"
-      class="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10"
+      class="w-7 h-7 sm:w-9 sm:h-9 md:w-7 md:h-7"
       alt="Help Icon"
     />
     <span class="text-xs sm:text-sm mt-1">Help</span>
@@ -694,7 +866,7 @@
   <button id="hamburger-btn" class="flex flex-col items-center">
     <img
       src="https://cdn-icons-png.flaticon.com/128/2976/2976215.png"
-      class="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10"
+      class="w-7 h-7 sm:w-9 sm:h-9 md:w-7 md:h-7"
       alt="Menu Icon"
     />
     <span class="text-xs sm:text-sm mt-1">Menu</span>
@@ -757,14 +929,82 @@
                 <p class="text-sm text-[#6b7280] mt-1">Style: CT89251601</p>
             </div>
     
-            <div class="mb-6">
-                <p class="text-sm font-medium text-[#4b5563] mb-2">Selected Color: <span class="font-normal text-[#1f2937]">Black</span></p>
-                <div class="flex items-center gap-3">
-                    <div class="w-6 h-6 rounded-full bg-[#1f2937] color-swatch-ring cursor-pointer"></div>
-                    <div class="w-6 h-6 rounded-full bg-[#374151] ring-2 ring-[#e5e7eb] cursor-pointer"></div>
-                    <div class="w-6 h-6 rounded-full bg-[#925420] ring-2 ring-[#e5e7eb] cursor-pointer"></div>
-                </div>
-            </div>
+          <div class="mb-6">
+    <p class="text-sm font-medium text-[#4b5563] mb-2">
+        Selected Color: <span id="selected-color" class="font-normal text-[#1f2937]">Black</span>
+    </p>
+    <div class="flex items-center gap-3">
+        <!-- Black -->
+        <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Black" class="sr-only" checked
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#1f2937] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+        <!-- Dark Gray -->
+        <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Dark Gray" class="sr-only"
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#374151] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+        <!-- Brown -->
+        <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Brown" class="sr-only "
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#925420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+         <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Brown" class="sr-only "
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#925420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+         <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Brown" class="sr-only "
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#925424] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+         <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Brown" class="sr-only "
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#925520] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+         <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Brown" class="sr-only "
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#922420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+         <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Brown" class="sr-only "
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#925400] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+         <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Brown" class="sr-only "
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#923420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+         <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Brown" class="sr-only "
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#928420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+         <label class="relative cursor-pointer">
+            <input type="radio" name="color" value="Brown" class="sr-only "
+                onchange="document.getElementById('selected-color').textContent = this.value">
+            <div class="w-6 h-6 bg-[#925620] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
+        </label>
+
+        
+    </div>
+</div>
+
+<style>
+    /* Highlight selected square */
+    input[type="radio"]:checked + div {
+        ring-width: 2px;
+        ring-color: #2563eb; /* Tailwind blue-600 */
+    }
+</style>
+
     
             <div class="mb-8">
                 <p class="text-sm font-medium text-[#4b5563] mb-2">Decoration Method:</p>
@@ -834,7 +1074,160 @@
         </div>
     </div>
 
+ <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 py-20">
 
+        <!-- Left Column: Product Details -->
+        <div class="lg:col-span-2">
+            <!-- Product Description Section -->
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm mb-8 border border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Product Description</h2>
+                <p class="text-gray-600 mb-6">
+                    Finally, activewear that can keep up with that youth-fueled energy! Personalize gym shirts, design practice tees for the team or use them as uniforms!
+                </p>
+
+                <!-- Available Sizes Section -->
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Available Sizes</h3>
+                <ul class="text-gray-600 space-y-2 mb-6">
+                    <li>
+                        <span class="font-medium">Youth:</span> YXS - YXL <a href="#" class="text-blue-500 hover:underline ml-2">Sizing Details</a>
+                    </li>
+                    <li>
+                        <span class="font-medium">Mens:</span> S - 4XL <a href="#" class="text-blue-500 hover:underline ml-2">Sizing Details</a>
+                    </li>
+                    <li>
+                        <span class="font-medium">Womens:</span> XS - 2XL <a href="#" class="text-blue-500 hover:underline ml-2">Sizing Details</a>
+                    </li>
+                </ul>
+
+                <hr class="border-gray-200 mb-6">
+
+                <!-- A4 Logo Section -->
+                <div class="flex items-center space-x-4 mb-4">
+                    <!-- Placeholder for the A4 Logo -->
+                    <div class="w-16 h-16 flex items-center justify-center">
+                       <img src="https://placehold.co/64x64/E0E7FF/4F46E5?text=A4" alt="A4 Logo" class="rounded-lg">
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-800">A4</h4>
+                        <p class="text-sm text-gray-500 font-semibold">pushing the limit</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">
+                    A4 specializes in high-performance athletic apparel designed to meet the rigorous demands of athletes. Their collection features innovative fabrics that provide comfort, durability, and moisture-wicking properties for optimal performance. With a commitment to quality and functionality, A4 offers a wide array of sportswear ideal for teams and individual athletes alike.
+                </p>
+                <a href="#" class="inline-block py-2 px-6 border border-blue-500 text-blue-500 rounded-full font-semibold hover:bg-blue-50 transition-colors">All A4</a>
+            </div>
+
+            <!-- Product Details Section -->
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Product Details</h2>
+                <ul class="text-gray-600 space-y-2 text-sm">
+                    <li><span class="font-semibold">●</span> 4 oz.</li>
+                    <li><span class="font-semibold">●</span> Superior moisture wicking for peak performance</li>
+                    <li><span class="font-semibold">●</span> Ultra-tight knit for better opacity and printability</li>
+                    <li><span class="font-semibold">●</span> Stain release and odor resistant for easy care</li>
+                    <li><span class="font-semibold">●</span> Fade and snag resistant for durability</li>
+                    <li><span class="font-semibold">●</span> 44+ UPF for UV sun protection</li>
+                    <li><span class="font-semibold">●</span> Reinforced shoulder seams</li>
+                    <li><span class="font-semibold">●</span> Double needle cover stitch hem</li>
+                    <li><span class="font-semibold">●</span> Transitioning to tag free neck</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Column: Pricing Calculator -->
+        <div class="lg:col-span-1">
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Pricing Calculator</h2>
+
+                <!-- Quantity Input -->
+                <div class="mb-6">
+                    <label for="quantity" class="block text-sm font-medium text-gray-700 mb-2">Quantity <span class="text-gray-400">(Min 50)</span></label>
+                    <div class="relative">
+                        <input type="number" id="quantity" value="50" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm">items</span>
+                    </div>
+                </div>
+
+                <!-- Color and Method Selectors -->
+                <div class="grid grid-cols-3 gap-2 mb-6 text-sm">
+                    <div>
+                        <p class="font-medium text-gray-700 mb-2">Front Colors</p>
+                        <select class="w-full px-2 py-2 border border-gray-300 rounded-lg bg-gray-50">
+                            <option>1 Color</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-700 mb-2">Back Colors</p>
+                        <select class="w-full px-2 py-2 border border-gray-300 rounded-lg bg-gray-50">
+                            <option>0 Colors</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-700 mb-2">Decoration </p>
+                        <select class="w-full px-2 py-2 border border-gray-300 rounded-lg bg-gray-50">
+                            <option>Printing</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr class="border-gray-200 my-6">
+
+                <!-- Price and Features Section -->
+                <div class="flex justify-between items-end mb-6">
+                    <div>
+                        <p class="text-sm text-gray-500 font-medium">Price Per Unit:</p>
+                        <p class="text-2xl font-bold text-gray-800">$14.56</p>
+                        <p class="text-sm text-gray-400 line-through">$32.98</p>
+                        <p class="text-xs text-green-600 font-semibold mt-1">56% bulk discount</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm text-gray-500 font-medium">Your price includes:</p>
+                        <ul class="text-gray-700 text-sm mt-1 space-y-1">
+                            <li class="flex items-center justify-end space-x-1"><span class="text-green-500">&#10003;</span><span>Free shipping</span></li>
+                            <li class="flex items-center justify-end space-x-1"><span class="text-green-500">&#10003;</span><span>100% satisfaction guarantee</span></li>
+                            <li class="flex items-center justify-end space-x-1"><span class="text-green-500">&#10003;</span><span>Fast turnaround</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between items-end bg-gray-50 p-4 rounded-lg mb-6">
+                    <div>
+                        <p class="text-sm text-gray-500 font-medium">Total Price:</p>
+                        <p class="text-2xl font-bold text-gray-800">$728.00</p>
+                        <p class="text-sm text-gray-500">for 50 items</p>
+                    </div>
+                </div>
+
+                <!-- Quote Checkbox -->
+                <div class="flex items-center mb-6">
+                    <input type="checkbox" id="email-quote" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label for="email-quote" class="ml-2 block text-sm text-gray-900">Email me this quote</label>
+                </div>
+            </div>
+
+            <!-- Flexible Payment Options Section -->
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-200 mt-8">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Flexible Payment Options</h3>
+                <p class="text-gray-600 mb-4 text-sm">Split your purchase into easy monthly payments with our trusted partners</p>
+                <div class="flex items-center space-x-4">
+                    <!-- Placeholders for payment logos -->
+                    <div class="w-16 h-6 rounded-md bg-gray-200 flex items-center justify-center">
+                        <p class="text-xs font-semibold text-gray-500">affirm</p>
+                    </div>
+                    <div class="w-16 h-6 rounded-md bg-gray-200 flex items-center justify-center">
+                        <p class="text-xs font-semibold text-gray-500">sezzle</p>
+                    </div>
+                    <div class="w-16 h-6 rounded-md bg-gray-200 flex items-center justify-center">
+                        <p class="text-xs font-semibold text-gray-500">Afterpay</p>
+                    </div>
+                    <div class="w-16 h-6 rounded-md bg-gray-200 flex items-center justify-center">
+                        <p class="text-xs font-semibold text-gray-500">Klarna</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
