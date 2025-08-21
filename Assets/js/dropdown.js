@@ -44,72 +44,59 @@ document.body.addEventListener("click", () => {
 });
 
 ////////////////// Dropdown meno js //////////////////
+
   document.addEventListener('DOMContentLoaded', function() {
-        const dropdownToggles = document.querySelectorAll('.toggle');
-        const mobileIcons = document.querySelector('#mobile-icons');
-        
-        // This function hides the mobile icons
-        function hideMobileIcons() {
-          if (window.innerWidth < 1072) {
-            mobileIcons.classList.add('hidden');
-            mobileIcons.classList.remove('flex');
-          }
-        }
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+    const mobileToggles = document.querySelectorAll('.mobile-toggle');
+    const dropdownToggles = document.querySelectorAll('.toggle');
 
-        // This function shows the mobile icons
-        function showMobileIcons() {
-          if (window.innerWidth < 1024) {
-            mobileIcons.classList.remove('hidden');
-            mobileIcons.classList.add('flex');
-          }
-        }
+    // Toggle mobile menu visibility
+    hamburgerBtn.addEventListener('click', function() {
+      mobileMenu.classList.remove('translate-x-full');
+    });
 
-        dropdownToggles.forEach(toggle => {
-          toggle.addEventListener('click', function(event) {
-            event.preventDefault();
+    closeMobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.add('translate-x-full');
+    });
 
-            const parentLi = this.closest('li.group');
-            const dropdown = parentLi.querySelector('.mega-dropdown');
-            const isAlreadyOpen = dropdown.classList.contains('is-open');
+    // Handle desktop dropdowns
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(event) {
+        if (window.innerWidth >= 1024) {
+          event.preventDefault();
+          const parentLi = this.closest('li.group');
+          const dropdown = parentLi.querySelector('.mega-dropdown');
+          const isAlreadyOpen = dropdown.classList.contains('is-open');
 
-            // Close all other dropdowns
-            document.querySelectorAll('.mega-dropdown').forEach(d => {
-              d.classList.remove('is-open');
-            });
-
-            // If the clicked dropdown was not already open, toggle it open and hide icons
-            if (!isAlreadyOpen) {
-              dropdown.classList.add('is-open');
-              hideMobileIcons();
-            } else {
-              // If it was already open, toggle it closed and show icons
-              showMobileIcons();
-            }
+          document.querySelectorAll('.mega-dropdown').forEach(d => {
+            d.classList.remove('is-open');
+            d.style.display = 'none'; // Hide all dropdowns
           });
-        });
 
-        // Close dropdowns and show icons when clicking anywhere else on the page
-        document.addEventListener('click', function(event) {
-          const isClickInsideDropdown = event.target.closest('.group');
-          if (!isClickInsideDropdown) {
-            document.querySelectorAll('.mega-dropdown').forEach(d => {
-              d.classList.remove('is-open');
-            });
-            showMobileIcons();
+          if (!isAlreadyOpen) {
+            dropdown.classList.add('is-open');
+            dropdown.style.display = 'block'; // Show the clicked dropdown
           }
-        });
-
-        // Listen for window resize to handle responsiveness
-        window.addEventListener('resize', function() {
-          if (window.innerWidth >= 1024) {
-            // On large screens, ensure icons are visible according to Tailwind classes
-            mobileIcons.classList.add('hidden');
-          } else {
-            // On small screens, check if any dropdown is open before showing icons
-            const isAnyDropdownOpen = document.querySelector('.mega-dropdown.is-open');
-            if (!isAnyDropdownOpen) {
-              showMobileIcons();
-            }
-          }
-        });
+        }
       });
+    });
+
+    // Handle mobile dropdowns
+    mobileToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(event) {
+        const parentLi = this.closest('li.group');
+        const dropdown = parentLi.querySelector('.mobile-mega-dropdown');
+
+        dropdown.classList.toggle('is-open');
+
+        const svg = this.nextElementSibling;
+        if (dropdown.classList.contains('is-open')) {
+          svg.style.transform = 'rotate(180deg)';
+        } else {
+          svg.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  });
