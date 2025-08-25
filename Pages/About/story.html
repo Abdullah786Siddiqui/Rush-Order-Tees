@@ -23,8 +23,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="/Assets/css/navbar.css" />
-    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="Assets/css/navbar.css" />
+    <link rel="stylesheet" href="Assets/css/main.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -57,8 +57,8 @@
       }
     </style>
   </head>
-  <body>
-   <nav
+  <body style="background-color: #F1F5F9;">
+  <nav
   style="background-color: #f1f5f9"
   class="navbar navbar-expand-lg top-bar py-2"
 >
@@ -866,577 +866,113 @@
       </div>
     </nav>
 
-
-    <!-- image area side bar -->
-
-    <div class="max-w-7xl mx-auto mt-6 px-4 flex gap-6">
-      <!-- Sidebar -->
-      <aside class=" hidden md:block w-64 h-[40vw] bg-white rounded-xl shadow-md p-6">
-        <!-- Shop by Style -->
-        <div>
-          <h2 class="font-semibold text-gray-800 mb-3">Shop by Style</h2>
-          <ul class="space-y-2 text-blue-600">
-            <li><a href="#" class="hover:underline">Champion Hoodies</a></li>
-            <li><a href="#" class="hover:underline">Champion T-Shirts</a></li>
-            <li><a href="#" class="hover:underline">Champion Jackets</a></li>
-            <li>
-              <a href="#" class="hover:underline">Champion Sweatshirts</a>
-            </li>
-          </ul>
-        </div>
-
-        <hr class="my-5" />
-
-        <!-- Shop by Category -->
-        <div>
-          <h2 class="font-semibold text-gray-800 mb-3">Shop by Category</h2>
-          <ul class="space-y-2 text-blue-600">
-            <li>
-              <a href="#" class="hover:underline"
-                >Champion Sweatpants & Joggers</a
-              >
-            </li>
-            <li><a href="#" class="hover:underline">Champion Shorts</a></li>
-            <li><a href="#" class="hover:underline">All Champion</a></li>
-          </ul>
-        </div>
-      </aside>
-
-      <!-- Main Content -->
-      <main class="flex-1 overflow-hidden">
-        <!-- Hero Section -->
-        <section>
-          <div
-            class="bg-blue-500 rounded-xl flex flex-col md:flex-row items-center justify-between px-8 py-10 text-white"
-          >
-            <!-- Text Content -->
-            <div class="max-w-lg">
-              <h1 class="text-4xl font-bold mb-2">Custom Champion</h1>
-              <p class="text-lg mb-3">
-                Unleash your brand logo on custom Champion apparel. Design your
-                legendary look.
-              </p>
-
-              <!-- CTA Button (full width) -->
-              <button
-                class="w-full bg-blue-900 text-white font-semibold py-2 rounded-lg shadow-md hover:bg-blue-800 transition"
-              >
-                Shop All Champion
-              </button>
-
-              <!-- Delivery Options -->
-              <div class="flex items-center gap-6 mt-6">
-                <!-- Free Delivery -->
-                <div class="flex items-center space-x-2">
-                  <!-- Truck Icon -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 text-white bg-blue-900 rounded-full p-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 13h2l1 2h13l1-2h1m-5 0V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m13 0a2 2 0 11-4 0m4 0a2 2 0 11-4 0"
-                    />
-                  </svg>
-                  <p class="text-sm">
-                    <span class="font-semibold">Free Delivery</span><br />
-                    As soon as Thu, Sep 4
-                  </p>
-                </div>
-
-                <!-- Rush Delivery -->
-                <div class="flex items-center space-x-2">
-                  <!-- Lightning Bolt Icon -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 text-white bg-yellow-500 rounded-full p-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                  <p class="text-sm">
-                    <span class="font-semibold">Rush Delivery</span><br />
-                    Guaranteed by Fri, Aug 22
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Image -->
-            <div class="mt-8 md:mt-0 md:ml-10 md-sm-10">
-              <img
-                src="https://cdn.sanity.io/images/2ahps9jc/production/99627a17f9f4a36d7fa50131ce7221a8c09f355e-1004x733.png?w=640&q=75&fit=min&auto=format"
-                alt="Champion Hoodies"
-                class="w-80 md:w-[400px]"
-              />
-            </div>
-          </div>
-        </section>
-
-        <!-- Top Picks -->
-         <div class="bg-gray-100 py-12 px-4 sm:px-6 lg:px-">
-    <h1 class="text-3xl font-bold text-gray-800 leading-relaxed">Top Picks</h1>
-        <p class="text-gray-600 mb-8 font-semibold">Shop best selling Adidas gear</p>
-    <div class="mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
-      <div class="group relative bg-white p-4 rounded-lg shadow-md">
-        <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-          <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Blue t-shirt with custom design" class="w-full h-full object-center object-fit-cover  lg:w-full lg:h-full">
-        </div>
-        <div class="mt-4 flex flex-col items-center text-center">
-          <div>
-            <h3 class="text-lg text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Adidas Tees
-              </a>
-            </h3>
-            <div class="flex items-center justify-center mt-1">
-              <div class="flex text-yellow-400">
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-              </div>
-              <p class="mt-0.5 text-sm text-gray-500">(5 reviews)</p>
-            </div>
-          </div>
-          <p class="mt-4 text-sm text-gray-500">Sizes S, M, L, XL</p>
-          <p class="text-sm font-medium text-gray-900 mt-1">Min. order 1</p>
-          <p class="text-2xl font-semibold text-gray-900 mt-2">$24.99</p>
-        </div>
-      </div>
-
-      <div class="group relative bg-white p-4 rounded-lg shadow-md">
-        <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-          <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Black Adidas polo shirt" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
-        </div>
-        <div class="mt-4 flex flex-col items-center text-center">
-          <div>
-            <h3 class="text-lg text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Adidas Performance Polo
-              </a>
-            </h3>
-            <div class="flex items-center justify-center mt-1">
-              <div class="flex text-yellow-400">
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-              </div>
-              <p class="mt-0.5 text-sm text-gray-500">(3 reviews)</p>
-            </div>
-          </div>
-          <p class="mt-4 text-sm text-gray-500">Sizes S, M, L, XL</p>
-          <p class="text-sm font-medium text-gray-900 mt-1">Min. order 1</p>
-          <p class="text-2xl font-semibold text-gray-900 mt-2">$34.99</p>
-        </div>
-      </div>
-
-      <div class="group relative bg-white p-4 rounded-lg shadow-md">
-        <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-          <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Black Adidas quarter-zip shirt" class="w-full h-full object-center object-cover lg:w-full lg:h-full">
-        </div>
-        <div class="mt-4 flex flex-col items-center text-center">
-          <div>
-            <h3 class="text-lg text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Adidas 3-Stripes Quarter-Zip
-              </a>
-            </h3>
-            <div class="flex items-center justify-center mt-1">
-              <div class="flex text-yellow-400">
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                <svg class="h-5 w-5 text-gray-200" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-              </div>
-              <p class="mt-0.5 text-sm text-gray-500">(9 reviews)</p>
-            </div>
-          </div>
-          <p class="mt-4 text-sm text-gray-500">Sizes S, M, L, XL</p>
-          <p class="text-sm font-medium text-gray-900 mt-1">Min. order 1</p>
-          <p class="text-2xl font-semibold text-gray-900 mt-2">$49.99</p>
-        </div>
-      </div>
-    </div>
-
-</div>
-       <!-- 4 gradient images -->
- <div class="max-w-6xl mx-auto font-sans mt-10 cursor-pointer">
-        <h1 class="text-3xl font-bold text-gray-800 leading-relaxed">Shop by Style</h1>
-        <p class="text-gray-600 mb-8 font-semibold">Find the perfect Champion product to customize</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
-
-            <div class="relative bg-[#f8e5d3] p-6 rounded-l-xl shadow-sm overflow-hidden flex items-center justify-center">
-                <img src="https://cdn.sanity.io/images/2ahps9jc/production/0d490937aa4f7f6a997446e0bcdf429e756366b0-6000x6000.png?w=640&q=75&fit=min&auto=format" alt="Champion Hoodies" class="w-2/3 object-cover transform scale-100 hover:scale-105 transition-transform duration-300">
-                <div class="absolute bottom-6 left-6 bg-white bg-opacity-80 backdrop-blur-sm px-4 py-2 rounded-lg font-medium text-gray-800">
-                    Champion Hoodies
-                </div>
-            </div>
-
-            <div class="relative bg-[#e6f1fb] p-6 rounded-r-xl shadow-sm overflow-hidden flex items-center justify-center">
-                <img src="https://cdn.sanity.io/images/2ahps9jc/production/0886b15d551a8ddfc468077bdc047f3ecacec453-6000x6000.png?w=640&q=75&fit=min&auto=format" alt="Champion T-Shirts" class="w-2/3 object-cover transform scale-100 hover:scale-105 transition-transform duration-300">
-                <div class="absolute bottom-6 left-6 bg-white bg-opacity-80 backdrop-blur-sm px-4 py-2 rounded-lg font-medium text-gray-800">
-                    Champion T-Shirts
-                </div>
-            </div>
-
-            <div class="relative bg-[#e6f1fb] p-6 rounded-l-xl shadow-sm overflow-hidden flex items-center justify-center">
-                <img src="https://cdn.sanity.io/images/2ahps9jc/production/93e84300d60ecf7128e9bfac1d63496ffedaa8a5-6000x6000.png?w=640&q=75&fit=min&auto=format" alt="Champion Jackets" class="w-2/3 object-cover transform scale-100 hover:scale-105 transition-transform duration-300">
-                <div class="absolute bottom-6 left-6 bg-white bg-opacity-80 backdrop-blur-sm px-4 py-2 rounded-lg font-medium text-gray-800">
-                    Champion Jackets
-                </div>
-            </div>
-
-            <div class="relative bg-[#f7f8d6] p-6 rounded-r-xlshadow-sm overflow-hidden flex items-center justify-center">
-                <img src="https://cdn.sanity.io/images/2ahps9jc/production/e45116d46f9f9097b11e152f77f8948eb0a67603-6000x6000.png?w=640&q=75&fit=min&auto=format" alt="Champion Sweatshirts" class="w-2/3 object-cover transform scale-100 hover:scale-105 transition-transform duration-300">
-                <div class="absolute bottom-6 left-6 bg-white bg-opacity-80 backdrop-blur-sm px-4 py-2 rounded-lg font-medium text-gray-800">
-                    Champion Sweatshirts
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- shop by category -->
-      <div class="max-w-6xl mx-auto font-sans ">
-        <h1 class="text-3xl font-semibold text-gray-800 mb-2">Shop by Category</h1>
-        <p class="text-gray-600 mb-8">Design your own Champion athletic wear</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-            <div class="relative bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
-                <img src="https://cdn.sanity.io/images/2ahps9jc/production/c8520740f9c50dd5199088fca684182de772d852-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Champion Sweatpants & Joggers" class="w-full h-auto object-cover transform scale-100 hover:scale-105 transition-transform duration-300">
-                <p class="mt-4 font-medium text-gray-800">Champion Sweatpants<br>& Joggers</p>
-            </div>
-
-            <div class="relative bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
-                <img src="https://cdn.sanity.io/images/2ahps9jc/production/dc58f114f073589ff27ac61a2bed2881b4005914-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="Champion Shorts" class="w-full h-auto object-cover transform scale-100 hover:scale-105 transition-transform duration-300">
-                <p class="mt-4 font-medium text-gray-800">Champion Shorts</p>
-            </div>
-
-            <div class="relative bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
-                <img src="https://cdn.sanity.io/images/2ahps9jc/production/36a096b699d99fc80b18f3b495cbab1da2b0197b-800x900.jpg?w=640&q=75&fit=min&auto=format" alt="All Champion" class="w-full h-auto object-cover transform scale-100 hover:scale-105 transition-transform duration-300">
-                <p class="mt-4 font-medium text-gray-800">All Champion</p>
-            </div>
-        </div>
-
-        <div class="bg-gray-200 p-8 rounded-lg">
-            <div class="mb-6">
-                <img src="https://cdn.sanity.io/images/2ahps9jc/production/2ec1ece58273045bc9ee6bf4867537d0bf0a67aa-350x78.png?w=640&q=75&fit=min&auto=format" alt="Champion Logo" class="h-12 w-auto">
-            </div>
-            
-            <p class="text-gray-700 mb-4 text-justify">
-                Combine iconic style with premium customization by creating custom Champion apparel. Known for its durable, comfortable, and trend-forward designs, Champion offers a standout selection of hoodies, sweatshirts, t-shirts, and joggers—perfect for businesses, sports teams, schools, and events. Add your logo, team name, or custom design to create stylish, high-quality apparel that blends streetwear appeal with everyday comfort.
-            </p>
-            <p class="text-gray-700 text-justify">
-                With expert embroidery and printing, your custom Champion gear will maintain its bold, recognizable look wash after wash. Whether you need branded team uniforms, corporate swag, or premium promotional apparel, we offer fast turnaround times and bulk ordering options to fit your needs. Order today and put your brand on authentic Champion apparel that never goes out of style!
-            </p>
-        </div>
-    </div>
-    <!-- text -->
-     <section class="bg-gray-50 py-16 px-6 md:px-16 mt-10">
-  <div class="max-w-4xl mx-auto text-center">
-    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-      Design Your Own Adidas Shirts & More
-    </h1>
-    <p class="text-gray-700 text-lg md:text-xl mb-4">
-      Show off your brand with custom Adidas gear built for comfort and performance. From polos and hoodies to jackets and hats, it’s easy to personalize top Adidas styles with your logo.
-    </p>
-    <p class="text-gray-700 text-lg md:text-xl mb-4">
-      Whether you're outfitting a team, planning a company event, or upgrading staff apparel, custom Adidas clothing delivers trusted quality and a professional look.
-    </p>
-    <p class="text-gray-700 text-lg md:text-xl">
-      Enjoy fast turnaround, free shipping, and simple design tools that make it easy to create branded Adidas apparel for any occasion.
-    </p>
+ <section class="bg-gray-100">
+    <!-- Heading -->
+    <!-- Hero Section with Background Image + Overlay -->
+<div class="relative bg-center bg-cover" style="background-image: url('your-image.jpg');">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+  
+  <!-- Content -->
+  <div class="relative text-center text-white py-16">
+    <h2 class="text-3xl font-semibold">Our Story</h2>
+    <p class="text-gray-200 mt-2">We Treat Every Customer Like Family</p>
   </div>
-</section>
+</div>
 
-    <!-- review -->
 
-    <div class="flex items-center justify-center min-h-screen bg-gray-100 p-2 sm:p-4 md:p-6 lg:p-8">
-        <div class="container mx-auto max-w-7xl">
-            <!-- Mobile: 1 column, Tablet: 2 columns, Desktop: 3 columns -->
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 place-items-center">
-                
-                <!-- Testimonial 1 -->
-                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 w-full max-w-sm flex flex-col justify-between h-full">
-                    <div>
-                        <!-- Star Rating -->
-                        <div class="flex items-center text-yellow-500 mb-3 sm:mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-bold mb-2">Champion Tees</h3>
-                        <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">At the last possible moment we decided to order tees. Not only did we receive these wonderful, self designed tees in time to present at our last game, but we became the envy of the entire league. Thank you for incredible service.</p>
-                    </div>
-                    <div>
-                        <div class="text-gray-800 font-bold mb-2 text-sm sm:text-base">Robert L.</div>
-                        <div class="flex items-center text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                            <span class="text-xs sm:text-sm">Verified Review on Yotpo</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- Content -->
+    <div class="max-w-5xl mx-auto px-6 py-12">
+      <h3 class="text-xl font-semibold mb-4">About Us</h3>
+      <p class="text-gray-700 mb-4">
+        RushOrderTees delivers the high-quality custom apparel you want on the deadline you need.
+      </p>
+      <p class="text-gray-700 mb-4">
+        We offer a wide variety of products that can be personalized with logos or artwork including 
+        <a href="#" class="text-blue-600 hover:underline">custom t-shirts</a>, 
+        <a href="#" class="text-blue-600 hover:underline">polo shirts</a>, 
+        <a href="#" class="text-blue-600 hover:underline">hats</a>, 
+        <a href="#" class="text-blue-600 hover:underline">custom hoodies</a>, 
+        and much more.
+      </p>
+      <p class="text-gray-700">
+        We’re proud to be the official partner of the Philadelphia 76ers and have more than 500,000 satisfied 
+        customers, ranging from Fortune 500 companies to small mom-and-pop shops. Whether an order is just one 
+        t-shirt or 10,000, we deliver high-quality prints in record time.
+      </p>
 
-                <!-- Testimonial 2 -->
-                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 w-full max-w-sm flex flex-col justify-between h-full">
-                    <div>
-                        <!-- Star Rating -->
-                        <div class="flex items-center text-yellow-500 mb-3 sm:mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-bold mb-2">Great product - easy process</h3>
-                        <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">Ordered a last minute shipment of sweatshirts with custom design work. Quality of the Champion crew neck sweatshirt is fantastic.</p>
-                    </div>
-                    <div>
-                        <div class="text-gray-800 font-bold mb-2 text-sm sm:text-base">Barak B.</div>
-                        <div class="flex items-center text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                            <span class="text-xs sm:text-sm">Verified Review on Yotpo</span>
-                        </div>
-                    </div>
-                </div>
+      <!-- Video -->
+      <div class="w-full mt-10">
+  <div class="relative w-full aspect-video">
+    <iframe 
+      class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+      src="https://www.youtube.com/embed/pmgsWLU8BGg?si=ZY1P2rznGyi_-VRL" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
 
-                <!-- Testimonial 3 -->
-                <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 w-full max-w-sm flex flex-col justify-between h-full md:col-span-2 xl:col-span-1 md:max-w-md xl:max-w-sm md:mx-auto xl:mx-0">
-                    <div>
-                        <!-- Star Rating -->
-                        <div class="flex items-center text-yellow-500 mb-3 sm:mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.691-.921 1.99 0l1.373 4.225a1 1 0 00.95.691h4.444c.969 0 1.371 1.24.588 1.81l-3.593 2.61a1 1 0 00-.363 1.118l1.373 4.225c.3.921-.755 1.688-1.545 1.118l-3.593-2.61a1 1 0 00-1.176 0l-3.593 2.61c-.79.57-1.844-.197-1.545-1.118l1.373-4.225a1 1 0 00-.363-1.118L2.915 9.653c-.783-.57-.381-1.81.588-1.81h4.444a1 1 0 00.95-.691l1.373-4.225z"/></svg>
-                        </div>
-                        <h3 class="text-lg sm:text-xl font-bold mb-2">Champion Sweatshirts</h3>
-                        <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">Our team had Champion sweatshirts made. We were under time constraints to get them in time for a team function. The representative listened to the details and made it all happen.</p>
-                    </div>
-                    <div>
-                        <div class="text-gray-800 font-bold mb-2 text-sm sm:text-base">Matthew C.</div>
-                        <div class="flex items-center text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 fill-current mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                            <span class="text-xs sm:text-sm">Verified Review on Yotpo</span>
-                        </div>
-                    </div>
-                </div>
+<div class="bg-gray-100 font-sans">
+  <div class="container mx-auto px-4 py-8">
 
-            </div>
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div class="overflow-hidden rounded-lg shadow-md">
+        <img src="https://cdn.sanity.io/images/2ahps9jc/production/3da09617606fe1ead06612e2fc81dfae77e41775-1920x1281.jpg?w=640&q=75&fit=min&auto=format" alt="Factory interior with screen printing machines" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-md">
+        <img src="https://cdn.sanity.io/images/2ahps9jc/production/c37d8639a125f9f5f778bfaec405d3b4d14a3b50-1920x1281.jpg?w=640&q=75&fit=min&auto=format" alt="Woman preparing a screen for printing" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-md">
+        <img src="https://cdn.sanity.io/images/2ahps9jc/production/0e668905c26ed094c1b068305f35ad8e40bc30fb-5323x3549.jpg?w=640&q=75&fit=min&auto=format" alt="Close-up of a blue screen printing machine" class="w-full h-full object-cover">
+      </div>
     </div>
 
-
-    <!-- others -->
-
-    <div class="max-w-4xl mx-auto p-6">
-        
-        <!-- Custom Adidas FAQs Section -->
-        <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Custom Adidas FAQs</h2>
-            
-            <!-- FAQ Items -->
-            <div class="space-y-1">
-                <div class="border-b border-gray-200">
-                    <button class="w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors duration-200 group faq-toggle">
-                        <span class="text-gray-800 font-medium">How much does personalized Adidas apparel cost?</span>
-                        <svg class="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-transform duration-200 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer hidden px-4 pb-4">
-                        <p class="text-gray-600 text-sm leading-relaxed">The cost of personalized Adidas apparel varies depending on the product type, customization method, and quantity ordered. Basic embroidery typically starts at $8-12 per item, while screen printing can range from $5-15 per piece. Premium customization options like heat transfer vinyl or specialty inks may cost more. We offer competitive bulk pricing for larger orders, and there are no setup fees for orders over 12 pieces.</p>
-                    </div>
-                </div>
-                
-                <div class="border-b border-gray-200">
-                    <button class="w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors duration-200 group faq-toggle">
-                        <span class="text-gray-800 font-medium">How can I customize Adidas apparel?</span>
-                        <svg class="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-transform duration-200 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer hidden px-4 pb-4">
-                        <p class="text-gray-600 text-sm leading-relaxed">We offer several customization methods for Adidas apparel: <strong>Embroidery</strong> - Perfect for logos, text, and detailed designs with a premium feel. <strong>Screen Printing</strong> - Ideal for large designs and bulk orders with vibrant colors. <strong>Heat Transfer Vinyl</strong> - Great for names, numbers, and simple graphics. <strong>Direct-to-Garment Printing</strong> - Best for complex, full-color designs and photo-realistic images. Simply upload your design or work with our design team to create custom artwork that meets your specifications.</p>
-                    </div>
-                </div>
-                
-                <div class="border-b border-gray-200">
-                    <button class="w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors duration-200 group faq-toggle">
-                        <span class="text-gray-800 font-medium">Is there a minimum order size?</span>
-                        <svg class="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-transform duration-200 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer hidden px-4 pb-4">
-                        <p class="text-gray-600 text-sm leading-relaxed">No, we don't have minimum order requirements! You can order as few as one piece of customized Adidas apparel. However, we do offer volume discounts for larger orders: 12+ pieces receive a 10% discount, 24+ pieces get 15% off, and orders of 50+ pieces qualify for our best bulk pricing with up to 25% savings. Setup fees may apply for very small orders depending on the customization method chosen.</p>
-                    </div>
-                </div>
-                
-                <div class="border-b border-gray-200">
-                    <button class="w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors duration-200 group faq-toggle">
-                        <span class="text-gray-800 font-medium">How quickly can I get my order?</span>
-                        <svg class="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-transform duration-200 arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer hidden px-4 pb-4">
-                        <p class="text-gray-600 text-sm leading-relaxed">Standard production time is 7-10 business days from artwork approval. Rush orders can be completed in 3-5 business days for an additional fee. Express shipping options include: <strong>Standard Shipping</strong> (5-7 days) - Free on orders over $75, <strong>Expedited Shipping</strong> (2-3 days) - $15 flat rate, <strong>Overnight Shipping</strong> (Next business day) - $25 flat rate. Production begins once your design is approved and payment is processed.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- More Brands Section -->
-        <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-900">More Brands Customers Love</h2>
-                <button class="text-sm text-gray-600 hover:text-gray-800 font-medium">Show More Brands</button>
-            </div>
-            
-            <!-- Brand Logos -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-                <!-- Nike -->
-                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200">
-                    <img src="https://cdn.sanity.io/images/2ahps9jc/production/96692d5643123aac52b9d057d065e86703cd4b68-500x250.png?w=640&q=75&fit=min&auto=format" alt="">
-                </div>
-                
-                <!-- Under Armour -->
-                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200">
-                    <img src="https://cdn.sanity.io/images/2ahps9jc/production/e49e15964b9c681e383733712f4412d021813d60-552x276.png?w=640&q=75&fit=min&auto=format" alt="">
-                </div>
-                
-                <!-- Puma -->
-                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200">
-                   <img src="https://cdn.sanity.io/images/2ahps9jc/production/7ce8fea9752c0ba355ab75212e4adef85ca9a130-500x250.png?w=640&q=75&fit=min&auto=format" alt="">
-                </div>
-                
-                <!-- Champion -->
-                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200">
-                   <img src="https://cdn.sanity.io/images/2ahps9jc/production/efdb42916e67c914e1df2334e335c237dd15e645-500x250.png?w=640&q=75&fit=min&auto=format" alt="">
-                </div>
-                
-                <!-- Oakley -->
-                <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-200 col-span-2 sm:col-span-1">
-                  <img src="https://cdn.sanity.io/images/2ahps9jc/production/b9d86b0f96e867165bb28e3291301987e91e1e79-500x250.png?w=640&q=75&fit=min&auto=format" alt="">
-                </div>
-            </div>
-        </div>
-
-        <!-- The Leader Section -->
-        <div class="bg-white rounded-lg shadow-sm p-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8">The Leader In Custom Apparel</h2>
-            
-            <!-- Features Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- No Minimums -->
-                <div class="text-center">
-                    <div class="mb-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2">No Minimums</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">We are committed to quality, priced products, meaning you can order as little as you need with no restrictions.</p>
-                </div>
-
-                <!-- 20 Years Experience -->
-                <div class="text-center">
-                    <div class="mb-4">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2">20 Years Experience</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">We've been growing businesses and perfecting custom apparel for more than two decades.</p>
-                </div>
-
-                <!-- Free & Fast Shipping -->
-                <div class="text-center">
-                    <div class="mb-4">
-                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2">Free & Fast Shipping</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">We're fast and right options for people on-the-go. Fast as two days.</p>
-                </div>
-
-                <!-- Satisfaction Guarantee -->
-                <div class="text-center">
-                    <div class="mb-4">
-                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto">
-                            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2">Satisfaction Guarantee</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Each order is inspected - we want and ensure you're 100% happy with your order.</p>
-                </div>
-
-            </div>
-        </div>
-
+    <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">History</h2>
+      <p class="text-gray-600 mb-4">
+        We started in a garage in 2002. While still in high school, our CEO Mike Nemeroff and his two siblings began screen printing as a way to help provide for their family during a difficult time. They learned the process from the ground up and obsessed over every detail.
+      </p>
+      <p class="text-gray-600">
+        The business developed over the years and Rush Order Tees grew into a leader in custom apparel products and became known for delivering the fastest turnaround times and exceptional customer service.
+      </p>
     </div>
 
- <script>
-  // Select all FAQ toggle buttons
-  document.querySelectorAll('.faq-toggle').forEach(button => {
-    button.addEventListener('click', function() {
-      const answer = this.nextElementSibling; // the div.faq-answer
-      const arrow = this.querySelector('.arrow');
-
-      // Toggle the answer visibility
-      if (answer) {
-        answer.classList.toggle('hidden');
-      }
-
-      // Rotate the arrow
-      if (arrow) {
-        arrow.classList.toggle('rotate-180');
-      }
-    });
-  });
-</script>
-
-
-
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="overflow-hidden rounded-lg shadow-md">
+        <img src="https://cdn.sanity.io/images/2ahps9jc/production/5eee0df33a184fe4ea9e607563d9fcd47382cd1d-3002x1762.jpg?w=640&q=75&fit=min&auto=format" alt="Close-up of an embroidery machine" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-md">
+        <img src="https://cdn.sanity.io/images/2ahps9jc/production/a8e9d4f7578f1fb35566fecf6a186862d83ebd6e-3000x1762.jpg?w=640&q=75&fit=min&auto=format" alt="A man holding a red t-shirt" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-md">
+        <img src="https://cdn.sanity.io/images/2ahps9jc/production/8f76bafb1089677e6448fceee418c61df1c89352-3000x1762.jpg?w=640&q=75&fit=min&auto=format" alt="Boxes of custom printed t-shirts on a conveyor belt" class="w-full h-full object-cover">
+      </div>
     </div>
 
-    <footer class="bg-[#0e1628] text-white py-12">
+  </div>
+</div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+<footer class="bg-[#0e1628] text-white py-12">
       <div class="container mx-auto px-4">
         <div class="flex justify-center mb-10">
           <img
@@ -1505,7 +1041,7 @@
             </ul>
           </div>
           <div>
-            <h4 class="font-bold text-lg mb-4">ABOUT</h4>
+            <a href="./Pages/About/about.html" class="font-bold text-lg mb-4 ">ABOUT</a>
             <ul>
               <li class="mb-2">
                 <a href="#" class="text-gray-400 hover:text-white">Reviews</a>
@@ -1681,9 +1217,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/Assets/js/swiper.js"></script>
-    <script src="/Assets/js/dropdown.js"></script>
-    <script src="/Assets/js/include.js"></script>
+    <script src="Assets/js/swiper.js"></script>
+    <script src="Assets/js/dropdown.js"></script>
+    <script src="Assets/js/include.js"></script>
 
     <!-- Bootstrap Icons -->
     <link
@@ -1692,3 +1228,4 @@
     />
   </body>
 </html>
+
