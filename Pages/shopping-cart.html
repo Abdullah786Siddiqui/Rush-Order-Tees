@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Rush Order Tees</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+<link 
+  rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+/>
+
+</head>
+<body class="bg-gray-100 min-h-screen">
+     <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img 
+        src="https://cdn.sanity.io/images/2ahps9jc/production/3ae1c16d3ec64699ef9fe2b86e6fbda1b358cade-300x120.png" 
+        alt="Logo"
+        class="h-12 w-auto"
+      >
+    </div>
+
+    <!-- Right Section -->
+     <div class="hidden xl:flex items-center gap-4">
+         
+          <div class="flex flex-col text-sm">
+            <div class="flex items-center gap-1.5 font-bold text-primary">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/7611/7611043.png"
+                class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
+                alt="Live Chat Icon"
+              />
+              <div class="flex flex-col">
+                <span>Live Chat Now</span>
+                <span class="text-xs text-muted -mt-0.5"
+                  >🟢 Chat With an Expert</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="vr"></div>
+          <div class="flex flex-col text-sm">
+            <div class="flex items-center gap-1.5 font-bold text-dark">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/1716/1716995.png"
+                class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 filter-blue"
+                alt="Phone Icon"
+              />
+              <div class="flex flex-col">
+                <span>(800) 620-1233</span>
+                <span class="text-xs text-muted -mt-0.5"
+                  >Talk to an Expert</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+</header>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto py-8 px-6">
+    
+              <h1 class="text-3xl font-semibold text-center mb-8">Shopping Cart</h1>
+
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 ">
+            <!-- Left Column - Product Details -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <!-- Customer Info -->
+                    <div class="flex justify-between items-center mb-6">
+                      <div>
+                        <h2 class="text-xl font-semibold">Abdullah Siddiqui
+                            <button class="text-blue-500 text-sm">Edit Design</button>
+                        </h2>
+                        </div>
+
+                        <div class="flex space-x-4">
+                            <button class="text-blue-500 text-sm">Remove Design</button>
+
+                        </div>
+                    </div>
+                    <hr class="py-2">
+
+                    <!-- Product -->
+                    <div class="flex space-x-4">
+                        <div class="flex-shrink-0">
+                            <img src="https://www.rushordertees.com/design/ZoomImage.php?src=11275501_f&style=f217&colorCode=a729&x=250&y=300&width=417&height=421&scale=.85&watermark=false" alt="Forest Green Fleece Jacket" class="w-32 h-32 rounded">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Port Authority Value Fleece Jacket</h3>
+                            <p class="text-gray-600">Forest Green</p>
+                            <p class="text-gray-600">128 items at $7.83 each</p>
+                            <p class="text-2xl max-sm:text-lg font-bold text-right max-sm:text-left">4,842.24</p>
+                            
+                            <!-- Size Options -->
+                            <div class="flex space-x-2  ">
+                                <button class="px-3 py-1 bg-slate-100 border border-gray-300 rounded text-sm">XS:40</button>
+                                <button class="px-3 py-1 bg-slate-100  border border-gray-300 rounded text-sm">XS:44</button>
+                                <button class="px-3 py-1 bg-slate-100  border border-gray-300 rounded text-sm">XXS:44</button>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="flex space-x-4 mt-4">
+                                <button class="text-blue-500 text-sm flex items-center space-x-1">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Edit Size</span>
+                                </button>
+                                <button class="text-blue-500 text-sm flex items-center space-x-1">
+                                    <i class="fas fa-palette"></i>
+                                    <span>Add Another Color</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notes Section -->
+                    <div class="mt-6 p-4 bg-blue-50 rounded-lg flex items-start space-x-3">
+                        <i class="fas fa-edit text-blue-500 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-blue-700">Add Notes or Special Instructions</h4>
+                            <p class="text-sm text-gray-600">We review and double-check every order for accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Delivery & Summary -->
+            <div class="space-y-6">
+                <!-- Delivery Options -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="font-semibold text-lg mb-4">Delivery Options</h3>
+                    
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3 p-3 border-2 border-blue-200 rounded-lg bg-blue-50">
+                            <input type="radio" name="delivery" class="text-blue-500" checked>
+                            <div class="flex-1">
+                                <div class="font-semibold">Free Delivery Sep 10 - Sep 15</div>
+                                <div class="text-sm text-gray-500">2 + 10 Business Days</div>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:border-gray-300">
+                            <input type="radio" name="delivery" class="text-blue-500">
+                            <div class="flex-1">
+                                <div class="font-semibold">September 2, Tue</div>
+                                <div class="text-sm text-gray-500">Guaranteed 2 Business Days</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold">+13.24 each</div>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:border-gray-300">
+                            <input type="radio" name="delivery" class="text-blue-500">
+                            <div class="flex-1">
+                                <div class="font-semibold">September 3, Wed</div>
+                                <div class="text-sm text-gray-500">Guaranteed 3 Business Days</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold">+12.48 each</div>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:border-gray-300">
+                            <input type="radio" name="delivery" class="text-blue-500">
+                            <div class="flex-1">
+                                <div class="font-semibold">September 4, Thu</div>
+                                <div class="text-sm text-gray-500">Guaranteed 5 Business Days</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold">+10.97 each</div>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-center space-x-3 p-3 border border-gray-200 rounded-lg hover:border-gray-300">
+                            <input type="radio" name="delivery" class="text-blue-500">
+                            <div class="flex-1">
+                                <div class="font-semibold">September 5, Fri</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-semibold">+9.45 each</div>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <button class="text-blue-500 text-sm mt-4">Show More Delivery Options</button>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="font-semibold text-lg mb-4">Order Summary</h3>
+                    
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span>Subtotal (128 items)</span>
+                            <span>4,842.24</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Free Delivery - Sep 10 - Sep 15</span>
+                            <span>0.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Tax (To be Calculated)</span>
+                            <span>-</span>
+                        </div>
+                        <hr>
+                        <div class="flex justify-between font-bold text-lg">
+                            <span>Total</span>
+                            <span>4,842.24</span>
+                        </div>
+                    </div>
+
+                    <!-- Payment Info -->
+                    <div class="mt-4 text-xs text-gray-600 text-center">
+                        <p>or 4 interest free payments of <span class="font-semibold">$1,210.56</span> with</p>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <img src="https://www.rushordertees.com/cart/images/installment-payment-options.png" alt="">
+                           
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button class="text-blue-500 text-sm">Voucher or Promo</button>
+                    </div>
+
+                    <!-- Checkout Buttons -->
+                    <div class="mt-6 space-y-3">
+                        <a href="./checkout.html" style="background-color: #0196FF;" class="w-full  hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition duration-200 flex items-center justify-center">
+                            CHECKOUT
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        
+                        <div class="text-center text-sm text-gray-500">
+                            or use Express Checkout
+                        </div>
+                        
+                        <button class="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-full transition duration-200 flex items-center justify-center">
+                           
+                            Buy with<i class="bi bi-google px-2"></i> Pay
+                        </button>
+                        
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-200">
+                            PayPal
+                        </button>
+                    </div>
+
+                    <!-- Security Badges -->
+                    <div class="mt-6">
+                        <div class="text-center text-sm text-gray-500 mb-3">100% Secure Checkout</div>
+                        <div class="flex justify-center items-center space-x-2 text-xs text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-lock"></i>
+                                <span>AES-256 Encrypted</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Guaranteed On-Time</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-user-shield"></i>
+                                <span>Privacy Protected</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Section -->
+    <!-- Trusted Section -->
+<div class="mt-16 text-center">
+  <hr class="py-10">
+  <p class="text-gray-700 mb-10 text-2xl font-semibold">
+    Trusted by over <span class="font-bold text-blue-600">1,000,000+</span> customers and counting.
+  </p>
+
+  <div class="flex flex-wrap justify-center items-center gap-14 opacity-90">
+    
+    <!-- Norton -->
+    <div class="flex items-center justify-center space-x-4">
+      <img 
+        src="https://www.rushordertees.com/cart/images/norton.png" 
+        alt="Norton"
+        class="h-24 w-auto"
+      >
+    </div>
+
+    <!-- BBB -->
+    <div class="flex items-center justify-center space-x-4">
+      <img 
+        src="https://www.rushordertees.com/cart/images/bbb.png" 
+        alt="BBB"
+        class="h-24 w-auto"
+      >
+    </div>
+
+    <!-- McAfee -->
+    <div class="flex items-center justify-center space-x-4">
+      <img 
+        src="https://www.rushordertees.com/cart/images/mcafee.png" 
+        alt="McAfee"
+        class="h-24 w-auto"
+      >
+    </div>
+
+    <!-- Stripe -->
+    <div class="flex items-center justify-center space-x-4">
+      <img 
+        src="https://www.rushordertees.com/cart/images/stripe.com.png" 
+        alt="Stripe"
+        class="h-20 w-auto"
+      >
+    </div>
+
+  </div>
+</div>
+
+
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-6 right-6">
+        <button class="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <script>
+        // Add interactivity for radio buttons
+        document.querySelectorAll('input[name="delivery"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Remove active styling from all labels
+                document.querySelectorAll('label').forEach(label => {
+                    label.classList.remove('border-blue-200', 'bg-blue-50');
+                    label.classList.add('border-gray-200');
+                });
+                
+                // Add active styling to selected label
+                if (this.checked) {
+                    this.parentElement.classList.remove('border-gray-200');
+                    this.parentElement.classList.add('border-blue-200', 'bg-blue-50');
+                }
+            });
+        });
+
+        // Add hover effects for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-1px)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rush UI</title>
+    <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <!-- Gooogle fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle"
+    />
+    <!-- Swiper.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Assets/css/navbar.css" />
+    <link rel="stylesheet" href="Assets/css/main.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .top-bar {
+        background-color: #f8fafd;
+        font-size: 0.9rem;
+      }
+      .custom-height {
+        height: 42px;
+      }
+      .search-icon {
+        pointer-events: none;
+        font-size: 1rem;
+      }
+      .clear-icon {
+        cursor: pointer;
+        display: none;
+      }
+      /* Custom styles for the verified icon */
+      .verified-icon {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        vertical-align: middle;
+        margin-right: 0.25rem;
+      }
+      .filter-blue {
+        filter: invert(35%) sepia(90%) saturate(5000%) hue-rotate(180deg)
+          brightness(95%) contrast(90%);
+      }
+    </style>
+  </head>
+  <body style="background-color: #F1F5F9;">
+  <nav
+  style="background-color: #f1f5f9"
+  class="navbar navbar-expand-lg top-bar py-2"
+>
+  <div class="container-fluid position-relative">
+    <!-- Left Info Text (Desktop only) -->
+    <span class="navbar-text small text-muted me-3 d-none d-md-block">
+      1,000,000+ Customers Nationwide w/ 99.7% Satisfaction
+    </span>
+
+    <!-- Right section always aligned right -->
+    <div class="ms-auto d-flex align-items-center gap-3">
+      <!-- Search (Large screens only) -->
+      <div class="position-relative d-none d-lg-block">
+        <i
+          class="bi bi-search search-icon position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"
+        ></i>
+
+        <!-- Search Input -->
+        <input
+          type="search"
+          id="searchInput"
+          class="form-control custom-height rounded-4 ps-5 pe-5 shadow-sm border-secondary-subtle"
+          placeholder="Search for products..."
+          aria-label="Search"
+        />
+
+        <i
+          class="bi bi-x clear-icon position-absolute top-50 end-0 fs-5 translate-middle-y pe-3 text-muted"
+        ></i>
+      </div>
+
+      <!-- Account -->
+     <div class="relative"> <button id="my-account-button" class="flex items-center space-x-2 text-black-600 hover:text-blue-700 transition-colors duration-200" > <!-- Account icon from Lucide React --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user" > <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="10" r="3" /> <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" /> </svg> <span class="font-medium">My Account</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Dropdown menu content --> <div id="dropdown-menu" class="z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200" > <!-- Dropdown Title --> <h2 class="text-lg font-semibold mb-4 text-center text-gray-800"> Login to Your Account </h2> <!-- Features List --> <ul class="space-y-3 mb-4"> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Access your saved designs</span > </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm">Track your orders</span> </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Easily place a reorder</span > </li> </ul> <!-- Sign In Button --> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Sign In </button> </div> </div> <!-- Cart --> <div class="relative"> <button id="cart-button" class="flex items-center space-x-2 text-gray-700 hover:text-blue-700 transition-colors duration-200" > <!-- Cart Icon as SVG --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart" > <circle cx="8" cy="21" r="1" /> <circle cx="19" cy="21" r="1" /> <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /> </svg> <span class="font-medium">Cart (0)</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow-cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Cart Dropdown menu content --> <div id="dropdown-menu-cart" class="z-[9999] absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300" > <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2> <div class="text-center text-gray-500 mb-4"> Your Cart is Empty!<br /> Let's Create something great. Click below to get started. </div> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Start Designing </button> </div> </div>
+
+
+    <!-- 🔥 Fixed Search Dropdown -->
+    <div
+      id="searchDropdown"
+      class="hidden z-[9999]  mt-2 "
+      style="
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f1f5f9;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      "
+    >
+        <div class="grid grid-cols-12 gap-6 p-10 py-10">
+                <!-- Left Sidebar -->
+                <div class="col-span-3 mb-10">
+                  <!-- Section Heading -->
+                  <h3
+                    class="text-base font-semibold text-gray-700 mb-3 tracking-wide"
+                  >
+                    Trending Categories
+                  </h3>
+
+                  <!-- Trending Categories List -->
+                  <ul
+                    class="space-y-2 text-gray-800 text-[15px] leading-relaxed"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
+                      >
+                        T-Shirts
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
+                      >
+                        Short Sleeve T-Shirts
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
+                      >
+                        Performance Shirts
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
+                      >
+                        Hoodies
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
+                      >
+                        All T-Shirts
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
+                      >
+                        Hats
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="font-semibold text-blue-600 hover:underline"
+                      >
+                        View All Categories
+                      </a>
+                    </li>
+                  </ul>
+
+                  <!-- Helpful Links Section -->
+                  <h3
+                    class="text-base font-semibold text-gray-700 mt-8 mb-3 tracking-wide"
+                  >
+                    Helpful Links
+                  </h3>
+                  <ul
+                    class="space-y-2 text-gray-800 text-[15px] leading-relaxed"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
+                      >
+                        My Account
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
+                      >
+                        Saved Designs
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
+                      >
+                        Order History
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Right Products -->
+                <div class="col-span-9">
+                  <h3 class="text-sm font-semibold text-gray-500 mb-4">
+                    Trending Products
+                  </h3>
+                  <div
+                    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+                  >
+                    <!-- Product Card -->
+                    <div
+                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+                    >
+                      <img
+                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+                        alt="Tee"
+                        class="mx-auto mb-2"
+                      />
+                      <p class="text-sm font-medium text-center">
+                        RushOrderTees Classic Tee
+                      </p>
+                      <div
+                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+                      >
+                        ★★★★☆
+                      </div>
+                      <p class="text-xs text-gray-500 text-center">
+                        2,832 reviews
+                      </p>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div
+                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+                    >
+                      <img
+                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+                        alt="Tee"
+                        class="mx-auto mb-2"
+                      />
+                      <p class="text-sm font-medium text-center">
+                        Bella + Canvas Tri-Blend T-Shirt
+                      </p>
+                      <div
+                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+                      >
+                        ★★★★☆
+                      </div>
+                      <p class="text-xs text-gray-500 text-center">
+                        391 reviews
+                      </p>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div
+                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+                    >
+                      <img
+                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+                        alt="Long Sleeve"
+                        class="mx-auto mb-2"
+                      />
+                      <p class="text-sm font-medium text-center">
+                        Gildan Long Sleeve Ultra Cotton
+                      </p>
+                      <div
+                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+                      >
+                        ★★★★☆
+                      </div>
+                      <p class="text-xs text-gray-500 text-center">
+                        674 reviews
+                      </p>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div
+                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+                    >
+                      <img
+                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+                        alt="Hoodie"
+                        class="mx-auto mb-2"
+                      />
+                      <p class="text-sm font-medium text-center">
+                        Gildan Heavy Blend Hoodie
+                      </p>
+                      <div
+                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+                      >
+                        ★★★★☆
+                      </div>
+                      <p class="text-xs text-gray-500 text-center">
+                        1,072 reviews
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("searchInput");
+    const searchDropdown = document.getElementById("searchDropdown");
+
+    searchInput.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (window.innerWidth > 993) {
+        searchDropdown.classList.toggle("hidden");
+      } else {
+        searchDropdown.classList.add("hidden"); // force hide if <993
+      }
+    });
+
+    
+
+    document.addEventListener("click", (e) => {
+      if (
+        !searchDropdown.contains(e.target) &&
+        !searchInput.contains(e.target)
+      ) {
+        searchDropdown.classList.add("hidden");
+      }
+    });
+  });
+</script>
+
+
+    <!-- Navbar 2 -->
+
+    <nav class="relative bg-white shadow-sm lg:px-8 ">
+      <div
+        class="container-fluid mx-auto flex items-center justify-between px-6 py-3"
+      >
+        <div class="flex items-center  ">
+  <a href="/index.html" class="mr-8">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/3ae1c16d3ec64699ef9fe2b86e6fbda1b358cade-300x120.png"
+      class="h-10"
+      alt="Logo"
+    />
+  </a>
+
+<div class="dropdowns d-flex justify-start  xl:block hidden   ">
+<div class="relative group inline-block">
+  <!-- Main Link -->
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+    Custom T-Shirts
+    <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+
+
+  <!-- Mega Dropdown -->
+  <div class="hidden group-hover:block absolute top-full left-0 w-[900px] bg-white shadow-lg border border-gray-200 rounded  z-50">
+    
+    <!-- Top Blue Line + Arrow -->
+    <div class="relative">
+      <!-- Blue line -->
+      <div class="h-1 bg-blue-500 w-full rounded-t"></div>
+    
+    </div>
+
+ <div class="grid grid-cols-4 gap-6 p-6 text-gray-700">
+  <div>
+    <h3 class="font-semibold mb-1">Sweatshirts</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Hoodies <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Crewnecks</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Zip Up Hoodies</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Quarter Zip Ups</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Carhartt Hoodies</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Women’s Sweatshirts</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids Sweatshirts</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Safety Hoodies</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">View All Sweatshirts</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="font-semibold mb-1">Polo Shirts</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered Polos</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Performance Polos <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf Polos</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Nike Polos</a></li>
+    </ul>
+
+    <h3 class="font-semibold mt-4 mb-1">Hats</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Baseball Hats <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Trucker Hats</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Richardson Hats</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Bucket Hats</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="font-semibold mb-1">Apparel</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Activewear <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Aprons</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Athleisure Wear</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Business Apparel</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Jackets</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Pants & Shorts</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Safety</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Team Uniforms</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Workwear</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="font-semibold mb-1">More Categories</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Big & Tall</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Cropped Apparel</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Premium</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Sustainable</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Womens</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">New Arrivals</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+<div class="relative group inline-block">
+  <!-- Main Link -->
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+    Custom Apparel
+    <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+
+
+  <!-- Mega Dropdown -->
+  <div class="hidden group-hover:block absolute top-full left-0 w-[900px] bg-white shadow-lg border border-gray-200 rounded  z-50">
+    
+    <!-- Top Blue Line + Arrow -->
+    <div class="relative">
+      <!-- Blue line -->
+      <div class="h-1 bg-blue-500 w-full rounded-t"></div>
+    
+    </div>
+
+ <div class="grid grid-cols-4 gap-6 p-6 text-gray-700">
+  <div>
+    <h3 class="font-semibold mb-1">Sweatshirts</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Hoodies <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Crewnecks</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Zip Up Hoodies</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Quarter Zip Ups</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Carhartt Hoodies</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Women’s Sweatshirts</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids Sweatshirts</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Safety Hoodies</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">View All Sweatshirts</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="font-semibold mb-1">Polo Shirts</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered Polos</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Performance Polos <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf Polos</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Nike Polos</a></li>
+    </ul>
+
+    <h3 class="font-semibold mt-4 mb-1">Hats</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Baseball Hats <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Trucker Hats</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Richardson Hats</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Bucket Hats</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="font-semibold mb-1">Apparel</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Activewear <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Aprons</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Athleisure Wear</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Business Apparel</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Jackets</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Pants & Shorts</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Safety</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Team Uniforms</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Workwear</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="font-semibold mb-1">More Categories</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Big & Tall</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Cropped Apparel</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Premium</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Sustainable</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Womens</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">New Arrivals</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+<div class="relative group inline-block">
+  <!-- Main Link -->
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+    Promo Products
+    <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+
+
+  <!-- Mega Dropdown -->
+  <div class="hidden group-hover:block absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-white shadow-lg border border-gray-200 rounded mt-1 z-50">
+    
+    <!-- Top Blue Line + Arrow -->
+    <div class="relative">
+      <!-- Blue line -->
+      <div class="h-1 bg-blue-500 w-full rounded-t"></div>
+    
+    </div>
+
+ <div class="grid grid-cols-4 gap-6 p-6 text-gray-700">
+  <div>
+    <h3 class="font-semibold mb-1">Sweatshirts</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Hoodies <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Crewnecks</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Zip Up Hoodies</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Quarter Zip Ups</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Carhartt Hoodies</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Women’s Sweatshirts</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids Sweatshirts</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Safety Hoodies</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">View All Sweatshirts</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="font-semibold mb-1">Polo Shirts</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered Polos</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Performance Polos <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf Polos</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Nike Polos</a></li>
+    </ul>
+
+    <h3 class="font-semibold mt-4 mb-1">Hats</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Baseball Hats <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Trucker Hats</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Richardson Hats</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Bucket Hats</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="font-semibold mb-1">Apparel</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Activewear <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Aprons</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Athleisure Wear</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Business Apparel</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Jackets</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Pants & Shorts</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Safety</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Team Uniforms</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Workwear</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="font-semibold mb-1">More Categories</h3>
+    <hr class="mb-2">
+    <ul class="space-y-1">
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Big & Tall</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Cropped Apparel</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Premium</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Sustainable</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Womens</a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">New Arrivals</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+<div class="relative group inline-block">
+  <!-- Main Link -->
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+    Brands
+    <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+
+
+  <!-- Mega Dropdown -->
+  <div class="hidden group-hover:block absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-white shadow-lg border border-gray-200 rounded mt-1 z-50">
+    
+    <!-- Top Blue Line + Arrow -->
+    <div class="relative">
+      <!-- Blue line -->
+      <div class="h-1 bg-blue-500 w-full rounded-t"></div>
+    
+    </div>
+
+<div class="p-6">
+  <!-- Brand Logos Row -->
+  <div class="flex justify-center items-center space-x-10 mb-4">
+    <a href="./Pages/brand.html">
+      <img src="https://cdn.sanity.io/images/2ahps9jc/production/68e9867b4a48e9e3e8db11e9e0cc715f3f294abd-200x150.png?w=640&q=75&fit=min&auto=format" alt="Nike" class="h-16 w-auto">
+    </a>
+    <a href="./Pages/brand.html">
+      <img src="https://cdn.sanity.io/images/2ahps9jc/production/65b923e79e305b886b5106c32183ec305bc7268f-200x150.png?w=640&q=75&fit=min&auto=format" alt="Under Armour" class="h-16 w-auto">
+    </a>
+    <a href="./Pages/brand.html">
+      <img src="https://cdn.sanity.io/images/2ahps9jc/production/dff5a2e74cc6c5a332da47cd9cad96090df0c9c5-200x150.png?w=640&q=75&fit=min&auto=format" alt="Carhartt" class="h-16 w-auto">
+    </a>
+    <a href="./Pages/brand.html">
+      <img src="https://cdn.sanity.io/images/2ahps9jc/production/4dc9662f60f2cca9390a06ed9558cb0c94cf9787-200x150.png?w=640&q=75&fit=min&auto=format" alt="The North Face" class="h-16 w-auto">
+    </a>
+    <!-- Highlighted Brand -->
+    <div class="bg-blue-50 p-4 rounded-lg">
+      <a href="./Pages/brand.html">
+        <img src="https://cdn.sanity.io/images/2ahps9jc/production/d65be0b68b7b43841c11f789796661027faaa964-200x150.png?w=640&q=75&fit=min&auto=format" alt="Champion" class="h-16 w-auto">
+      </a>
+    </div>
+    <a href="./Pages/brand.html">
+      <img src="https://cdn.sanity.io/images/2ahps9jc/production/82a633e7adae679c55d4d7b5425f9719d9fdbdab-200x150.png?w=640&q=75&fit=min&auto=format" alt="Adidas" class="h-16 w-auto">
+    </a>
+   
+  </div>
+  <hr class="mb-2">
+  <!-- Brand Names Columns -->
+  <div class="grid grid-cols-4 gap-6 text-gray-700">
+    <div>
+      <ul class="space-y-1">
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Adidas</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">American Giant</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">American Apparel</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Arctic Zone</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Bella + Canvas</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Berne</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Brooks Brothers</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-1">
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Champion</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Columbia</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Comfort Colors</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Dickies</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">District</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Eddie Bauer</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Gildan</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-1">
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Hanes</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Helly Hansen</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Hydro Flask</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">JBL</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Jerzees</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Koozie</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Nike</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-1">
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">The North Face</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Under Armour</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">Vineyard Vines</a></li>
+        <li><a href="./Pages/brand.html" class="hover:text-blue-500">YETI</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+ 
+</div>
+
+        <div class="hidden xl:flex items-center gap-4">
+          <button class="btn btn-outline-primary font-bold rounded-4 px-3 py-2">
+            Design Now
+          </button>
+          <div class="flex flex-col text-sm">
+            <div class="flex items-center gap-1.5 font-bold text-primary">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/7611/7611043.png"
+                class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
+                alt="Live Chat Icon"
+              />
+              <div class="flex flex-col">
+                <span>Live Chat Now</span>
+                <span class="text-xs text-muted -mt-0.5"
+                  >🟢 Chat With an Expert</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="vr"></div>
+          <div class="flex flex-col text-sm">
+            <div class="flex items-center gap-1.5 font-bold text-dark">
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/1716/1716995.png"
+                class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 filter-blue"
+                alt="Phone Icon"
+              />
+              <div class="flex flex-col">
+                <span>(800) 620-1233</span>
+                <span class="text-xs text-muted -mt-0.5"
+                  >Talk to an Expert</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex items-center justify-around gap-3 sm:gap-4 md:gap-6 xl:hidden"
+          id="mobile-icons"
+        >
+          <!-- Search Icon -->
+          <button class="flex flex-col items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2801/2801881.png"
+              class="w-7 h-7 sm:w-9 sm:h-9 md:w-7 md:h-7"
+              alt="Search Icon"
+            />
+            <span class="text-xs sm:text-sm mt-1">Search</span>
+          </button>
+
+          <!-- Help Icon -->
+          <button class="flex flex-col items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/7090/7090669.png"
+              class="w-7 h-7 sm:w-9 sm:h-9 md:w-7 md:h-7"
+              alt="Help Icon"
+            />
+            <span class="text-xs sm:text-sm mt-1">Help</span>
+          </button>
+
+          <!-- Menu/Hamburger Icon -->
+          <button id="hamburger-btn" class="flex flex-col items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2976/2976215.png"
+              class="w-7 h-7 sm:w-9 sm:h-9 md:w-7 md:h-7"
+              alt="Menu Icon"
+            />
+            <span class="text-xs sm:text-sm mt-1">Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed top-0 left-0 w-full h-full bg-white transition-transform duration-300 transform translate-x-full z-[1000] p-6 lg:hidden"
+      >
+        <div class="flex justify-end mb-8">
+          <button id="close-mobile-menu">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png"
+              class="w-5 h-5"
+              alt="Close Icon"
+            />
+          </button>
+        </div>
+        <ul class="flex flex-col gap-6 text-xl">
+          <li>
+            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+              >Custom T-Shirts</a
+            >
+          </li>
+          <li>
+            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+              >Custom Apparial</a
+            >
+          </li>
+          <li>
+            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+              >Promo Products</a
+            >
+          </li>
+          <li>
+            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+              >Brands</a
+            >
+          </li>
+        </ul>
+        <div class="flex flex-col mt-8 gap-4">
+          <button
+            class="btn btn-outline-primary w-full py-2 rounded-5 hover:blue-500"
+          >
+            Design Now
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+ <div class="flex h-screen  p-8">
+        <!-- Sidebar -->
+        <div class="w-80 bg-white">
+            <!-- My Account Header -->
+            <div class="px-6 py-6">
+                <h2 class="text-xl font-medium text-gray-900">My Account</h2>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="space-y-0">
+                    <li>
+                        <a href="#" class="block px-6 py-3 text-blue-500 bg-blue-50 border-l-4 border-blue-500 text-sm">
+                            My Designs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 text-sm">
+                            Order History
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 text-sm">
+                            Group Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 text-sm">
+                            Log Out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Get Help Section -->
+            <div class="mt-12 px-6">
+                <h3 class="text-base font-medium text-gray-900 mb-4">Get Help</h3>
+                <p class="text-xs text-gray-600 leading-relaxed mb-6">
+                    All of your designs are saved here for easy access. If you have any questions or need help with an order, please get in touch with us!
+                </p>
+                
+                <!-- Contact Options -->
+                <div class="space-y-4">
+                    <a href="tel:8006201233" class="flex items-center text-blue-500 hover:text-blue-600 text-sm">
+                        <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24">
+                            <path d="M6.62,10.79c1.44,2.83,3.76,5.14,6.59,6.59l2.2-2.2c0.27-0.27,0.67-0.36,1.02-0.24 c1.12,0.37,2.33,0.57,3.57,0.57c0.55,0,1,0.45,1,1V20c0,0.55-0.45,1-1,1c-9.39,0-17-7.61-17-17c0-0.55,0.45-1,1-1h3.5 c0.55,0,1,0.45,1,1c0,1.25,0.2,2.45,0.57,3.57c0.11,0.35,0.03,0.74-0.25,1.02L6.62,10.79z"/>
+                        </svg>
+                        Call (800) 620-1233
+                    </a>
+                    
+                    <a href="#" class="flex items-center text-blue-500 hover:text-blue-600 text-sm">
+                        <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24">
+                            <path d="M20,2H4C2.9,2,2,2.9,2,4v12c0,1.1,0.9,2,2,2h14l4,4V4C22,2.9,21.1,2,20,2z M18,14H6v-2h12V14z M18,11H6V9h12V11z M18,8H6V6h12V8z"/>
+                        </svg>
+                        Chat with an Expert
+                    </a>
+                    
+                    <a href="mailto:" class="flex items-center text-blue-500 hover:text-blue-600 text-sm">
+                        <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24">
+                            <path d="M20,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5 l8-5V8z"/>
+                        </svg>
+                        Email Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 bg-gray-100">
+            <!-- Header -->
+            <div class=" px-8 py-6 flex justify-between items-center">
+                <h1 class="text-2xl font-medium text-gray-900">My Designs</h1>
+                <div class="flex items-center space-x-3">
+                    <span class="text-sm text-gray-600">Sort By:</span>
+                    <select class="bg-white border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
+                        <option>Newest</option>
+                        <option>Oldest</option>
+                        <option>Name A-Z</option>
+                        <option>Name Z-A</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Loading Content Area -->
+            <div class="flex items-center justify-center h-full bg-gray-100" style="height: calc(100vh - 84px);">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <footer class="bg-[#0e1628] text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-center mb-10">
+          <img
+            src="https://cdn.sanity.io/images/2ahps9jc/production/163648c29436822845ac0ffa031f84ed19a1494e-484x484.png?w=640&q=75&fit=min&auto=format"
+            alt="Logo"
+            class="h-16"
+          />
+        </div>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 border-b border-gray-700 pb-12"
+        >
+          <div>
+            <h4 class="font-bold text-lg mb-4">APPAREL</h4>
+            <ul>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">T-Shirts</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">Hoodies</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Sweatshirts</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">Hats</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">Polos</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">Jackets</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">PROMO PRODUCTS</h4>
+            <ul>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >No Minimums</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">Bags</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">Drinkware</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Trade Shows</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Office Supplies</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Technology</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+                       <h4 class="font-bold text-lg mb-4">ABOUT</h4>
+
+            <ul>
+              <li class="mb-2">
+                <a href="./Pages/About/review.html" class="text-gray-400 hover:text-white">Reviews</a>
+              </li>
+              <li class="mb-2">
+                <a href="./Pages/About/story.html" class="text-gray-400 hover:text-white">Our Story</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">Blog</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">Careers</a>
+              </li>
+              <li class="mb-2">
+                <a href="./Pages/About/about.html" class="text-gray-400 hover:text-white">View All</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">MY ACCOUNT</h4>
+            <ul>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">My Orders</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Track My Order</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Recent Saved Designs</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white">Reorder</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Help Center</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">CONTACT</h4>
+            <div class="flex items-start mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-gray-400 mr-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              <p class="text-gray-400">
+                2727 Commerce Way<br />Philadelphia PA 19154
+              </p>
+            </div>
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-gray-400 mr-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.24 1.761a12 12 0 005.656 5.656l1.762-2.241a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <p class="text-gray-400">Call (800) 620-1233</p>
+            </div>
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-gray-400 mr-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                />
+              </svg>
+              <p class="text-gray-400">Chat With An Expert</p>
+            </div>
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-gray-400 mr-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <p class="text-gray-400">Email Us</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm pt-6"
+        >
+          <div class="flex flex-wrap space-x-4 mb-4 md:mb-0">
+            <a href="#" class="hover:text-white">Accessibility</a>
+            <a href="#" class="hover:text-white">User Agreement</a>
+            <a href="#" class="hover:text-white">Privacy Policy</a>
+            <a href="#" class="hover:text-white">CCPA</a>
+            <a href="#" class="hover:text-white">Copyright Infringement</a>
+            <a href="#" class="hover:text-white">IP Policy</a>
+            <a href="#" class="hover:text-white">Sitemap</a>
+          </div>
+          <div class="flex space-x-4 mb-4 md:mb-0 text-gray-700">
+            <a href="#" class="text-blue-600"
+              ><i class="fab fa-facebook-f text-2xl"></i
+            ></a>
+            <a href="#" class="text-blue-400"
+              ><i class="fab fa-x-twitter text-2xl"></i
+            ></a>
+            <a href="#" class="text-pink-500"
+              ><i class="fab fa-instagram text-2xl"></i
+            ></a>
+            <a href="#" class="text-blue-700"
+              ><i class="fab fa-linkedin-in text-2xl"></i
+            ></a>
+            <a href="#" class="text-black"
+              ><i class="fab fa-tiktok text-2xl"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="flex justify-between items-center pt-6 text-gray-400 text-sm"
+        >
+          <div class="hidden md:block"></div>
+          <p class="text-center md:text-right">
+            &copy; Copyright 2025 RushOrderTees. All rights reserved.
+          </p>
+          <div class="flex-shrink-0">
+            <img
+              src="https://i.imgur.com/P7b5K2m.png"
+              alt="Star"
+              class="h-10 w-10"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Include Swiper's JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/js/swiper.js"></script>
+    <script src="Assets/js/dropdown.js"></script>
+    <script src="Assets/js/include.js"></script>
+
+    <!-- Bootstrap Icons -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </body>
+</html>
