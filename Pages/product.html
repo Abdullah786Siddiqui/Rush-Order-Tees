@@ -1476,3 +1476,191 @@
     />
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Customizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-6xl mx-auto p-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Product Image Section -->
+            <div class="flex">
+                <!-- Thumbnail Images -->
+                <div class="flex flex-col space-y-2 mr-4">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23556B2F'/%3E%3C/svg%3E" 
+                         alt="Thumbnail 1" class="w-15 h-15 border-2 border-gray-300 rounded cursor-pointer hover:border-blue-500">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23556B2F'/%3E%3C/svg%3E" 
+                         alt="Thumbnail 2" class="w-15 h-15 border-2 border-gray-300 rounded cursor-pointer hover:border-blue-500">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23556B2F'/%3E%3C/svg%3E" 
+                         alt="Thumbnail 3" class="w-15 h-15 border-2 border-gray-300 rounded cursor-pointer hover:border-blue-500">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23556B2F'/%3E%3C/svg%3E" 
+                         alt="Thumbnail 4" class="w-15 h-15 border-2 border-gray-300 rounded cursor-pointer hover:border-blue-500">
+                </div>
+                
+                <!-- Main Product Image -->
+                <div class="flex-1 relative bg-white rounded-lg shadow-sm">
+                    <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center relative overflow-hidden">
+                        <div class="w-80 h-96 bg-green-700 rounded-lg flex items-center justify-center text-white">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold mb-2">YOUR</div>
+                                <div class="text-3xl font-bold mb-2">DESIGN</div>
+                                <div class="text-2xl font-bold mb-2">HERE</div>
+                                <div class="w-20 h-1 bg-white mx-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details Section -->
+            <div class="space-y-6">
+                <!-- Product Title and Rating -->
+                <div>
+                    <h1 class="text-2xl font-semibold text-gray-900 mb-2">RushOrderTees Classic Long Sleeve Tee</h1>
+                    <p class="text-sm text-gray-600 mb-3">Style: PT2400</p>
+                    <div class="flex items-center space-x-2">
+                        <div class="flex text-yellow-400">
+                            <span>★★★★★</span>
+                        </div>
+                        <span class="text-sm text-blue-600 underline cursor-pointer">144 reviews</span>
+                    </div>
+                </div>
+
+                <!-- Color Selection -->
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <label class="text-sm font-medium text-gray-900">Selected Color:</label>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 bg-green-700 border border-gray-300"></div>
+                            <span class="text-sm text-gray-700">Military Green</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Color Palette -->
+                    <div class="grid grid-cols-10 gap-2 mb-4">
+                        <!-- First Row -->
+                        <div class="w-8 h-8 bg-gray-300 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-gray-500 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-gray-600 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-gray-700 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-black border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-pink-500 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-red-500 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-red-800 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-red-900 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-orange-200 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        
+                        <!-- Second Row -->
+                        <div class="w-8 h-8 bg-green-700 border-2 border-blue-500 cursor-pointer scale-110"></div>
+                        <div class="w-8 h-8 bg-green-900 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-blue-300 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-blue-400 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-blue-500 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-blue-700 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-blue-900 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-purple-600 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-purple-800 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                        <div class="w-8 h-8 bg-pink-200 border border-gray-400 cursor-pointer hover:scale-110 transition-transform"></div>
+                    </div>
+                </div>
+
+                <!-- Decoration Method -->
+                <div>
+                    <div class="flex items-center justify-between cursor-pointer" onclick="toggleDropdown()">
+                        <span class="text-sm font-medium text-gray-900">Decoration Method:</span>
+                        <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-sm font-medium text-gray-900">Printing</div>
+                        <div class="text-xs text-gray-500">No Minimum</div>
+                    </div>
+                </div>
+
+                <!-- Start Designing Button -->
+                <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                    Start Designing
+                </button>
+
+                <!-- Product Features -->
+                <div class="grid grid-cols-2 gap-4 pt-4">
+                    <!-- Free Delivery -->
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-900">Free Delivery</div>
+                            <div class="text-xs text-gray-600">As soon as Wed Sep 10</div>
+                        </div>
+                    </div>
+
+                    <!-- Rush Delivery -->
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-900">Rush Delivery</div>
+                            <div class="text-xs text-gray-600">Guaranteed by Fri Aug 29</div>
+                        </div>
+                    </div>
+
+                    <!-- Material -->
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                        </svg>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-900">Material</div>
+                            <div class="text-xs text-gray-600">100% Cotton</div>
+                        </div>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                        </svg>
+                        <div>
+                            <div class="font-semibold text-sm text-gray-900">Price</div>
+                            <div class="text-xs text-gray-600">Budget</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Color selection functionality
+        document.querySelectorAll('.grid div[class*="bg-"]').forEach(color => {
+            color.addEventListener('click', function() {
+                // Remove border from all colors
+                document.querySelectorAll('.grid div[class*="bg-"]').forEach(c => {
+                    c.classList.remove('border-2', 'border-blue-500', 'scale-110');
+                    c.classList.add('border', 'border-gray-400');
+                });
+                
+                // Add border to selected color
+                this.classList.remove('border', 'border-gray-400');
+                this.classList.add('border-2', 'border-blue-500', 'scale-110');
+                
+                // Update the t-shirt color (simplified example)
+                const colorClass = this.className.match(/bg-\w+-\d+/)?.[0] || 'bg-green-700';
+                document.querySelector('.w-80.h-96').className = `w-80 h-96 ${colorClass} rounded-lg flex items-center justify-center text-white`;
+            });
+        });
+
+        function toggleDropdown() {
+            // Simple dropdown toggle functionality
+            console.log('Dropdown toggled');
+        }
+    </script>
+</body>
+</html>
