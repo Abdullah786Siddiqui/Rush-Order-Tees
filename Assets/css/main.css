@@ -1,4 +1,18 @@
 .changeBtnClr{
-  background-color: rgb(231, 194, 93);
+  background-color:#f2be5f;
   color: white;
+}
+.changelinkcolor{
+  color: black;
+
+}
+.changelinkcolor:hover {
+  color: #f2be5f; 
+}
+
+.changefooterlinks{
+  color: #9CA3AF;
+}
+.changefooterlinks:hover {
+  color: #f2be5f; 
 }
