@@ -32,36 +32,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .top-bar {
-        background-color: #f8fafd;
-        font-size: 0.9rem;
-      }
-      .custom-height {
-        height: 42px;
-      }
-      .search-icon {
-        pointer-events: none;
-        font-size: 1rem;
-      }
-      .clear-icon {
-        cursor: pointer;
-        display: none;
-      }
-      /* Custom styles for the verified icon */
-      .verified-icon {
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        vertical-align: middle;
-        margin-right: 0.25rem;
-      }
-      .filter-blue {
-        filter: invert(35%) sepia(90%) saturate(5000%) hue-rotate(180deg)
-          brightness(95%) contrast(90%);
-      }
+     
     </style>
   </head>
-  <body style="background-color: #F1F5F9;">
+  <body>
   <nav
   style="background-color: #f1f5f9"
   class="navbar navbar-expand-lg top-bar py-2"
@@ -95,7 +69,181 @@
       </div>
 
       <!-- Account -->
-     <div class="relative"> <button id="my-account-button" class="flex items-center space-x-2 text-black-600 hover:text-blue-700 transition-colors duration-200" > <!-- Account icon from Lucide React --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user" > <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="10" r="3" /> <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" /> </svg> <span class="font-medium">My Account</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Dropdown menu content --> <div id="dropdown-menu" class="z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200" > <!-- Dropdown Title --> <h2 class="text-lg font-semibold mb-4 text-center text-gray-800"> Login to Your Account </h2> <!-- Features List --> <ul class="space-y-3 mb-4"> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Access your saved designs</span > </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm">Track your orders</span> </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Easily place a reorder</span > </li> </ul> <!-- Sign In Button --> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Sign In </button> </div> </div> <!-- Cart --> <div class="relative"> <button id="cart-button" class="flex items-center space-x-2 text-gray-700 hover:text-blue-700 transition-colors duration-200" > <!-- Cart Icon as SVG --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart" > <circle cx="8" cy="21" r="1" /> <circle cx="19" cy="21" r="1" /> <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /> </svg> <span class="font-medium">Cart (0)</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow-cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Cart Dropdown menu content --> <div id="dropdown-menu-cart" class="z-[9999] absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300" > <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2> <div class="text-center text-gray-500 mb-4"> Your Cart is Empty!<br /> Let's Create something great. Click below to get started. </div> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Start Designing </button> </div> </div>
+     <div class="relative">
+  <button
+    id="my-account-button"
+    class="flex items-center space-x-2 text-black-600 hover:text-blue-700 transition-colors duration-200"
+  >
+    <!-- Account icon from Lucide React -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-circle-user"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="10" r="3" />
+      <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+    </svg>
+    <span class="font-medium">My Account</span>
+    <!-- Dropdown arrow icon -->
+    <svg
+      id="dropdown-arrow"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-chevron-down transform transition-transform duration-200"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <!-- Dropdown menu content -->
+  <div
+    id="dropdown-menu"
+    class="z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200"
+  >
+    <!-- Dropdown Title -->
+    <h2 class="text-lg font-semibold mb-4 text-center text-gray-800">
+      Login to Your Account
+    </h2>
+
+    <!-- Features List -->
+    <ul class="space-y-3 mb-4">
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Access your saved designs</span>
+      </li>
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Track your orders</span>
+      </li>
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Easily place a reorder</span>
+      </li>
+    </ul>
+
+    <!-- Sign In Button -->
+     <div class="flex justify-center">
+ <a 
+  href="./Pages/Authentication/login.html"
+  class="px-16 py-2 bg-blue-600  text-white text-sm font-semibold rounded-full 
+         hover:bg-blue-700 transition-colors duration-200 
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1">
+  Sign In
+</a>
+</div>
+
+
+  </div>
+</div>
+
+<!-- Cart -->
+<div class="relative">
+  <button
+    id="cart-button"
+    class="flex items-center space-x-2 text-gray-700 hover:text-blue-700 transition-colors duration-200"
+  >
+    <!-- Cart Icon as SVG -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-shopping-cart"
+    >
+      <circle cx="8" cy="21" r="1" />
+      <circle cx="19" cy="21" r="1" />
+      <path
+        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+      />
+    </svg>
+    <span class="font-medium">Cart (0)</span>
+    <!-- Dropdown arrow icon -->
+    <svg
+      id="dropdown-arrow-cart"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-chevron-down transform transition-transform duration-200"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <!-- Cart Dropdown menu content -->
+  <div
+    id="dropdown-menu-cart"
+    class="z-[9999] absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300"
+  >
+    <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2>
+    <div class="text-center text-gray-500 mb-4">
+      Your Cart is Empty!<br />
+      Let's Create something great. Click below to get started.
+    </div>
+   <a 
+  href="./Pages/designing.html"
+  class="px-16 py-2 bg-blue-600  text-white text-sm font-semibold rounded-full 
+         hover:bg-blue-700 transition-colors duration-200 
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1">
+  Start Designing
+</a>
+  </div>
+</div>
 
 
     <!-- 🔥 Fixed Search Dropdown -->
@@ -127,7 +275,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         T-Shirts
@@ -135,7 +283,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                     href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Short Sleeve T-Shirts
@@ -143,7 +291,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Performance Shirts
@@ -151,7 +299,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                    href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Hoodies
@@ -159,7 +307,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                         href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         All T-Shirts
@@ -167,7 +315,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                       href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Hats
@@ -175,7 +323,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                   href="/Pages/product.html"
                         class="font-semibold text-blue-600 hover:underline"
                       >
                         View All Categories
@@ -194,7 +342,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         My Account
@@ -202,7 +350,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                          href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Saved Designs
@@ -210,7 +358,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                          href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Order History
@@ -228,92 +376,108 @@
                     class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
                   >
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Tee"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        RushOrderTees Classic Tee
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        2,832 reviews
-                      </p>
-                    </div>
+                 <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Tee"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Bella + Canvas Tri-Blend T-Shirt
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        391 reviews
-                      </p>
-                    </div>
+                  <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Long Sleeve"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Gildan Long Sleeve Ultra Cotton
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        674 reviews
-                      </p>
-                    </div>
+                  <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Hoodie"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Gildan Heavy Blend Hoodie
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        1,072 reviews
-                      </p>
-                    </div>
+                   <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
                   </div>
                 </div>
               </div>
@@ -351,23 +515,23 @@
 
     <!-- Navbar 2 -->
 
-    <nav class="relative bg-white shadow-sm lg:px-8 ">
+    <nav class="relative bg-white shadow-md lg:px-8 ">
       <div
-        class="container-fluid mx-auto flex items-center justify-between px-6 py-3"
+        class="container-fluid mx-auto flex items-center justify-between px-6 py-2"
       >
         <div class="flex items-center  ">
   <a href="/index.html" class="mr-8">
     <img
-      src="https://cdn.sanity.io/images/2ahps9jc/production/3ae1c16d3ec64699ef9fe2b86e6fbda1b358cade-300x120.png"
+      src="/Assets/logo/logo.png"
       class="h-10"
       alt="Logo"
     />
   </a>
 
-<div class="dropdowns d-flex justify-start  xl:block hidden   ">
+<div class="dropdowns flex justify-start  hidden lg:block mt-2  ">
 <div class="relative group inline-block">
   <!-- Main Link -->
-  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50  mb-1 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
     Custom T-Shirts
     <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -459,9 +623,9 @@
 
   </div>
 </div>
-<div class="relative group inline-block">
+<div class="relative group inline-block"> 
   <!-- Main Link -->
-  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 mb-1 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
     Custom Apparel
     <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -753,9 +917,9 @@
 </div>
 
         <div class="hidden xl:flex items-center gap-4">
-          <button class="btn btn-outline-primary font-bold rounded-4 px-3 py-2">
+          <a href="/Pages/designing.html" class="btn btn-outline-primary font-bold rounded-4 px-2 py-2">
             Design Now
-          </button>
+          </a>
           <div class="flex flex-col text-sm">
             <div class="flex items-center gap-1.5 font-bold text-primary">
               <img
@@ -845,118 +1009,126 @@
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/product.html" class="font-bold text-gray-800 hover:text-blue-600"
               >Custom Apparial</a
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/product.html" class="font-bold text-gray-800 hover:text-blue-600"
               >Promo Products</a
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/brand.html"class="font-bold text-gray-800 hover:text-blue-600"
               >Brands</a
             >
           </li>
         </ul>
         <div class="flex flex-col mt-8 gap-4">
-          <button
+          <a href="./Pages/designing.html"
             class="btn btn-outline-primary w-full py-2 rounded-5 hover:blue-500"
           >
             Design Now
-          </button>
+        </a>
         </div>
       </div>
     </nav>
+    <script>
+  // Select buttons and menu
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-mobile-menu');
+
+  // Open menu
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+  });
+
+  // Close menu
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('translate-x-full');
+  });
+</script>
 
 
- <div class="flex h-screen  p-8">
+
+ <div class="flex min-h-screen p-4">
         <!-- Sidebar -->
-        <div class="w-80 bg-white">
-            <!-- My Account Header -->
-            <div class="px-6 py-6">
-                <h2 class="text-xl font-medium text-gray-900">My Account</h2>
+        <div class="w-80 bg-white shadow-sm border-r border-gray-200">
+            <!-- Account Section -->
+            <div class="p-6 border-b border-gray-100">
+                <h2 class="text-lg font-semibold text-gray-900 mb-4">My Account</h2>
+                <nav class="space-y-2">
+                    <a href="#" class="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded">My Designs</a>
+                    <a href="#" class="block py-2 px-3 text-blue-600 bg-blue-50 border-r-2 border-blue-600 font-medium">Order History</a>
+                    <a href="#" class="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded">Group Orders</a>
+                    <a href="#" class="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded">Log Out</a>
+                </nav>
             </div>
-            
-            <!-- Navigation Menu -->
-            <nav>
-                <ul class="space-y-0">
-                    <li>
-                        <a href="#" class="block px-6 py-3 text-blue-500 bg-blue-50 border-l-4 border-blue-500 text-sm">
-                            My Designs
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 text-sm">
-                            Order History
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 text-sm">
-                            Group Orders
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 text-sm">
-                            Log Out
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            
+
             <!-- Get Help Section -->
-            <div class="mt-12 px-6">
-                <h3 class="text-base font-medium text-gray-900 mb-4">Get Help</h3>
-                <p class="text-xs text-gray-600 leading-relaxed mb-6">
+            <div class="p-6">
+                <h3 class="text-base font-semibold text-gray-900 mb-3">Get Help</h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
                     All of your designs are saved here for easy access. If you have any questions or need help with an order, please get in touch with us!
                 </p>
                 
-                <!-- Contact Options -->
-                <div class="space-y-4">
-                    <a href="tel:8006201233" class="flex items-center text-blue-500 hover:text-blue-600 text-sm">
-                        <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M6.62,10.79c1.44,2.83,3.76,5.14,6.59,6.59l2.2-2.2c0.27-0.27,0.67-0.36,1.02-0.24 c1.12,0.37,2.33,0.57,3.57,0.57c0.55,0,1,0.45,1,1V20c0,0.55-0.45,1-1,1c-9.39,0-17-7.61-17-17c0-0.55,0.45-1,1-1h3.5 c0.55,0,1,0.45,1,1c0,1.25,0.2,2.45,0.57,3.57c0.11,0.35,0.03,0.74-0.25,1.02L6.62,10.79z"/>
+                <div class="space-y-3">
+                    <a href="tel:8006201233" class="flex items-center text-blue-600 hover:text-blue-700 text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                         </svg>
                         Call (800) 620-1233
                     </a>
                     
-                    <a href="#" class="flex items-center text-blue-500 hover:text-blue-600 text-sm">
-                        <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M20,2H4C2.9,2,2,2.9,2,4v12c0,1.1,0.9,2,2,2h14l4,4V4C22,2.9,21.1,2,20,2z M18,14H6v-2h12V14z M18,11H6V9h12V11z M18,8H6V6h12V8z"/>
+                    <a href="#" class="flex items-center text-blue-600 hover:text-blue-700 text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
                         </svg>
                         Chat with an Expert
                     </a>
                     
-                    <a href="mailto:" class="flex items-center text-blue-500 hover:text-blue-600 text-sm">
-                        <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24">
-                            <path d="M20,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5 l8-5V8z"/>
+                    <a href="mailto:" class="flex items-center text-blue-600 hover:text-blue-700 text-sm">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                         Email Us
                     </a>
                 </div>
             </div>
         </div>
-        
+
         <!-- Main Content -->
-        <div class="flex-1 bg-gray-100">
+        <div class="flex-1">
             <!-- Header -->
-            <div class=" px-8 py-6 flex justify-between items-center">
-                <h1 class="text-2xl font-medium text-gray-900">My Designs</h1>
-                <div class="flex items-center space-x-3">
-                    <span class="text-sm text-gray-600">Sort By:</span>
-                    <select class="bg-white border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
-                        <option>Newest</option>
-                        <option>Oldest</option>
-                        <option>Name A-Z</option>
-                        <option>Name Z-A</option>
-                    </select>
+            <div class="border-b border-gray-200 px-8 py-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-2xl font-bold text-gray-900">Order History</h1>
+                 <div class="flex items-center space-x-2">
+  <label for="sort" class="text-base text-gray-700 font-medium">Sort By:</label>
+  <select 
+    id="sort" 
+    class="border border-gray-300 rounded-md px-4 py-2 text-base w-96 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+  >
+    <option>Newest</option>
+    <option>Oldest</option>
+    <option>Price: High to Low</option>
+    <option>Price: Low to High</option>
+  </select>
+</div>
+
                 </div>
             </div>
-            
-            <!-- Loading Content Area -->
-            <div class="flex items-center justify-center h-full bg-gray-100" style="height: calc(100vh - 84px);">
-                <div class="spinner"></div>
+
+            <!-- Empty State -->
+            <div class="flex flex-col items-center justify-center py-10 px-8 bg-white mx-4 mt-6">
+                <div class="text-6xl mb-2">🤔</div>
+                <p class="text-gray-600 text-lg mb-2">It doesn't look like you have placed any orders yet...</p>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-2 rounded-lg transition-colors">
+                    Start Designing
+                </button>
             </div>
         </div>
     </div>

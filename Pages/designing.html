@@ -711,6 +711,7 @@
               <!-- Overlay Buttons -->
               <div
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2"
+                id="edinting"
               >
                 <button class="bg-white border px-4 py-1 rounded-full shadow">
                   ADD TEXT
@@ -971,7 +972,7 @@
             <!-- Bottom Right Buttons -->
             <div
             id="nextbtn"
-              class="absolute lg:bottom-48 md:bottom-68 bottom-2 right-2 flex flex-col sm:flex-row gap-2 sm:gap-3"
+              class="absolute xl:bottom-64 md:bottom-68 bottom-2 right-2 flex flex-col sm:flex-row gap-2 sm:gap-3"
             >
               <button
                 class="bg-white border-2 border-blue-500 text-blue-500 rounded-lg px-3 sm:px-6 py-1.5 sm:py-2 font-medium text-sm"
@@ -1050,6 +1051,8 @@ function handlenext () {
     let frba = document.querySelectorAll('.frba')
   let shirt = document.getElementById('shirt');
   let caculating = document.getElementById('caculating');
+  let edinting = document.getElementById('edinting');
+
 
 
 
@@ -1061,6 +1064,8 @@ function handlenext () {
     productsrm.classList.add('hidden')
     nextbtn.classList.add('hidden')
     caculating.classList.remove('hidden')
+    edinting.classList.add('hidden')
+
 
 frba.forEach((fr) => fr.classList.add('hidden'));
 shirt.classList.remove('justify-center');

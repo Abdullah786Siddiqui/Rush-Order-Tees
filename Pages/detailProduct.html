@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rush UI</title>
     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
     <!-- Gooogle fonts -->
     <link
       rel="stylesheet"
@@ -23,42 +27,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="/Assets/css/navbar.css" />
-    <link rel="stylesheet" href="/Assets/css/main.css" />
+    <link rel="stylesheet" href="Assets/css/navbar.css" />
+    <link rel="stylesheet" href="Assets/css/main.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .top-bar {
-        background-color: #f8fafd;
-        font-size: 0.9rem;
-      }
-      .custom-height {
-        height: 42px;
-      }
-      .search-icon {
-        pointer-events: none;
-        font-size: 1rem;
-      }
-      .clear-icon {
-        cursor: pointer;
-        display: none;
-      }
-      /* Custom styles for the verified icon */
-      .verified-icon {
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        vertical-align: middle;
-        margin-right: 0.25rem;
-      }
-      .filter-blue {
-        filter: invert(35%) sepia(90%) saturate(5000%) hue-rotate(180deg)
-          brightness(95%) contrast(90%);
-      }
+     
     </style>
   </head>
   <body>
-     <nav
+  <nav
   style="background-color: #f1f5f9"
   class="navbar navbar-expand-lg top-bar py-2"
 >
@@ -91,7 +69,181 @@
       </div>
 
       <!-- Account -->
-     <div class="relative"> <button id="my-account-button" class="flex items-center space-x-2 text-black-600 hover:text-blue-700 transition-colors duration-200" > <!-- Account icon from Lucide React --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user" > <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="10" r="3" /> <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" /> </svg> <span class="font-medium">My Account</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Dropdown menu content --> <div id="dropdown-menu" class="z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200" > <!-- Dropdown Title --> <h2 class="text-lg font-semibold mb-4 text-center text-gray-800"> Login to Your Account </h2> <!-- Features List --> <ul class="space-y-3 mb-4"> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Access your saved designs</span > </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm">Track your orders</span> </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Easily place a reorder</span > </li> </ul> <!-- Sign In Button --> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Sign In </button> </div> </div> <!-- Cart --> <div class="relative"> <button id="cart-button" class="flex items-center space-x-2 text-gray-700 hover:text-blue-700 transition-colors duration-200" > <!-- Cart Icon as SVG --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart" > <circle cx="8" cy="21" r="1" /> <circle cx="19" cy="21" r="1" /> <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /> </svg> <span class="font-medium">Cart (0)</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow-cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Cart Dropdown menu content --> <div id="dropdown-menu-cart" class="z-[9999] absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300" > <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2> <div class="text-center text-gray-500 mb-4"> Your Cart is Empty!<br /> Let's Create something great. Click below to get started. </div> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Start Designing </button> </div> </div>
+     <div class="relative">
+  <button
+    id="my-account-button"
+    class="flex items-center space-x-2 text-black-600 hover:text-blue-700 transition-colors duration-200"
+  >
+    <!-- Account icon from Lucide React -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-circle-user"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="10" r="3" />
+      <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+    </svg>
+    <span class="font-medium">My Account</span>
+    <!-- Dropdown arrow icon -->
+    <svg
+      id="dropdown-arrow"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-chevron-down transform transition-transform duration-200"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <!-- Dropdown menu content -->
+  <div
+    id="dropdown-menu"
+    class="z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200"
+  >
+    <!-- Dropdown Title -->
+    <h2 class="text-lg font-semibold mb-4 text-center text-gray-800">
+      Login to Your Account
+    </h2>
+
+    <!-- Features List -->
+    <ul class="space-y-3 mb-4">
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Access your saved designs</span>
+      </li>
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Track your orders</span>
+      </li>
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Easily place a reorder</span>
+      </li>
+    </ul>
+
+    <!-- Sign In Button -->
+     <div class="flex justify-center">
+ <a 
+  href="./Pages/Authentication/login.html"
+  class="px-16 py-2 bg-blue-600  text-white text-sm font-semibold rounded-full 
+         hover:bg-blue-700 transition-colors duration-200 
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1">
+  Sign In
+</a>
+</div>
+
+
+  </div>
+</div>
+
+<!-- Cart -->
+<div class="relative">
+  <button
+    id="cart-button"
+    class="flex items-center space-x-2 text-gray-700 hover:text-blue-700 transition-colors duration-200"
+  >
+    <!-- Cart Icon as SVG -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-shopping-cart"
+    >
+      <circle cx="8" cy="21" r="1" />
+      <circle cx="19" cy="21" r="1" />
+      <path
+        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+      />
+    </svg>
+    <span class="font-medium">Cart (0)</span>
+    <!-- Dropdown arrow icon -->
+    <svg
+      id="dropdown-arrow-cart"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-chevron-down transform transition-transform duration-200"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <!-- Cart Dropdown menu content -->
+  <div
+    id="dropdown-menu-cart"
+    class="z-[9999] absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300"
+  >
+    <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2>
+    <div class="text-center text-gray-500 mb-4">
+      Your Cart is Empty!<br />
+      Let's Create something great. Click below to get started.
+    </div>
+   <a 
+  href="./Pages/designing.html"
+  class="px-16 py-2 bg-blue-600  text-white text-sm font-semibold rounded-full 
+         hover:bg-blue-700 transition-colors duration-200 
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1">
+  Start Designing
+</a>
+  </div>
+</div>
 
 
     <!-- 🔥 Fixed Search Dropdown -->
@@ -123,7 +275,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         T-Shirts
@@ -131,7 +283,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                     href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Short Sleeve T-Shirts
@@ -139,7 +291,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Performance Shirts
@@ -147,7 +299,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                    href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Hoodies
@@ -155,7 +307,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                         href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         All T-Shirts
@@ -163,7 +315,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                       href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Hats
@@ -171,7 +323,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                   href="/Pages/product.html"
                         class="font-semibold text-blue-600 hover:underline"
                       >
                         View All Categories
@@ -190,7 +342,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         My Account
@@ -198,7 +350,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                          href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Saved Designs
@@ -206,7 +358,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                          href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Order History
@@ -224,92 +376,108 @@
                     class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
                   >
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Tee"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        RushOrderTees Classic Tee
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        2,832 reviews
-                      </p>
-                    </div>
+                 <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Tee"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Bella + Canvas Tri-Blend T-Shirt
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        391 reviews
-                      </p>
-                    </div>
+                  <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Long Sleeve"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Gildan Long Sleeve Ultra Cotton
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        674 reviews
-                      </p>
-                    </div>
+                  <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Hoodie"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Gildan Heavy Blend Hoodie
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        1,072 reviews
-                      </p>
-                    </div>
+                   <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
                   </div>
                 </div>
               </div>
@@ -347,23 +515,23 @@
 
     <!-- Navbar 2 -->
 
-    <nav class="relative bg-white shadow-sm">
+    <nav class="relative bg-white shadow-md lg:px-8 ">
       <div
-        class="container-fluid mx-auto flex items-center justify-between px-6 py-3"
+        class="container-fluid mx-auto flex items-center justify-between px-6 py-2"
       >
-        <div class="flex items-center">
+        <div class="flex items-center  ">
   <a href="/index.html" class="mr-8">
     <img
-      src="https://cdn.sanity.io/images/2ahps9jc/production/3ae1c16d3ec64699ef9fe2b86e6fbda1b358cade-300x120.png"
+      src="/Assets/logo/logo.png"
       class="h-10"
       alt="Logo"
     />
   </a>
 
-<div class="dropdowns  xl:block hidden   ">
+<div class="dropdowns flex justify-start  hidden lg:block mt-2  ">
 <div class="relative group inline-block">
   <!-- Main Link -->
-  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50  mb-1 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
     Custom T-Shirts
     <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -455,9 +623,9 @@
 
   </div>
 </div>
-<div class="relative group inline-block">
+<div class="relative group inline-block"> 
   <!-- Main Link -->
-  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 mb-1 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
     Custom Apparel
     <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -749,9 +917,9 @@
 </div>
 
         <div class="hidden xl:flex items-center gap-4">
-          <button class="btn btn-outline-primary font-bold rounded-4 px-3 py-2">
+          <a href="/Pages/designing.html" class="btn btn-outline-primary font-bold rounded-4 px-2 py-2">
             Design Now
-          </button>
+          </a>
           <div class="flex flex-col text-sm">
             <div class="flex items-center gap-1.5 font-bold text-primary">
               <img
@@ -841,200 +1009,356 @@
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/product.html" class="font-bold text-gray-800 hover:text-blue-600"
               >Custom Apparial</a
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/product.html" class="font-bold text-gray-800 hover:text-blue-600"
               >Promo Products</a
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/brand.html"class="font-bold text-gray-800 hover:text-blue-600"
               >Brands</a
             >
           </li>
         </ul>
         <div class="flex flex-col mt-8 gap-4">
-          <button
+          <a href="./Pages/designing.html"
             class="btn btn-outline-primary w-full py-2 rounded-5 hover:blue-500"
           >
             Design Now
-          </button>
+        </a>
         </div>
       </div>
     </nav>
+    <script>
+  // Select buttons and menu
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-mobile-menu');
+
+  // Open menu
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+  });
+
+  // Close menu
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('translate-x-full');
+  });
+</script>
 
 
-  <!-- Main Content Container -->
-   <div class="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl p-8 flex flex-col lg:flex-row gap-12 font-sans">
-    
-        <div class="lg:w-1/2 flex flex-col items-center">
-            <div class="relative w-full aspect-square rounded-3xl flex items-center justify-center overflow-hidden">
-                <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" alt="Carhartt Cooler Main Image" class="w-full h-auto object-cover">
-                
-             
+  <div class="max-w-8xl  p-6">
+    <p class="text-blue-600 pb-6 px-6 text-sm">All Products/ T-Shirts/ Short Sleeve T-Shirts</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2  gap-20 justify-center">
+
+        <div class="flex items-start space-x-4 ">
+            <div class="flex flex-col space-y-2 mr-4">
+                <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" alt="Thumbnail 1" class="w-16 h-16 border-2 border-gray-300 rounded cursor-pointer hover:border-blue-500">
+                <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" alt="Thumbnail 2" class="w-16 h-16 border-2 border-gray-300 rounded cursor-pointer hover:border-blue-500">
+                <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" alt="Thumbnail 3" class="w-16 h-16 border-2 border-gray-300 rounded cursor-pointer hover:border-blue-500">
+                <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" alt="Thumbnail 4" class="w-16 h-16 border-2 border-gray-300 rounded cursor-pointer hover:border-blue-500">
             </div>
-            
-            <div class="flex flex-row mt-6 space-x-4 w-full justify-start">
-                <img src="https://i.ibb.co/68fDfqS/image-061487.png" alt="Thumbnail 1" class="w-16 h-16 rounded-xl border-2 border-[#3c82f6] cursor-pointer transition-all duration-300">
-                <img src="https://i.ibb.co/r763b3M/image-061487-2.png" alt="Thumbnail 2" class="w-16 h-16 rounded-xl border-2 border-transparent hover:border-[#3c82f6] transition-all duration-300 cursor-pointer">
-                <img src="https://i.ibb.co/VMyhG8Y/image-061487-3.png" alt="Thumbnail 3" class="w-16 h-16 rounded-xl border-2 border-transparent hover:border-[#3c82f6] transition-all duration-300 cursor-pointer">
-                <img src="https://i.ibb.co/2d1H3P2/image-061487-4.png" alt="Thumbnail 4" class="w-16 h-16 rounded-xl border-2 border-transparent hover:border-[#3c82f6] transition-all duration-300 cursor-pointer">
-            </div>
-        </div>
-    
-        <div class="lg:w-1/2">
-            <div class="mb-6">
-                <h1 class="text-3xl font-semibold text-[#1f2937] leading-tight">Carhartt Lunch 6-Can Cooler</h1>
-                <p class="text-sm text-[#6b7280] mt-1">Style: CT89251601</p>
-            </div>
-    
-          <div class="mb-6">
-    <p class="text-sm font-medium text-[#4b5563] mb-2">
-        Selected Color: <span id="selected-color" class="font-normal text-[#1f2937]">Black</span>
-    </p>
-    <div class="flex items-center gap-3">
-        <!-- Black -->
-        <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Black" class="sr-only" checked
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#1f2937] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-        <!-- Dark Gray -->
-        <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Dark Gray" class="sr-only"
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#374151] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-        <!-- Brown -->
-        <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Brown" class="sr-only "
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#925420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-         <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Brown" class="sr-only "
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#925420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-         <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Brown" class="sr-only "
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#925424] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-         <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Brown" class="sr-only "
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#925520] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-         <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Brown" class="sr-only "
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#922420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-         <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Brown" class="sr-only "
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#925400] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-         <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Brown" class="sr-only "
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#923420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-         <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Brown" class="sr-only "
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#928420] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
-         <label class="relative cursor-pointer">
-            <input type="radio" name="color" value="Brown" class="sr-only "
-                onchange="document.getElementById('selected-color').textContent = this.value">
-            <div class="w-6 h-6 bg-[#925620] ring-2 ring-transparent hover:ring-gray-400 transition-all duration-200 rounded-2"></div>
-        </label>
 
-        
-    </div>
-</div>
 
-<style>
-    /* Highlight selected square */
-    input[type="radio"]:checked + div {
-        ring-width: 2px;
-        ring-color: #2563eb; /* Tailwind blue-600 */
-    }
-</style>
-
-    
-            <div class="mb-8">
-                <p class="text-sm font-medium text-[#4b5563] mb-2">Decoration Method:</p>
-                <div class="flex items-center space-x-2">
-                    <button class="bg-[#e0f2fe] text-[#3c82f6] px-4 py-2 rounded-lg font-medium text-sm transition-colors hover:bg-[#cbe6fd]">
-                        Printing
-                    </button>
-                    <span class="text-xs text-[#9ca3af]">No Minimum</span>
+            <div class="flex-1 relative bg-white rounded-lg shadow-sm">
+                <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center relative overflow-hidden ">
+                    <img src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format" alt="Thumbnail" class="w-full h-full  object-cover rounded-lg">
                 </div>
             </div>
-    
-           <a href="./designing.html" class="w-auto bg-[#3c82f6] text-white text-xs font-semibold px-4 py-3 rounded-lg shadow-lg hover:bg-[#2563eb] transition">
-    Start Designing
-           </a>
-    
-           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-  <!-- Feature Item -->
-  <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
-    <div class="flex-shrink-0 p-3 rounded-full bg-gray-200">
-      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-      </svg>
-    </div>
-    <div>
-      <p class="text-sm font-semibold text-gray-800">Free Delivery</p>
-      <p class="text-xs text-gray-500">As soon as Fri Aug 29</p>
-    </div>
-  </div>
-
-  <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
-    <div class="flex-shrink-0 p-3 rounded-full bg-gray-200">
-      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-      </svg>
-    </div>
-    <div>
-      <p class="text-sm font-semibold text-gray-800">Rush Delivery</p>
-      <p class="text-xs text-gray-500">Guaranteed by Wed Aug 20</p>
-    </div>
-  </div>
-
-  <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
-    <div class="flex-shrink-0 p-3 rounded-full bg-gray-200">
-      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5V12h2v5.5zm0-7.5V6.5h2V10z"></path>
-      </svg>
-    </div>
-    <div>
-      <p class="text-sm font-semibold text-gray-800">Material</p>
-      <p class="text-xs text-gray-500">100% Polyester</p>
-    </div>
-  </div>
-
-  <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
-    <div class="flex-shrink-0 p-3 rounded-full bg-gray-200">
-      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12c-2.76 0-5 2.24-5 5h2c0-1.66 1.34-3 3-3s3 1.34 3 3-1.34 3-3 3h-2v2h2c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
-      </svg>
-    </div>
-    <div>
-      <p class="text-sm font-semibold text-gray-800">Price</p>
-      <p class="text-xs text-gray-500">Premium</p>
-    </div>
-  </div>
-</div>
 
         </div>
+
+        <div class="space-y-4">
+            <div>
+                <h1 class="text-2xl font-semibold text-gray-900 mb-2">RushOrderTees Classic Long Sleeve Tee</h1>
+                <p class="text-sm text-gray-600 mb-3">Style: PT2400</p>
+                <div class="flex items-center space-x-2">
+                    <div class="flex text-yellow-400">
+                        <span>★★★★★</span>
+                    </div>
+                    <span class="text-sm text-blue-600 underline cursor-pointer">144 reviews</span>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center justify-start mb-3 rounded-lg">
+                    <label class="text-sm font-semibold text-gray-900 ">Selected Color:</label>
+                    <div class="flex items-center space-x-2 px-2">
+                        <div class="w-6 h-6 bg-pink-500 cursor-pointer rounded-md hover:scale-110 transition-transform"></div>
+                        <span class="text-sm font-semibold text-gray-800">Pink</span>
+                    </div>
+                </div>
+
+
+            <div class="flex flex-wrap">
+  <!-- White -->
+  <button type="button" 
+          class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-rush-blue-500" 
+          aria-pressed="true" 
+          title="White">
+    <div class="flex h-full w-full">
+      <span class="h-full w-full" style="background-color:#FFFFFF"></span>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check absolute isolate h-6 w-6 text-black/30">
+      <path d="M20 6 9 17l-5-5"></path>
+    </svg>
+  </button>
+
+  <!-- Ash -->
+  <button type="button" 
+          class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" 
+          aria-pressed="false" 
+          title="Ash">
+    <div class="flex h-full w-full">
+      <span class="h-full w-full" style="background-color:#F1F1F1"></span>
+    </div>
+  </button>
+
+  <!-- Ice Grey -->
+  <button type="button" 
+          class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" 
+          aria-pressed="false" 
+          title="Ice Grey">
+    <div class="flex h-full w-full">
+      <span class="h-full w-full" style="background-color:#DBDDDC"></span>
+    </div>
+  </button>
+
+  <!-- Gravel -->
+  <button type="button" 
+          class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" 
+          aria-pressed="false" 
+          title="Gravel">
+    <div class="flex h-full w-full">
+      <span class="h-full w-full" style="background-color:#B3B2B7"></span>
+    </div>
+  </button>
+
+  <!-- Sport Grey -->
+  <button type="button" 
+          class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" 
+          aria-pressed="false" 
+          title="Sport Grey">
+    <div class="flex h-full w-full">
+      <span class="h-full w-full" style="background-color:#B2ABB3"></span>
+    </div>
+  </button>
+
+  <!-- Prairie Dust -->
+  <button type="button" 
+          class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" 
+          aria-pressed="false" 
+          title="Prairie Dust">
+    <div class="flex h-full w-full">
+      <span class="h-full w-full" style="background-color:#A79780"></span>
+    </div>
+  </button>
+    <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="White">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#FFFFFF"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Ash">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#F1F1F1"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Ice Grey">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#DBDDDC"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Gravel">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#B3B2B7"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Sport Grey">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#B2ABB3"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Prairie Dust">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#A79780"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Stone Blue">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#7E93A7"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Brown Savana">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#9F877B"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Tweed">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#878A8F"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Dark Heather Grey">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#606671"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Charcoal">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#5A5657"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Blackberry">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#504259"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Russet">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#593F4C"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 hover:disabled:outline-transparent outline-transparent" aria-pressed="false" title="Black">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#131619"></span></div>
+  </button>
+   <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Sunshine">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#FFD700"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Coral">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#FF6F61"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Mint">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#98FF98"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Sky Blue">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#87CEEB"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Lavender">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#E6E6FA"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Peach">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#FFDAB9"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Rose">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#FF007F"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Turquoise">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#40E0D0"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Gold">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#FFD700"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Olive">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#808000"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Indigo">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#4B0082"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Crimson">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#DC143C"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Aqua">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#00FFFF"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Magenta">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#FF00FF"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Lime">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#32CD32"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Salmon">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#FA8072"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Deep Sky Blue">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#00BFFF"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Hot Pink">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#FF69B4"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Royal Blue">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#4169E1"></span></div>
+  </button>
+  <button type="button" class="relative m-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-black/15 bg-contain outline outline-2 outline-offset-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-rush-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rush-blue-500 outline-transparent" title="Chocolate">
+    <div class="flex h-full w-full"><span class="h-full w-full" style="background-color:#D2691E"></span></div>
+  </button>
+
+  <!-- ... continue the same pattern for the remaining colors ... -->
+
+</div>
+
+
+
+            </div>
+
+            <div>
+                <div class="flex items-center justify-between cursor-pointer" onclick="toggleDropdown()">
+                    <span class="text-sm font-medium text-gray-900">Decoration Method:</span>
+                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+                <div class="mt-2 w-40 rounded-xl border border-gray-200 bg-slate-100 px-4 py-2 shadow-sm transition hover:shadow-md">
+                    <div class="text-sm font-semibold text-gray-900">Printing</div>
+                    <div class="mt-1 text-xs text-gray-500">No Minimum</div>
+                </div>
+
+            </div>
+
+            <a href="./designing.html" class="inline-flex items-center justify-center rounded-2xl bg-sky-500 px-16 py-3 text-lg font-semibold text-white shadow-md transition-all hover:bg-sky-600 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                Start Designing
+            </a>
+
+
+            <div class="grid grid-cols-2 gap-4 pt-4">
+                <div class="flex items-start space-x-3">
+                    <svg class="w-6 h-6 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                    </svg>
+                    <div>
+                        <div class="font-semibold text-sm text-gray-900">Free Delivery</div>
+                        <div class="text-xs text-gray-600">As soon as Wed Sep 10</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <svg class="w-6 h-6 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <div>
+                        <div class="font-semibold text-sm text-gray-900">Rush Delivery</div>
+                        <div class="text-xs text-gray-600">Guaranteed by Fri Aug 29</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <svg class="w-6 h-6 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                    </svg>
+                    <div>
+                        <div class="font-semibold text-sm text-gray-900">Material</div>
+                        <div class="text-xs text-gray-600">100% Cotton</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <svg class="w-6 h-6 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                    <div>
+                        <div class="font-semibold text-sm text-gray-900">Price</div>
+                        <div class="text-xs text-gray-600">Budget</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // Color selection functionality
+        document.querySelectorAll('.grid div[class*="bg-"]').forEach(color => {
+            color.addEventListener('click', function() {
+                // Remove border from all colors
+                document.querySelectorAll('.grid div[class*="bg-"]').forEach(c => {
+                    c.classList.remove('border-2', 'border-blue-500', 'scale-110');
+                    c.classList.add('border', 'border-gray-400');
+                });
+                
+                // Add border to selected color
+                this.classList.remove('border', 'border-gray-400');
+                this.classList.add('border-2', 'border-blue-500', 'scale-110');
+                
+                // Update the t-shirt color (simplified example)
+                const colorClass = this.className.match(/bg-\w+-\d+/)?.[0] || 'bg-green-700';
+                document.querySelector('.w-80.h-96').className = `w-80 h-96 ${colorClass} rounded-lg flex items-center justify-center text-white`;
+            });
+        });
+
+        function toggleDropdown() {
+            // Simple dropdown toggle functionality
+            console.log('Dropdown toggled');
+        }
+    </script>
 
  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 py-20">
 

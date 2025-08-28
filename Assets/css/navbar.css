@@ -1,0 +1,27 @@
+ .top-bar {
+        background-color: #f8fafd;
+        font-size: 0.9rem;
+      }
+      .custom-height {
+        height: 42px;
+      }
+      .search-icon {
+        pointer-events: none;
+        font-size: 1rem;
+      }
+      .clear-icon {
+        cursor: pointer;
+        display: none;
+      }
+      /* Custom styles for the verified icon */
+      .verified-icon {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        vertical-align: middle;
+        margin-right: 0.25rem;
+      }
+      .filter-blue {
+        filter: invert(35%) sepia(90%) saturate(5000%) hue-rotate(180deg)
+          brightness(95%) contrast(90%);
+      }

@@ -32,33 +32,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .top-bar {
-        background-color: #f8fafd;
-        font-size: 0.9rem;
-      }
-      .custom-height {
-        height: 42px;
-      }
-      .search-icon {
-        pointer-events: none;
-        font-size: 1rem;
-      }
-      .clear-icon {
-        cursor: pointer;
-        display: none;
-      }
-      /* Custom styles for the verified icon */
-      .verified-icon {
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        vertical-align: middle;
-        margin-right: 0.25rem;
-      }
-      .filter-blue {
-        filter: invert(35%) sepia(90%) saturate(5000%) hue-rotate(180deg)
-          brightness(95%) contrast(90%);
-      }
+     
     </style>
   </head>
   <body>
@@ -95,7 +69,181 @@
       </div>
 
       <!-- Account -->
-     <div class="relative"> <button id="my-account-button" class="flex items-center space-x-2 text-black-600 hover:text-blue-700 transition-colors duration-200" > <!-- Account icon from Lucide React --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user" > <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="10" r="3" /> <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" /> </svg> <span class="font-medium">My Account</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Dropdown menu content --> <div id="dropdown-menu" class="z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200" > <!-- Dropdown Title --> <h2 class="text-lg font-semibold mb-4 text-center text-gray-800"> Login to Your Account </h2> <!-- Features List --> <ul class="space-y-3 mb-4"> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Access your saved designs</span > </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm">Track your orders</span> </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Easily place a reorder</span > </li> </ul> <!-- Sign In Button --> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Sign In </button> </div> </div> <!-- Cart --> <div class="relative"> <button id="cart-button" class="flex items-center space-x-2 text-gray-700 hover:text-blue-700 transition-colors duration-200" > <!-- Cart Icon as SVG --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart" > <circle cx="8" cy="21" r="1" /> <circle cx="19" cy="21" r="1" /> <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /> </svg> <span class="font-medium">Cart (0)</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow-cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Cart Dropdown menu content --> <div id="dropdown-menu-cart" class="z-[9999] absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300" > <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2> <div class="text-center text-gray-500 mb-4"> Your Cart is Empty!<br /> Let's Create something great. Click below to get started. </div> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Start Designing </button> </div> </div>
+     <div class="relative">
+  <button
+    id="my-account-button"
+    class="flex items-center space-x-2 text-black-600 hover:text-blue-700 transition-colors duration-200"
+  >
+    <!-- Account icon from Lucide React -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-circle-user"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="10" r="3" />
+      <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+    </svg>
+    <span class="font-medium">My Account</span>
+    <!-- Dropdown arrow icon -->
+    <svg
+      id="dropdown-arrow"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-chevron-down transform transition-transform duration-200"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <!-- Dropdown menu content -->
+  <div
+    id="dropdown-menu"
+    class="z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200"
+  >
+    <!-- Dropdown Title -->
+    <h2 class="text-lg font-semibold mb-4 text-center text-gray-800">
+      Login to Your Account
+    </h2>
+
+    <!-- Features List -->
+    <ul class="space-y-3 mb-4">
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Access your saved designs</span>
+      </li>
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Track your orders</span>
+      </li>
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Easily place a reorder</span>
+      </li>
+    </ul>
+
+    <!-- Sign In Button -->
+     <div class="flex justify-center">
+ <a 
+  href="./Pages/Authentication/login.html"
+  class="px-16 py-2 bg-blue-600  text-white text-sm font-semibold rounded-full 
+         hover:bg-blue-700 transition-colors duration-200 
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1">
+  Sign In
+</a>
+</div>
+
+
+  </div>
+</div>
+
+<!-- Cart -->
+<div class="relative">
+  <button
+    id="cart-button"
+    class="flex items-center space-x-2 text-gray-700 hover:text-blue-700 transition-colors duration-200"
+  >
+    <!-- Cart Icon as SVG -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-shopping-cart"
+    >
+      <circle cx="8" cy="21" r="1" />
+      <circle cx="19" cy="21" r="1" />
+      <path
+        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+      />
+    </svg>
+    <span class="font-medium">Cart (0)</span>
+    <!-- Dropdown arrow icon -->
+    <svg
+      id="dropdown-arrow-cart"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-chevron-down transform transition-transform duration-200"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <!-- Cart Dropdown menu content -->
+  <div
+    id="dropdown-menu-cart"
+    class="z-[9999] absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300"
+  >
+    <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2>
+    <div class="text-center text-gray-500 mb-4">
+      Your Cart is Empty!<br />
+      Let's Create something great. Click below to get started.
+    </div>
+   <a 
+  href="./Pages/designing.html"
+  class="px-16 py-2 bg-blue-600  text-white text-sm font-semibold rounded-full 
+         hover:bg-blue-700 transition-colors duration-200 
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1">
+  Start Designing
+</a>
+  </div>
+</div>
 
 
     <!-- 🔥 Fixed Search Dropdown -->
@@ -127,7 +275,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         T-Shirts
@@ -135,7 +283,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                     href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Short Sleeve T-Shirts
@@ -143,7 +291,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Performance Shirts
@@ -151,7 +299,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                    href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Hoodies
@@ -159,7 +307,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                         href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         All T-Shirts
@@ -167,7 +315,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                       href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Hats
@@ -175,7 +323,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                   href="/Pages/product.html"
                         class="font-semibold text-blue-600 hover:underline"
                       >
                         View All Categories
@@ -194,7 +342,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         My Account
@@ -202,7 +350,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                          href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Saved Designs
@@ -210,7 +358,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                          href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Order History
@@ -228,92 +376,108 @@
                     class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
                   >
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Tee"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        RushOrderTees Classic Tee
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        2,832 reviews
-                      </p>
-                    </div>
+                 <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Tee"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Bella + Canvas Tri-Blend T-Shirt
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        391 reviews
-                      </p>
-                    </div>
+                  <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Long Sleeve"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Gildan Long Sleeve Ultra Cotton
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        674 reviews
-                      </p>
-                    </div>
+                  <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Hoodie"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Gildan Heavy Blend Hoodie
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        1,072 reviews
-                      </p>
-                    </div>
+                   <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
                   </div>
                 </div>
               </div>
@@ -351,23 +515,23 @@
 
     <!-- Navbar 2 -->
 
-    <nav class="relative bg-white shadow-sm lg:px-8 ">
+    <nav class="relative bg-white shadow-md lg:px-8 ">
       <div
-        class="container-fluid mx-auto flex items-center justify-between px-6 py-3"
+        class="container-fluid mx-auto flex items-center justify-between px-6 py-2"
       >
         <div class="flex items-center  ">
   <a href="/index.html" class="mr-8">
     <img
-      src="https://cdn.sanity.io/images/2ahps9jc/production/3ae1c16d3ec64699ef9fe2b86e6fbda1b358cade-300x120.png"
+      src="./Assets/logo/logo.png"
       class="h-10"
       alt="Logo"
     />
   </a>
 
-<div class="dropdowns flex justify-start  hidden lg:block  ">
+<div class="dropdowns flex justify-start  hidden lg:block mt-2  ">
 <div class="relative group inline-block">
   <!-- Main Link -->
-  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50  mb-1 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
     Custom T-Shirts
     <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -381,7 +545,7 @@
     <!-- Top Blue Line + Arrow -->
     <div class="relative">
       <!-- Blue line -->
-      <div class="h-1 bg-blue-500 w-full rounded-t"></div>
+      <div class="h-1 changeBtnClr w-full rounded-t"></div>
     
     </div>
 
@@ -390,7 +554,7 @@
     <h3 class="font-semibold mb-1">Sweatshirts</h3>
     <hr class="mb-2">
     <ul class="space-y-1">
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Hoodies <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Hoodies <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Crewnecks</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Zip Up Hoodies</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Quarter Zip Ups</a></li>
@@ -407,7 +571,7 @@
     <hr class="mb-2">
     <ul class="space-y-1">
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered Polos</a></li>
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Performance Polos <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Performance Polos <span class=" changeBtnClrtext-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf Polos</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Nike Polos</a></li>
     </ul>
@@ -415,7 +579,7 @@
     <h3 class="font-semibold mt-4 mb-1">Hats</h3>
     <hr class="mb-2">
     <ul class="space-y-1">
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Baseball Hats <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Baseball Hats <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Trucker Hats</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Richardson Hats</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Bucket Hats</a></li>
@@ -426,7 +590,7 @@
     <h3 class="font-semibold mb-1">Apparel</h3>
     <hr class="mb-2">
     <ul class="space-y-1">
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Activewear <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Activewear <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Aprons</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Athleisure Wear</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Business Apparel</a></li>
@@ -446,7 +610,7 @@
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Cropped Apparel</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf</a></li>
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Premium</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Sustainable</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Womens</a></li>
@@ -459,9 +623,9 @@
 
   </div>
 </div>
-<div class="relative group inline-block">
+<div class="relative group inline-block"> 
   <!-- Main Link -->
-  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 mb-1 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
     Custom Apparel
     <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -475,7 +639,7 @@
     <!-- Top Blue Line + Arrow -->
     <div class="relative">
       <!-- Blue line -->
-      <div class="h-1 bg-blue-500 w-full rounded-t"></div>
+      <div class="h-1 changeBtnClr w-full rounded-t"></div>
     
     </div>
 
@@ -484,7 +648,7 @@
     <h3 class="font-semibold mb-1">Sweatshirts</h3>
     <hr class="mb-2">
     <ul class="space-y-1">
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Hoodies <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Hoodies <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Crewnecks</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Zip Up Hoodies</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Quarter Zip Ups</a></li>
@@ -501,7 +665,7 @@
     <hr class="mb-2">
     <ul class="space-y-1">
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered Polos</a></li>
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Performance Polos <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Performance Polos <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf Polos</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Nike Polos</a></li>
     </ul>
@@ -509,7 +673,7 @@
     <h3 class="font-semibold mt-4 mb-1">Hats</h3>
     <hr class="mb-2">
     <ul class="space-y-1">
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Baseball Hats <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Baseball Hats <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Trucker Hats</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Richardson Hats</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Bucket Hats</a></li>
@@ -520,7 +684,7 @@
     <h3 class="font-semibold mb-1">Apparel</h3>
     <hr class="mb-2">
     <ul class="space-y-1">
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Activewear <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Activewear <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Aprons</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Athleisure Wear</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Business Apparel</a></li>
@@ -540,7 +704,7 @@
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Cropped Apparel</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf</a></li>
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Premium</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Sustainable</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Womens</a></li>
@@ -569,7 +733,7 @@
     <!-- Top Blue Line + Arrow -->
     <div class="relative">
       <!-- Blue line -->
-      <div class="h-1 bg-blue-500 w-full rounded-t"></div>
+      <div class="h-1 changeBtnClr w-full rounded-t"></div>
     
     </div>
 
@@ -578,7 +742,7 @@
     <h3 class="font-semibold mb-1">Sweatshirts</h3>
     <hr class="mb-2">
     <ul class="space-y-1">
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Hoodies <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Hoodies <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Crewnecks</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Zip Up Hoodies</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Quarter Zip Ups</a></li>
@@ -595,7 +759,7 @@
     <hr class="mb-2">
     <ul class="space-y-1">
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered Polos</a></li>
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Performance Polos <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Performance Polos <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf Polos</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Nike Polos</a></li>
     </ul>
@@ -603,7 +767,7 @@
     <h3 class="font-semibold mt-4 mb-1">Hats</h3>
     <hr class="mb-2">
     <ul class="space-y-1">
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Baseball Hats <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Baseball Hats <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Trucker Hats</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Richardson Hats</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Bucket Hats</a></li>
@@ -614,7 +778,7 @@
     <h3 class="font-semibold mb-1">Apparel</h3>
     <hr class="mb-2">
     <ul class="space-y-1">
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Activewear <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Activewear <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Aprons</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Athleisure Wear</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Business Apparel</a></li>
@@ -634,7 +798,7 @@
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Cropped Apparel</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Embroidered</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Golf</a></li>
-      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids <span class="bg-blue-400 text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
+      <li><a href="./Pages/product.html" class="hover:text-blue-500">Kids <span class=" changeBtnClr text-white px-1 rounded text-xs ml-1">Popular</span></a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Premium</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Sustainable</a></li>
       <li><a href="./Pages/product.html" class="hover:text-blue-500">Womens</a></li>
@@ -663,7 +827,7 @@
     <!-- Top Blue Line + Arrow -->
     <div class="relative">
       <!-- Blue line -->
-      <div class="h-1 bg-blue-500 w-full rounded-t"></div>
+      <div class="h-1 changeBtnClr w-full rounded-t"></div>
     
     </div>
 
@@ -753,19 +917,19 @@
 </div>
 
         <div class="hidden xl:flex items-center gap-4">
-          <button class="btn btn-outline-primary font-bold rounded-4 px-3 py-2">
+          <a href="/Pages/designing.html" class="btn btn-outline-warning hover:text-white font-bold rounded-4 px-2 py-2">
             Design Now
-          </button>
+          </a>
           <div class="flex flex-col text-sm">
-            <div class="flex items-center gap-1.5 font-bold text-primary">
+            <div class="flex items-center gap-1.5 font-bold ">
               <img
                 src="https://cdn-icons-png.flaticon.com/128/7611/7611043.png"
                 class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
                 alt="Live Chat Icon"
               />
-              <div class="flex flex-col">
+              <div  class="flex flex-col ">
                 <span>Live Chat Now</span>
-                <span class="text-xs text-muted -mt-0.5"
+                <span class="text-xs text-muted -mt-0.5 "
                   >🟢 Chat With an Expert</span
                 >
               </div>
@@ -845,30 +1009,49 @@
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/product.html" class="font-bold text-gray-800 hover:text-blue-600"
               >Custom Apparial</a
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/product.html" class="font-bold text-gray-800 hover:text-blue-600"
               >Promo Products</a
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/brand.html"class="font-bold text-gray-800 hover:text-blue-600"
               >Brands</a
             >
           </li>
         </ul>
         <div class="flex flex-col mt-8 gap-4">
-          <button
+          <a href="./Pages/designing.html"
             class="btn btn-outline-primary w-full py-2 rounded-5 hover:blue-500"
           >
             Design Now
-          </button>
+        </a>
         </div>
       </div>
     </nav>
+    <script>
+  // Select buttons and menu
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-mobile-menu');
+
+  // Open menu
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+  });
+
+  // Close menu
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('translate-x-full');
+  });
+</script>
+
 
     <!-- Main -->
     <section class="bg-white py-12 px-6">
@@ -896,16 +1079,17 @@
           <div
             class="flex flex-col sm:flex-row gap-2 mb-10 justify-center lg:justify-start mx-3"
           >
-            <button
-              class="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-lg py-2 px-10 rounded-lg"
+            <a href="./Pages/product.html"
+              class="changeBtnClr font-semibold text-lg py-2 px-10 rounded-lg"
             >
               Shop Products
-            </button>
-            <button
-              class="border border-blue-500 text-blue-500 font-semibold text-lg py-2 px-10 rounded-lg hover:bg-blue-50"
+        </a>
+            <a
+              href="./Pages/designing.html"
+              class="border changeBtnClr font-semibold text-lg py-2 px-10 rounded-lg "
             >
               Start Designing
-            </button>
+      </a>
           </div>
 
           <!-- Features -->
@@ -952,119 +1136,129 @@
       </div>
 
       <div class="container mx-auto px-4">
-        <div
-          class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-        >
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/581e34253f31a7227d19177c5a714066c99a51d2-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="T-Shirts"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              T-Shirts
-            </h3>
-          </div>
+       <div
+  class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+>
+  <a href="./Pages/detailProduct.html" class="block">
+    <div
+      class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+    >
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/581e34253f31a7227d19177c5a714066c99a51d2-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="T-Shirts"
+        class="w-full mb-2 rounded-lg object-contain"
+      />
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-800">T-Shirts</h3>
+    </div>
+  </a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="Performance Shirts"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Performance Shirts
-            </h3>
-          </div>
+  <a href="./Pages/detailProduct.html" class="block">
+    <div
+      class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+    >
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="Performance Shirts"
+        class="w-full mb-2 rounded-lg object-contain"
+      />
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+        Shirts
+      </h3>
+    </div>
+  </a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/3448afbe8512eef65bc95ece600f50c0dd689eb0-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="Hoodies"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Hoodies
-            </h3>
-          </div>
+  <a href="./Pages/detailProduct.html" class="block">
+    <div
+      class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+    >
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/3448afbe8512eef65bc95ece600f50c0dd689eb0-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="Hoodies"
+        class="w-full mb-2 rounded-lg object-contain"
+      />
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Hoodies</h3>
+    </div>
+  </a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/cfe5bbac5ea1e707fac73ac23305b94c8793b6cd-800x900.png?w=828&q=75&fit=min&auto=format"
-              alt="Promotional Products"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Promotional Products
-            </h3>
-          </div>
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/581e34253f31a7227d19177c5a714066c99a51d2-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="T-Shirts"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              T-Shirts
-            </h3>
-          </div>
+  <a href="./Pages/detailProduct.html" class="block">
+    <div
+      class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+    >
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/cfe5bbac5ea1e707fac73ac23305b94c8793b6cd-800x900.png?w=828&q=75&fit=min&auto=format"
+        alt="Promotional Products"
+        class="w-full mb-2 rounded-lg object-contain"
+      />
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+        shirts
+      </h3>
+    </div>
+  </a>
+    <a href="./Pages/detailProduct.html" class="block">
+    <div
+      class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+    >
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/581e34253f31a7227d19177c5a714066c99a51d2-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="T-Shirts"
+        class="w-full mb-2 rounded-lg object-contain"
+      />
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-800">T-Shirts</h3>
+    </div>
+  </a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="Performance Shirts"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Performance Shirts
-            </h3>
-          </div>
+  <a href="./Pages/detailProduct.html" class="block">
+    <div
+      class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+    >
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="Performance Shirts"
+        class="w-full mb-2 rounded-lg object-contain"
+      />
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+        Shirts
+      </h3>
+    </div>
+  </a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/3448afbe8512eef65bc95ece600f50c0dd689eb0-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="Hoodies"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Hoodies
-            </h3>
-          </div>
+  <a href="./Pages/detailProduct.html" class="block">
+    <div
+      class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+    >
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/3448afbe8512eef65bc95ece600f50c0dd689eb0-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="Hoodies"
+        class="w-full mb-2 rounded-lg object-contain"
+      />
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Hoodies</h3>
+    </div>
+  </a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/cfe5bbac5ea1e707fac73ac23305b94c8793b6cd-800x900.png?w=828&q=75&fit=min&auto=format"
-              alt="Promotional Products"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Promotional Products
-            </h3>
-          </div>
-        </div>
+  <a href="./Pages/detailProduct.html" class="block">
+    <div
+      class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+    >
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/cfe5bbac5ea1e707fac73ac23305b94c8793b6cd-800x900.png?w=828&q=75&fit=min&auto=format"
+        alt="Promotional Products"
+        class="w-full mb-2 rounded-lg object-contain"
+      />
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+        shirts
+      </h3>
+    </div>
+  </a>
+</div>
+
       </div>
       <div class="flex justify-center mt-6">
-        <button
-          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2.5 px-8 rounded-xl shadow-md transition transform hover:scale-102"
+        <a
+        href="./Pages/product.html"
+          class="changeBtnClr text-white font-semibold py-2.5 px-8 rounded-xl shadow-md transition transform hover:scale-102"
         >
           Shop All Products
-        </button>
+      </a>
       </div>
 
       <!-- brand Section -->
@@ -1087,6 +1281,11 @@
           class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6"
         >
           <!-- Card 1: Nike -->
+           <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1096,8 +1295,14 @@
               class="h-16 sm:h-20 w-auto"
             />
           </div>
+        </a>
 
           <!-- Card 2: Carhartt -->
+            <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1107,8 +1312,15 @@
               class="h-16 sm:h-20 w-auto"
             />
           </div>
+        </a>
+
 
           <!-- Card 3: Under Armour -->
+            <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1118,8 +1330,15 @@
               class="h-16 sm:h-20 w-auto"
             />
           </div>
+                  </a>
+
 
           <!-- Card 4: Champion -->
+            <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1129,8 +1348,15 @@
               class="h-16 sm:h-20 w-auto"
             />
           </div>
+                  </a>
+
 
           <!-- Card 5: Stanley -->
+            <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1140,8 +1366,15 @@
               class="h-16 sm:h-20 w-auto"
             />
           </div>
+                  </a>
+
 
           <!-- Card 6: TravisMathew -->
+            <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1151,8 +1384,15 @@
               class="h-16 sm:h-20 w-auto"
             />
           </div>
+                  </a>
+
 
           <!-- Card 7: Adidas -->
+            <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1162,8 +1402,15 @@
               class="h-16 sm:h-20 w-auto"
             />
           </div>
+                  </a>
+
 
           <!-- Card 8: New Era -->
+            <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1173,8 +1420,15 @@
               class="h-16 sm:h-20 w-auto"
             />
           </div>
+                  </a>
+
 
           <!-- Card 9: OGIO -->
+            <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1184,8 +1438,15 @@
               class="h-16 sm:h-20 w-auto"
             />
           </div>
+                  </a>
+
 
           <!-- Card 10: Richardson -->
+            <a 
+  href="./Pages/brand.html" 
+ 
+  class="block"
+>
           <div
             class="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex justify-center items-center h-44 sm:h-52 transform transition-transform duration-300 hover:scale-105"
           >
@@ -1196,299 +1457,474 @@
             />
           </div>
         </div>
+                </a>
+
 
         <div class="flex justify-center mt-6">
-          <button
-            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 sm:py-2.5 sm:px-8 rounded-xl shadow-md transition transform hover:scale-102"
+          <a
+          href="./Pages/brand.html"
+            class="changeBtnClr text-white font-semibold py-2 px-6 sm:py-2.5 sm:px-8 rounded-xl shadow-md transition transform hover:scale-102"
           >
             Shop All Brands
-          </button>
+        </a>
         </div>
       </div>
 
-      <!-- Explore Best Sellers -->
-      <div class="max-w-7xl mx-auto">
-        <!-- Header section -->
-        <header class="mb-8 lg:mb-12 px-4 md:px-0 text-center">
-          <h1 class="text-4xl font-bold text-gray-800 mb-2">
-            Explore Best Sellers
-            <span class="text-gray-900 font-extrabold">on Any Deadline</span>
-          </h1>
-          <p
-            class="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            The most-loved products that customers can't get enough of
-          </p>
-        </header>
+      <!-- Trend Alert Section -->
 
-        <!-- Navigation Tabs -->
-        <nav
-          class="flex justify-center space-x-4 sm:space-x-8 md:space-x-12 mb-8 px-2"
-        >
-          <a
-            href=""
-            class="pb-1.5 font-medium text-gray-900 border-b-2 border-indigo-600 whitespace-nowrap"
-          >
-            T-Shirts
-          </a>
-          <a
-            href="#"
-            class="pb-1.5 font-medium text-gray-500 hover:text-gray-900 transition-colors duration-200 whitespace-nowrap"
-          >
-            Hoodies
-          </a>
-          <a
-            href="#"
-            class="pb-1.5 font-medium text-gray-500 hover:text-gray-900 transition-colors duration-200 whitespace-nowrap"
-          >
-            Hats
-          </a>
-          <a
-            href="#"
-            class="pb-1.5 font-medium text-gray-500 hover:text-gray-900 transition-colors duration-200 whitespace-nowrap"
-          >
-            Polos
-          </a>
-          <a
-            href="#"
-            class="pb-1.5 font-medium text-gray-500 hover:text-gray-900 transition-colors duration-200 whitespace-nowrap"
-          >
-            Promo Products
-          </a>
-        </nav>
+
+  <!-- Section -->
+ <section class="py-8 px-4 text-center">
+  <div class="flex flex-col justify-center items-center">
+<img src="https://www.freshprints.com/images/star_face.gif?key=w96xq75xwebp" class="h-16 w-16" alt="">
+  <h2 class="text-2xl md:text-3xl font-bold text-gray-800"> Trend Alerts</h2>
+  </div>
+  <p class="text-gray-500 mt-1 text-sm md:text-base">Our clients can’t get enough of these merch trends.</p>
+
+  <!-- Cards container -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6 lg:px-16">
+
+    <!-- Card -->
+      <a 
+       href="./Pages/designing.html">
+      
+      <div class="text-card-foreground inline-block relative rounded-[20px] w-full h-full border-[2px] border-solid bg-white p-[10px] shadow-[0px_3px_15px_#0000000D] border-light-blue-100">
+<div class="relative aspect-[4/5] lg:aspect-[7/9] rounded-[15px] overflow-hidden">
+  <img 
+    src="https://fp-cms.directus.app/assets/c6c38f7d-747c-4b52-aaba-028a3b8a8f48?key=w640xq75xwebp" 
+    alt="image" 
+    class="w-full h-full object-cover"
+    loading="lazy"
+  >
+</div>
+
+
+  <div class="absolute right-[-6px] top-[-6px] flex items-center gap-1 rounded-2xl border border-solid bg-white px-2 py-1 text-xs font-normal border-light-blue-100">
+  
+    <div class="text-sm font-bold text-blue-500">🤩
+cozy</div>
+  </div>
+
+  <div class="left-0 mt-1 text-left flex max-w-[280px] flex-col gap-1 p-0 pl-2 pt-3 pb-12">
+    <div class="text-[20px] font-bold text-dark-gray-500">Mock Necks</div>
+    <div class="text-xs text-dark-gray-500">A viral neckline combined with our bestselling heavyweight fabric.</div>
+  </div>
+
+  
+      <button 
+        aria-label="trend" 
+        class="text-white justify-center items-center rounded-[30px] font-bold disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none white-space:nowrap bg-none shadow-[0px_3px_10px_#0000000D]; ease-in duration-200 changeBtnClr mt-2 [translate:0] lg:lg:hover:[translate:3px_0] *:ease-in *:duration-200 *:lg:lg:hover:[translate:1px_0] text-sm leading-none px-4 ripple-effect ripple-effect-white flex h-8 gap-1 py-2 bg-light-blue-500 ripple-effect">
+        <div class="flex items-center gap-1">
+          <div class="text-sm font-semibold text-white">Customize</div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="6.9" height="8.9" class="mt-[1px]" viewBox="0 0 7.414 12.828">
+            <path id="Path_67706" data-name="Path 67706" d="M1436.9,39.5l5,5-5,5" transform="translate(-1435.486 -38.086)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+          </svg>
+        </div>
+      </button>
+    
+</div>
+      </a>
+
+ <a 
+       href="./Pages/designing.html">
+<div class="text-card-foreground inline-block relative rounded-[20px] w-full h-full border-[2px] border-solid bg-white p-[10px] shadow-[0px_3px_15px_#0000000D] border-light-blue-100">
+<div class="relative aspect-[4/5] lg:aspect-[7/9] rounded-[15px] overflow-hidden">
+  <img 
+    src="https://fp-cms.directus.app/assets/bf8e6f47-3841-4d2a-a2dc-947a310263ae?key=w640xq75xwebp" 
+    alt="image" 
+    class="w-full h-full object-cover"
+    loading="lazy"
+  >
+</div>
+
+
+  <div class="absolute right-[-6px] top-[-6px] flex items-center gap-1 rounded-2xl border border-solid bg-white px-2 py-1 text-xs font-normal border-light-blue-100">
+  
+    <div class="text-sm font-bold text-orange-500">😊chic</div>
+  </div>
+
+  <div class="left-0 mt-1 text-left flex max-w-[280px] flex-col gap-1 p-0 pl-2 pt-3 pb-12">
+    <div class="text-[20px] font-bold text-dark-gray-500">Mock Necks</div>
+    <div class="text-xs text-dark-gray-500">A viral neckline combined with our bestselling heavyweight fabric.</div>
+  </div>
+
+  
+      <button 
+        aria-label="trend" 
+        class="text-white justify-center items-center rounded-[30px] font-bold disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none white-space:nowrap bg-none shadow-[0px_3px_10px_#0000000D]; ease-in duration-200 changeBtnClr mt-2 [translate:0] lg:lg:hover:[translate:3px_0] *:ease-in *:duration-200 *:lg:lg:hover:[translate:1px_0] text-sm leading-none px-4 ripple-effect ripple-effect-white flex h-8 gap-1 py-2 bg-orange-500 ripple-effect">
+        <div class="flex items-center gap-1">
+          <div class="text-sm font-semibold text-white">Customize</div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="6.9" height="8.9" class="mt-[1px]" viewBox="0 0 7.414 12.828">
+            <path id="Path_67706" data-name="Path 67706" d="M1436.9,39.5l5,5-5,5" transform="translate(-1435.486 -38.086)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+          </svg>
+        </div>
+      </button>
+    
+</div>
+      </a>
+
+
+ <a 
+       href="./Pages/designing.html">
+<div class="text-card-foreground inline-block relative rounded-[20px] w-full h-full border-[2px] border-solid bg-white p-[10px] shadow-[0px_3px_15px_#0000000D] border-light-blue-100">
+<div class="relative aspect-[4/5] lg:aspect-[7/9] rounded-[15px] overflow-hidden">
+  <img 
+    src="https://fp-cms.directus.app/assets/6f2dcd65-53a7-4820-86cb-f9fc777f5f5e?key=w640xq75xwebp" 
+    alt="image" 
+    class="w-full h-full object-cover"
+    loading="lazy"
+  >
+</div>
+
+
+  <div class="absolute right-[-6px] top-[-6px] flex items-center gap-1 rounded-2xl border border-solid bg-white px-2 py-1 text-xs font-normal border-light-blue-100">
+  
+    <div class="text-sm font-bold text-pink-500">😍viral</div>
+  </div>
+
+  <div class="left-0 mt-1 text-left flex max-w-[280px] flex-col gap-1 p-0 pl-2 pt-3 pb-12">
+    <div class="text-[20px] font-bold text-dark-gray-500">Mock Necks</div>
+    <div class="text-xs text-dark-gray-500">A viral neckline combined with our bestselling heavyweight fabric.</div>
+  </div>
+
+  
+      <button 
+        aria-label="trend" 
+        class="text-white justify-center items-center rounded-[30px] font-bold disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none white-space:nowrap bg-none shadow-[0px_3px_10px_#0000000D]; ease-in duration-200 changeBtnClr mt-2 [translate:0] lg:lg:hover:[translate:3px_0] *:ease-in *:duration-200 *:lg:lg:hover:[translate:1px_0] text-sm leading-none px-4 ripple-effect ripple-effect-white flex h-8 gap-1 py-2 bg-pink-500 ripple-effect">
+        <div class="flex items-center gap-1">
+          <div class="text-sm font-semibold text-white">Customize</div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="6.9" height="8.9" class="mt-[1px]" viewBox="0 0 7.414 12.828">
+            <path id="Path_67706" data-name="Path 67706" d="M1436.9,39.5l5,5-5,5" transform="translate(-1435.486 -38.086)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+          </svg>
+        </div>
+      </button>
+    
+</div>
+
+      </a>
+
+ <a 
+       href="./Pages/designing.html">
+<div class="text-card-foreground inline-block relative rounded-[20px] w-full h-full border-[2px] border-solid bg-white p-[10px] shadow-[0px_3px_15px_#0000000D] border-light-blue-100">
+<div class="relative aspect-[4/5] lg:aspect-[7/9] rounded-[15px] overflow-hidden">
+  <img 
+    src="https://fp-cms.directus.app/assets/d156d7f2-8a3e-4d5b-93db-9cbe991f9f8c?key=w640xq75xwebp" 
+    alt="image" 
+    class="w-full h-full object-cover"
+    loading="lazy"
+  >
+</div>
+      
+
+
+  <div class="absolute right-[-6px] top-[-6px] flex items-center gap-1 rounded-2xl border border-solid bg-white px-2 py-1 text-xs font-normal border-light-blue-100">
+  
+    <div class="text-sm font-bold text-purple-500">😎heavy</div>
+  </div>
+
+  <div class="left-0 mt-1 text-left flex max-w-[280px] flex-col gap-1 p-0 pl-2 pt-3 pb-12">
+    <div class="text-[20px] font-bold text-dark-gray-500">Mock Necks</div>
+    <div class="text-xs text-dark-gray-500">A viral neckline combined with our bestselling heavyweight fabric.</div>
+  </div>
+
+  
+      <button 
+        aria-label="trend" 
+        class="text-white justify-center items-center rounded-[30px] font-bold disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none white-space:nowrap bg-none shadow-[0px_3px_10px_#0000000D]; ease-in duration-200 changeBtnClr mt-2 [translate:0] lg:lg:hover:[translate:3px_0] *:ease-in *:duration-200 *:lg:lg:hover:[translate:1px_0] text-sm leading-none px-4 ripple-effect ripple-effect-white flex h-8 gap-1 py-2 bg-purple-500 ripple-effect">
+        <div class="flex items-center gap-1">
+          <div class="text-sm font-semibold text-white">Customize</div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="6.9" height="8.9" class="mt-[1px]" viewBox="0 0 7.414 12.828">
+            <path id="Path_67706" data-name="Path 67706" d="M1436.9,39.5l5,5-5,5" transform="translate(-1435.486 -38.086)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+          </svg>
+        </div>
+      </button>
+    
+</div>
+</a>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Explore Best Sellers -->
+      <div class="max-w-7xl mx-auto lg:px-16">
+    <!-- Header section -->
+<div class="flex flex-col gap-2 text-center px-4 sm:px-6 lg:px-0">
+  <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold" role="heading" aria-level="3">
+    Explore Best Sellers
+  </h2>
+  <p class="text-sm sm:text-base lg:text-lg text-gray-600">
+    The most-loved products that customers can't get enough of
+  </p>
+</div>
+
+<!-- Navigation Tabs -->
+<div
+  aria-orientation="horizontal "
+  class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-4 px-4 sm:px-6 lg:px-0"
+  id="product-tabs"
+>
+  <button class="tab-btn px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base font-medium rounded-md bg-white text-gray-900 shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+    T-Shirts
+  </button>
+  <button class="tab-btn px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base font-medium rounded-md bg-gray-50 text-gray-700 shadow-sm transition-all hover:bg-slate-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+    Hoodies
+  </button>
+  <button class="tab-btn px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base font-medium rounded-md bg-gray-50 text-gray-700 shadow-sm transition-all hover:bg-slate-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+    Hats
+  </button>
+  <button class="tab-btn px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base font-medium rounded-md bg-gray-50 text-gray-700 shadow-sm transition-all hover:bg-slate-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+    Polos
+  </button>
+  <button class="tab-btn px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base font-medium rounded-md bg-gray-50 text-gray-700 shadow-sm transition-all hover:bg-slate-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+    Promo Products
+  </button>
+</div>
 
         <!-- Product Grid -->
         <div
-          class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+          class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-4"
         >
           <!-- Product Card 1 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
-            <!-- Top Seller Badge -->
-            <div
-              class="absolute top-3 left-3 bg-yellow-400 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded-full z-10"
-            >
-              Top Seller
-            </div>
-            <!-- Image Container -->
-            <div class="relative w-full aspect-w-1 aspect-h-1 overflow-hidden">
-              <img
-                src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
-                alt="T-Shirt"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <!-- Product Info -->
-            <div class="p-4">
-              <h3 class="font-semibold text-base text-gray-800">
-                RushOrderTees Classic Tee
-              </h3>
-              <div class="flex items-center mt-1">
-                <div class="flex text-yellow-400 text-sm">
-                  <span>★</span><span>★</span><span>★</span><span>★</span
-                  ><span>★</span>
-                </div>
-                <span class="ml-2 text-xs text-gray-500">3,045 reviews</span>
-              </div>
-              <!-- Color Swatches -->
-              <div class="flex items-center space-x-1.5 mt-2">
-                <div
-                  class="w-4 h-4 rounded-full bg-black border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-white border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-gray-400 border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-red-500 border border-gray-300"
-                ></div>
-                <a href="#" class="text-xs text-gray-500">+84 colors</a>
-              </div>
-              <!-- Size and Price -->
-              <p class="text-xs text-gray-500 mt-2">9 - 5XL | No Minimum</p>
-              <p class="font-bold text-base text-gray-900 mt-1">
-                $10.41
-                <span class="font-normal text-sm text-gray-500"
-                  >each for 50 items</span
-                >
-              </p>
-            </div>
-          </div>
+          
+        <a href="./Pages/detailProduct.html" class="block no-underline">
+  <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
+    <!-- Top Seller Badge -->
+    <div
+      class="absolute top-3 left-3 bg-yellow-400 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded-full z-10"
+    >
+      Top Seller
+    </div>
+    <!-- Image Container -->
+    <div class="relative w-full aspect-w-1 aspect-h-1 overflow-hidden">
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="T-Shirt"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <!-- Product Info -->
+    <div class="p-4">
+      <h3 class="font-semibold text-base text-gray-800">
+        RushOrderTees Classic Tee
+      </h3>
+      <div class="flex items-center mt-1">
+        <div class="flex text-yellow-400 text-sm">
+          <span>★</span><span>★</span><span>★</span><span>★</span
+          ><span>★</span>
+        </div>
+        <span class="ml-2 text-xs text-gray-500">3,045 reviews</span>
+      </div>
+      <!-- Color Swatches -->
+      <div class="flex items-center space-x-1.5 mt-2">
+        <div
+          class="w-4 h-4 rounded-full bg-black border border-gray-300"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full bg-white border border-gray-300"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full bg-gray-400 border border-gray-300"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full bg-red-500 border border-gray-300"
+        ></div>
+        <span class="text-xs text-gray-500">+84 colors</span>
+      </div>
+      <!-- Size and Price -->
+      <p class="text-xs text-gray-500 mt-2">9 - 5XL | No Minimum</p>
+      <p class="font-bold text-base text-gray-900 mt-1">
+        $10.41
+        <span class="font-normal text-sm text-gray-500"
+          >each for 50 items</span
+        >
+      </p>
+    </div>
+  </div>
+</a>
+
           <!-- Product Card 2 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
-            <!-- Top Seller Badge -->
-            <div
-              class="absolute top-3 left-3 bg-yellow-400 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded-full z-10"
-            >
-              Top Seller
-            </div>
-            <!-- Image Container -->
-            <div class="relative w-full aspect-w-1 aspect-h-1 overflow-hidden">
-              <img
-                src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
-                alt="T-Shirt"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <!-- Product Info -->
-            <div class="p-4">
-              <h3 class="font-semibold text-base text-gray-800">
-                RushOrderTees Classic Tee
-              </h3>
-              <div class="flex items-center mt-1">
-                <div class="flex text-yellow-400 text-sm">
-                  <span>★</span><span>★</span><span>★</span><span>★</span
-                  ><span>★</span>
-                </div>
-                <span class="ml-2 text-xs text-gray-500">3,045 reviews</span>
-              </div>
-              <!-- Color Swatches -->
-              <div class="flex items-center space-x-1.5 mt-2">
-                <div
-                  class="w-4 h-4 rounded-full bg-black border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-white border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-gray-400 border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-red-500 border border-gray-300"
-                ></div>
-                <a href="#" class="text-xs text-gray-500">+84 colors</a>
-              </div>
-              <!-- Size and Price -->
-              <p class="text-xs text-gray-500 mt-2">9 - 5XL | No Minimum</p>
-              <p class="font-bold text-base text-gray-900 mt-1">
-                $10.41
-                <span class="font-normal text-sm text-gray-500"
-                  >each for 50 items</span
-                >
-              </p>
-            </div>
-          </div>
+       <a href="./Pages/detailProduct.html" class="block no-underline">
+  <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
+    <!-- Top Seller Badge -->
+    <div
+      class="absolute top-3 left-3 bg-yellow-400 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded-full z-10"
+    >
+      Top Seller
+    </div>
+    <!-- Image Container -->
+    <div class="relative w-full aspect-w-1 aspect-h-1 overflow-hidden">
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="T-Shirt"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <!-- Product Info -->
+    <div class="p-4">
+      <h3 class="font-semibold text-base text-gray-800">
+        RushOrderTees Classic Tee
+      </h3>
+      <div class="flex items-center mt-1">
+        <div class="flex text-yellow-400 text-sm">
+          <span>★</span><span>★</span><span>★</span><span>★</span
+          ><span>★</span>
+        </div>
+        <span class="ml-2 text-xs text-gray-500">3,045 reviews</span>
+      </div>
+      <!-- Color Swatches -->
+      <div class="flex items-center space-x-1.5 mt-2">
+        <div
+          class="w-4 h-4 rounded-full bg-black border border-gray-300"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full bg-white border border-gray-300"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full bg-gray-400 border border-gray-300"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full bg-red-500 border border-gray-300"
+        ></div>
+        <span class="text-xs text-gray-500">+84 colors</span>
+      </div>
+      <!-- Size and Price -->
+      <p class="text-xs text-gray-500 mt-2">9 - 5XL | No Minimum</p>
+      <p class="font-bold text-base text-gray-900 mt-1">
+        $10.41
+        <span class="font-normal text-sm text-gray-500"
+          >each for 50 items</span
+        >
+      </p>
+    </div>
+  </div>
+</a>
+
           <!-- Product Card 3 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
-            <!-- Top Seller Badge -->
-            <div
-              class="absolute top-3 left-3 bg-yellow-400 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded-full z-10"
-            >
-              Top Seller
-            </div>
-            <!-- Image Container -->
-            <div class="relative w-full aspect-w-1 aspect-h-1 overflow-hidden">
-              <img
-                src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
-                alt="T-Shirt"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <!-- Product Info -->
-            <div class="p-4">
-              <h3 class="font-semibold text-base text-gray-800">
-                RushOrderTees Classic Tee
-              </h3>
-              <div class="flex items-center mt-1">
-                <div class="flex text-yellow-400 text-sm">
-                  <span>★</span><span>★</span><span>★</span><span>★</span
-                  ><span>★</span>
-                </div>
-                <span class="ml-2 text-xs text-gray-500">3,045 reviews</span>
-              </div>
-              <!-- Color Swatches -->
-              <div class="flex items-center space-x-1.5 mt-2">
-                <div
-                  class="w-4 h-4 rounded-full bg-black border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-white border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-gray-400 border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-red-500 border border-gray-300"
-                ></div>
-                <a href="#" class="text-xs text-gray-500">+84 colors</a>
-              </div>
-              <!-- Size and Price -->
-              <p class="text-xs text-gray-500 mt-2">9 - 5XL | No Minimum</p>
-              <p class="font-bold text-base text-gray-900 mt-1">
-                $10.41
-                <span class="font-normal text-sm text-gray-500"
-                  >each for 50 items</span
-                >
-              </p>
-            </div>
-          </div>
-          <!-- Product Card 4 -->
-          <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
-            <!-- Top Seller Badge -->
-            <div
-              class="absolute top-3 left-3 bg-yellow-400 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded-full z-10"
-            >
-              Top Seller
-            </div>
-            <!-- Image Container -->
-            <div class="relative w-full aspect-w-1 aspect-h-1 overflow-hidden">
-              <img
-                src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
-                alt="T-Shirt"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <!-- Product Info -->
-            <div class="p-4">
-              <h3 class="font-semibold text-base text-gray-800">
-                RushOrderTees Classic Tee
-              </h3>
-              <div class="flex items-center mt-1">
-                <div class="flex text-yellow-400 text-sm">
-                  <span>★</span><span>★</span><span>★</span><span>★</span
-                  ><span>★</span>
-                </div>
-                <span class="ml-2 text-xs text-gray-500">3,045 reviews</span>
-              </div>
-              <!-- Color Swatches -->
-              <div class="flex items-center space-x-1.5 mt-2">
-                <div
-                  class="w-4 h-4 rounded-full bg-black border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-white border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-gray-400 border border-gray-300"
-                ></div>
-                <div
-                  class="w-4 h-4 rounded-full bg-red-500 border border-gray-300"
-                ></div>
-                <a href="#" class="text-xs text-gray-500">+84 colors</a>
-              </div>
-              <!-- Size and Price -->
-              <p class="text-xs text-gray-500 mt-2">9 - 5XL | No Minimum</p>
-              <p class="font-bold text-base text-gray-900 mt-1">
-                $10.41
-                <span class="font-normal text-sm text-gray-500"
-                  >each for 50 items</span
-                >
-              </p>
-            </div>
-          </div>
+         <!-- Product Card 3 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
+    <!-- Top Seller Badge -->
+    <div
+      class="absolute top-3 left-3 bg-yellow-400 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded-full z-10"
+    >
+      Top Seller
+    </div>
+    <!-- Image Container -->
+    <div class="relative w-full aspect-w-1 aspect-h-1 overflow-hidden">
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="T-Shirt"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <!-- Product Info -->
+    <div class="p-4">
+      <h3 class="font-semibold text-base text-gray-800">
+        RushOrderTees Classic Tee
+      </h3>
+      <div class="flex items-center mt-1">
+        <div class="flex text-yellow-400 text-sm">
+          <span>★</span><span>★</span><span>★</span><span>★</span
+          ><span>★</span>
+        </div>
+        <span class="ml-2 text-xs text-gray-500">3,045 reviews</span>
+      </div>
+      <!-- Color Swatches -->
+      <div class="flex items-center space-x-1.5 mt-2">
+        <div class="w-4 h-4 rounded-full bg-black border border-gray-300"></div>
+        <div class="w-4 h-4 rounded-full bg-white border border-gray-300"></div>
+        <div class="w-4 h-4 rounded-full bg-gray-400 border border-gray-300"></div>
+        <div class="w-4 h-4 rounded-full bg-red-500 border border-gray-300"></div>
+        <span class="text-xs text-gray-500">+84 colors</span>
+      </div>
+      <!-- Size and Price -->
+      <p class="text-xs text-gray-500 mt-2">9 - 5XL | No Minimum</p>
+      <p class="font-bold text-base text-gray-900 mt-1">
+        $10.41
+        <span class="font-normal text-sm text-gray-500"
+          >each for 50 items</span
+        >
+      </p>
+    </div>
+  </div>
+</a>
+
+<!-- Product Card 4 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
+    <!-- Top Seller Badge -->
+    <div
+      class="absolute top-3 left-3 bg-yellow-400 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded-full z-10"
+    >
+      Top Seller
+    </div>
+    <!-- Image Container -->
+    <div class="relative w-full aspect-w-1 aspect-h-1 overflow-hidden">
+      <img
+        src="https://cdn.sanity.io/images/2ahps9jc/production/d4a41814673d910c4715322b6d68da7313fc9b4e-800x900.jpg?w=828&q=75&fit=min&auto=format"
+        alt="T-Shirt"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <!-- Product Info -->
+    <div class="p-4">
+      <h3 class="font-semibold text-base text-gray-800">
+        RushOrderTees Classic Tee
+      </h3>
+      <div class="flex items-center mt-1">
+        <div class="flex text-yellow-400 text-sm">
+          <span>★</span><span>★</span><span>★</span><span>★</span
+          ><span>★</span>
+        </div>
+        <span class="ml-2 text-xs text-gray-500">3,045 reviews</span>
+      </div>
+      <!-- Color Swatches -->
+      <div class="flex items-center space-x-1.5 mt-2">
+        <div class="w-4 h-4 rounded-full bg-black border border-gray-300"></div>
+        <div class="w-4 h-4 rounded-full bg-white border border-gray-300"></div>
+        <div class="w-4 h-4 rounded-full bg-gray-400 border border-gray-300"></div>
+        <div class="w-4 h-4 rounded-full bg-red-500 border border-gray-300"></div>
+        <span class="text-xs text-gray-500">+84 colors</span>
+      </div>
+      <!-- Size and Price -->
+      <p class="text-xs text-gray-500 mt-2">9 - 5XL | No Minimum</p>
+      <p class="font-bold text-base text-gray-900 mt-1">
+        $10.41
+        <span class="font-normal text-sm text-gray-500"
+          >each for 50 items</span
+        >
+      </p>
+    </div>
+  </div>
+</a>
+
         </div>
       </div>
       <div class="flex justify-center mt-6">
         <button
-          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2.5 px-8 rounded-xl shadow-md transition transform hover:scale-102"
+          class="changeBtnClr text-white font-semibold py-2.5 px-8 rounded-xl shadow-md transition transform hover:scale-102"
         >
           Shop T-Shirts
         </button>
       </div>
 
       <!-- Shop Popular Promo Products -->
-      <div class="text-center mb-12 px-4 mt-4">
+      <div class="text-center mb-12 px-4 mt-4 ">
         <h2 class="text-4xl font-bold text-gray-800 mb-2">
           Shop Popular Promo Products
         </h2>
@@ -1498,117 +1934,135 @@
         </p>
       </div>
 
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto  lg:px-16">
         <div
           class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         >
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/30f59ba6fe4c998e1b2e7d537ccfe8c008d501dd-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="T-Shirts"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              T-Shirts
-            </h3>
-          </div>
+       <!-- Card 1 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div
+    class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+  >
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/30f59ba6fe4c998e1b2e7d537ccfe8c008d501dd-800x900.jpg?w=828&q=75&fit=min&auto=format"
+      alt="T-Shirts"
+      class="w-full mb-2 rounded-lg object-contain"
+    />
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">T-Shirts</h3>
+  </div>
+</a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/5679b636726b3ab2a4c807d314fb727abd9bd0bb-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="Performance Shirts"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Performance Shirts
-            </h3>
-          </div>
+<!-- Card 2 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div
+    class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+  >
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/5679b636726b3ab2a4c807d314fb727abd9bd0bb-800x900.jpg?w=828&q=75&fit=min&auto=format"
+      alt="Performance Shirts"
+      class="w-full mb-2 rounded-lg object-contain"
+    />
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+      Performance Shirts
+    </h3>
+  </div>
+</a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/f25d814cf635ae101bff0721a4f63f062f6531e2-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="Hoodies"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Hoodies
-            </h3>
-          </div>
+<!-- Card 3 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div
+    class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+  >
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/f25d814cf635ae101bff0721a4f63f062f6531e2-800x900.jpg?w=828&q=75&fit=min&auto=format"
+      alt="Hoodies"
+      class="w-full mb-2 rounded-lg object-contain"
+    />
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Hoodies</h3>
+  </div>
+</a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/d1a788e295e072238119b5f7f6681a4ed3eeeda4-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="Promotional Products"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Promotional Products
-            </h3>
-          </div>
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/934dd0ee7e805dc34d12d379d0086c8d680a2693-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="T-Shirts"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              T-Shirts
-            </h3>
-          </div>
+<!-- Card 4 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div
+    class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+  >
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/d1a788e295e072238119b5f7f6681a4ed3eeeda4-800x900.jpg?w=828&q=75&fit=min&auto=format"
+      alt="Promotional Products"
+      class="w-full mb-2 rounded-lg object-contain"
+    />
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+      Promotional Products
+    </h3>
+  </div>
+</a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/9a362ade31bde86454e8e11ec3098ac8a39c63ab-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="Performance Shirts"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Performance Shirts
-            </h3>
-          </div>
+<!-- Card 5 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div
+    class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+  >
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/934dd0ee7e805dc34d12d379d0086c8d680a2693-800x900.jpg?w=828&q=75&fit=min&auto=format"
+      alt="T-Shirts"
+      class="w-full mb-2 rounded-lg object-contain"
+    />
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">T-Shirts</h3>
+  </div>
+</a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/a6eabf2369e29cc0c98d8f6b4bc8eb4e8f8dd0ec-800x900.jpg?w=828&q=75&fit=min&auto=format"
-              alt="Hoodies"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Hoodies
-            </h3>
-          </div>
+<!-- Card 6 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div
+    class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+  >
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/9a362ade31bde86454e8e11ec3098ac8a39c63ab-800x900.jpg?w=828&q=75&fit=min&auto=format"
+      alt="Performance Shirts"
+      class="w-full mb-2 rounded-lg object-contain"
+    />
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+      Performance Shirts
+    </h3>
+  </div>
+</a>
 
-          <div
-            class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src="https://cdn.sanity.io/images/2ahps9jc/production/cfe5bbac5ea1e707fac73ac23305b94c8793b6cd-800x900.png?w=828&q=75&fit=min&auto=format"
-              alt="Promotional Products"
-              class="w-full mb-2 rounded-lg object-contain"
-            />
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
-              Promotional Products
-            </h3>
-          </div>
+<!-- Card 7 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div
+    class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+  >
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/a6eabf2369e29cc0c98d8f6b4bc8eb4e8f8dd0ec-800x900.jpg?w=828&q=75&fit=min&auto=format"
+      alt="Hoodies"
+      class="w-full mb-2 rounded-lg object-contain"
+    />
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Hoodies</h3>
+  </div>
+</a>
+
+<!-- Card 8 -->
+<a href="./Pages/detailProduct.html" class="block no-underline">
+  <div
+    class="bg-white rounded-lg shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300"
+  >
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/cfe5bbac5ea1e707fac73ac23305b94c8793b6cd-800x900.png?w=828&q=75&fit=min&auto=format"
+      alt="Promotional Products"
+      class="w-full mb-2 rounded-lg object-contain"
+    />
+    <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+      Promotional Products
+    </h3>
+  </div>
+</a>
+
         </div>
       </div>
       <div class="flex justify-center mt-6">
         <button
-          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2.5 px-8 rounded-xl shadow-md transition transform hover:scale-102"
+          class="changeBtnClr text-white font-semibold py-2.5 px-8 rounded-xl shadow-md transition transform hover:scale-102"
         >
           Shop All Promo Products
         </button>
@@ -1631,7 +2085,7 @@
 
         <!-- grid section 1 -->
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-2    items-stretch ">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2 lg:px-16   items-stretch ">
 
   <!-- Big Image (Left side, spans 2 rows) -->
   <div class="md:row-span-2 h-full flex">
@@ -1683,7 +2137,7 @@
 </div>
  
 <!-- grid section 2-->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-2  items-stretch mt-3 mb-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2  items-stretch mt-3 mb-10 lg:px-16 ">
 
   
 
@@ -1738,102 +2192,10 @@
 
 
 
-
- <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
+<style>
   
+</style>
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #444;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 350px;
-      /* margin: 20px auto; */
-    }
-
-    .append-buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .append-buttons button {
-      display: inline-block;
-      cursor: pointer;
-      border: 1px solid #007aff;
-      color: #007aff;
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin: 0 10px;
-      font-size: 13px;
-    }
-    /* Custom Arrow Buttons */
-.swiper-button-next,
-.swiper-button-prev {
-  width: 45px;
-  height: 45px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  border-radius: 20%;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Hover Effect */
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: #007aff;
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 122, 255, 0.5);
-}
-
-/* Change default arrow color */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Position tweak */
-.swiper-button-next {
-  right: 15px;
-}
-.swiper-button-prev {
-  left: 13px;
-}
-
-  </style>
-</head>
-
-<body>
   <!-- Swiper -->
    <h1 class="text-center text-3xl md:text-4xl font-bold text-gray-800 mb-8">
   <span class="relative inline-block">
@@ -1842,254 +2204,215 @@
   </span>
 </h1>
 
-  <div #swiperRef="" class="swiper mySwiper ">
-    <div class="swiper-wrapper ">
-      <div class="swiper-slide flex justify-center rounded-full ">
-          <div class="max-w-md bg-white shadow-lg rounded-2xl p-6 text-center border">
-            <div class="flex justify-center mb-3">
-              <span class="text-yellow-400 text-xl">★★★★★</span>
-            </div>
-            <h2 class="text-lg text-black font-semibold mb-3">
-              Great Shirts & Great Company!
-            </h2>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-              We had a great experience working with the Rush Order Tees team. 
-              We needed ~20 shirts for a group bicycle cruise celebrating a wedding. 
-              They did a great job & our final design looked nice & clean on the shirts. 
-              This is a great brand doing great work and we will definitely order 
-              from them again. Thank you Rush Order Tees!
-            </p>
-            <div>
-              <p class="font-medium text-gray-800">Jennifer W.</p>
-              <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Verified Review on Yotpo
-              </p>
-            </div>
-          </div>
-        </div>
+ <style>
+  /* Optional: Ensure swiper navigation buttons are visible against your background */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #4b5563; /* Change to a color that contrasts with your background */
+  }
+  .swiper-button-next,
+.swiper-button-prev {
+  width: 35px;           /* square size */
+  height: 35px;
+  border-radius: 8px;    /* optional rounded corners */
+  background-color: transparent; /* transparent background */
+  color: #333;           /* arrow color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #333; /* optional border to see the square */
+}
 
-        <div class="swiper-slide flex justify-center rounded-full ">
-          <div class="max-w-md bg-white shadow-lg rounded-2xl p-6 text-center border">
-            <div class="flex justify-center mb-3">
-              <span class="text-yellow-400 text-xl">★★★★★</span>
-            </div>
-            <h2 class="text-lg text-black font-semibold mb-3">
-              Great Shirts & Great Company!
-            </h2>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-              We had a great experience working with the Rush Order Tees team. 
-              We needed ~20 shirts for a group bicycle cruise celebrating a wedding. 
-              They did a great job & our final design looked nice & clean on the shirts. 
-              This is a great brand doing great work and we will definitely order 
-              from them again. Thank you Rush Order Tees!
-            </p>
-            <div>
-              <p class="font-medium text-gray-800">Jennifer W.</p>
-              <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Verified Review on Yotpo
-              </p>
-            </div>
-          </div>
+/* Position adjustments */
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* Smaller arrow size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #000;          /* arrow darkens on hover */
+  border-color: #000;    /* border darkens on hover */
+}
+
+
+  /* Optional: Adjust pagination dot color */
+  .swiper-pagination-bullet-active {
+    background: #4b5563;
+  }
+</style>
+
+<div #swiperRef="" class="swiper mySwiper lg:px-4">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide flex justify-center items-center ">
+      <div class="max-w-md bg-white  rounded-2xl p-6 text-center border">
+        <div class="flex justify-center mb-3">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
         </div>
-          <div class="swiper-slide flex justify-center rounded-full ">
-          <div class="max-w-md bg-white shadow-lg rounded-2xl p-6 text-center border">
-            <div class="flex justify-center mb-3">
-              <span class="text-yellow-400 text-xl">★★★★★</span>
-            </div>
-            <h2 class="text-lg text-black font-semibold mb-3">
-              Great Shirts & Great Company!
-            </h2>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-              We had a great experience working with the Rush Order Tees team. 
-              We needed ~20 shirts for a group bicycle cruise celebrating a wedding. 
-              They did a great job & our final design looked nice & clean on the shirts. 
-              This is a great brand doing great work and we will definitely order 
-              from them again. Thank you Rush Order Tees!
-            </p>
-            <div>
-              <p class="font-medium text-gray-800">Jennifer W.</p>
-              <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Verified Review on Yotpo
-              </p>
-            </div>
-          </div>
+        <h2 class="text-lg text-black font-semibold mb-3">Great Shirts & Great Company!</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          We had a great experience working with the Rush Order Tees team. We needed ~20 shirts for a group bicycle cruise celebrating a wedding. They did a great job & our final design looked nice & clean on the shirts. This is a great brand doing great work and we will definitely order from them again. Thank you Rush Order Tees!
+        </p>
+        <div>
+          <p class="font-medium text-gray-800">Jennifer W.</p>
+          <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Verified Review on Yotpo
+          </p>
         </div>
-          <div class="swiper-slide flex justify-center rounded-full ">
-          <div class="max-w-md bg-white shadow-lg rounded-2xl p-6 text-center border">
-            <div class="flex justify-center mb-3">
-              <span class="text-yellow-400 text-xl">★★★★★</span>
-            </div>
-            <h2 class="text-lg text-black font-semibold mb-3">
-              Great Shirts & Great Company!
-            </h2>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-              We had a great experience working with the Rush Order Tees team. 
-              We needed ~20 shirts for a group bicycle cruise celebrating a wedding. 
-              They did a great job & our final design looked nice & clean on the shirts. 
-              This is a great brand doing great work and we will definitely order 
-              from them again. Thank you Rush Order Tees!
-            </p>
-            <div>
-              <p class="font-medium text-gray-800">Jennifer W.</p>
-              <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Verified Review on Yotpo
-              </p>
-            </div>
-          </div>
-        </div>
-          <div class="swiper-slide flex justify-center rounded-full ">
-          <div class="max-w-md bg-white shadow-lg rounded-2xl p-6 text-center border">
-            <div class="flex justify-center mb-3">
-              <span class="text-yellow-400 text-xl">★★★★★</span>
-            </div>
-            <h2 class="text-lg text-black font-semibold mb-3">
-              Great Shirts & Great Company!
-            </h2>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-              We had a great experience working with the Rush Order Tees team. 
-              We needed ~20 shirts for a group bicycle cruise celebrating a wedding. 
-              They did a great job & our final design looked nice & clean on the shirts. 
-              This is a great brand doing great work and we will definitely order 
-              from them again. Thank you Rush Order Tees!
-            </p>
-            <div>
-              <p class="font-medium text-gray-800">Jennifer W.</p>
-              <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Verified Review on Yotpo
-              </p>
-            </div>
-          </div>
-        </div>
-          <div class="swiper-slide flex justify-center rounded-full ">
-          <div class="max-w-md bg-white shadow-lg rounded-2xl p-6 text-center border">
-            <div class="flex justify-center mb-3">
-              <span class="text-yellow-400 text-xl">★★★★★</span>
-            </div>
-            <h2 class="text-lg text-black font-semibold mb-3">
-              Great Shirts & Great Company!
-            </h2>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-              We had a great experience working with the Rush Order Tees team. 
-              We needed ~20 shirts for a group bicycle cruise celebrating a wedding. 
-              They did a great job & our final design looked nice & clean on the shirts. 
-              This is a great brand doing great work and we will definitely order 
-              from them again. Thank you Rush Order Tees!
-            </p>
-            <div>
-              <p class="font-medium text-gray-800">Jennifer W.</p>
-              <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Verified Review on Yotpo
-              </p>
-            </div>
-          </div>
-        </div>
-          <div class="swiper-slide flex justify-center rounded-full ">
-          <div class="max-w-md bg-white shadow-lg rounded-2xl p-6 text-center border">
-            <div class="flex justify-center mb-3">
-              <span class="text-yellow-400 text-xl">★★★★★</span>
-            </div>
-            <h2 class="text-lg text-black font-semibold mb-3">
-              Great Shirts & Great Company!
-            </h2>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-              We had a great experience working with the Rush Order Tees team. 
-              We needed ~20 shirts for a group bicycle cruise celebrating a wedding. 
-              They did a great job & our final design looked nice & clean on the shirts. 
-              This is a great brand doing great work and we will definitely order 
-              from them again. Thank you Rush Order Tees!
-            </p>
-            <div>
-              <p class="font-medium text-gray-800">Jennifer W.</p>
-              <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Verified Review on Yotpo
-              </p>
-            </div>
-          </div>
-        </div>
+      </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-slide flex justify-center">
+      <div class="max-w-md bg-white rounded-2xl p-6 text-center border">
+        <div class="flex justify-center mb-3">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h2 class="text-lg text-black font-semibold mb-3">Great Shirts & Great Company!</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          We had a great experience working with the Rush Order Tees team. We needed ~20 shirts for a group bicycle cruise celebrating a wedding. They did a great job & our final design looked nice & clean on the shirts. This is a great brand doing great work and we will definitely order from them again. Thank you Rush Order Tees!
+        </p>
+        <div>
+          <p class="font-medium text-gray-800">Jennifer W.</p>
+          <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Verified Review on Yotpo
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide flex justify-center">
+      <div class="max-w-md bg-white  rounded-2xl p-6 text-center border">
+        <div class="flex justify-center mb-3">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h2 class="text-lg text-black font-semibold mb-3">Great Shirts & Great Company!</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          We had a great experience working with the Rush Order Tees team. We needed ~20 shirts for a group bicycle cruise celebrating a wedding. They did a great job & our final design looked nice & clean on the shirts. This is a great brand doing great work and we will definitely order from them again. Thank you Rush Order Tees!
+        </p>
+        <div>
+          <p class="font-medium text-gray-800">Jennifer W.</p>
+          <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Verified Review on Yotpo
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide flex justify-center">
+      <div class="max-w-md bg-white rounded-2xl p-6 text-center border">
+        <div class="flex justify-center mb-3">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h2 class="text-lg text-black font-semibold mb-3">Great Shirts & Great Company!</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          We had a great experience working with the Rush Order Tees team. We needed ~20 shirts for a group bicycle cruise celebrating a wedding. They did a great job & our final design looked nice & clean on the shirts. This is a great brand doing great work and we will definitely order from them again. Thank you Rush Order Tees!
+        </p>
+        <div>
+          <p class="font-medium text-gray-800">Jennifer W.</p>
+          <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Verified Review on Yotpo
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide flex justify-center">
+      <div class="max-w-md bg-white  rounded-2xl p-6 text-center border">
+        <div class="flex justify-center mb-3">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h2 class="text-lg text-black font-semibold mb-3">Great Shirts & Great Company!</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          We had a great experience working with the Rush Order Tees team. We needed ~20 shirts for a group bicycle cruise celebrating a wedding. They did a great job & our final design looked nice & clean on the shirts. This is a great brand doing great work and we will definitely order from them again. Thank you Rush Order Tees!
+        </p>
+        <div>
+          <p class="font-medium text-gray-800">Jennifer W.</p>
+          <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Verified Review on Yotpo
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide flex justify-center">
+      <div class="max-w-md bg-white  rounded-2xl p-6 text-center border">
+        <div class="flex justify-center mb-3">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h2 class="text-lg text-black font-semibold mb-3">Great Shirts & Great Company!</h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          We had a great experience working with the Rush Order Tees team. We needed ~20 shirts for a group bicycle cruise celebrating a wedding. They did a great job & our final design looked nice & clean on the shirts. This is a great brand doing great work and we will definitely order from them again. Thank you Rush Order Tees!
+        </p>
+        <div>
+          <p class="font-medium text-gray-800">Jennifer W.</p>
+          <p class="flex items-center justify-center text-sm text-gray-500 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Verified Review on Yotpo
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
 
- 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
+<script>
+  var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
       },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30
       },
-    });
-
-    var appendNumber = 4;
-    var prependNumber = 1;
-    document
-      .querySelector(".prepend-2-slides")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        swiper.prependSlide([
-          '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-          '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-        ]);
-      });
-    document
-      .querySelector(".prepend-slide")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        swiper.prependSlide(
-          '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
-        );
-      });
-    document
-      .querySelector(".append-slide")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        swiper.appendSlide(
-          '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
-        );
-      });
-    document
-      .querySelector(".append-2-slides")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        swiper.appendSlide([
-          '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-          '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-        ]);
-      });
-  </script>
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+    }
+  });
+</script>
 
 
 
@@ -2232,24 +2555,24 @@
             <h4 class="font-bold text-lg mb-4">APPAREL</h4>
             <ul>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">T-Shirts</a>
+                <a href="#" class="text-gray-400 changeBtnClr">T-Shirts</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">Hoodies</a>
+                <a href="#" class="text-gray-400 changeBtnClr">Hoodies</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white"
+                <a href="#" class="text-gray-400 changeBtnClr"
                   >Sweatshirts</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">Hats</a>
+                <a href="#" class="text-gray-400 changeBtnClr">Hats</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">Polos</a>
+                <a href="#" class="text-gray-400 changeBtnClr">Polos</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">Jackets</a>
+                <a href="#" class="text-gray-400 changeBtnClr">Jackets</a>
               </li>
             </ul>
           </div>
@@ -2257,28 +2580,28 @@
             <h4 class="font-bold text-lg mb-4">PROMO PRODUCTS</h4>
             <ul>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white"
+                <a href="#" class="text-gray-400 changeBtnClr"
                   >No Minimums</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">Bags</a>
+                <a href="#" class="text-gray-400 changeBtnClr">Bags</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">Drinkware</a>
+                <a href="#" class="text-gray-400 changeBtnClr">Drinkware</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white"
+                <a href="#" class="text-gray-400 changeBtnClr"
                   >Trade Shows</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white"
+                <a href="#" class="text-gray-400 changeBtnClr"
                   >Office Supplies</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white"
+                <a href="#" class="text-gray-400 changeBtnClr"
                   >Technology</a
                 >
               </li>
@@ -2289,19 +2612,19 @@
 
             <ul>
               <li class="mb-2">
-                <a href="./Pages/About/review.html" class="text-gray-400 hover:text-white">Reviews</a>
+                <a href="./Pages/About/review.html" class="text-gray-400 changeBtnClr">Reviews</a>
               </li>
               <li class="mb-2">
-                <a href="./Pages/About/story.html" class="text-gray-400 hover:text-white">Our Story</a>
+                <a href="./Pages/About/story.html" class="text-gray-400 changeBtnClr">Our Story</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">Blog</a>
+                <a href="#" class="text-gray-400 changeBtnClr">Blog</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">Careers</a>
+                <a href="#" class="text-gray-400 changeBtnClr">Careers</a>
               </li>
               <li class="mb-2">
-                <a href="./Pages/About/about.html" class="text-gray-400 hover:text-white">View All</a>
+                <a href="./Pages/About/about.html" class="text-gray-400 changeBtnClr">View All</a>
               </li>
             </ul>
           </div>
@@ -2309,23 +2632,23 @@
             <h4 class="font-bold text-lg mb-4">MY ACCOUNT</h4>
             <ul>
               <li class="mb-2">
-                <a href="/Pages/My Account/account.html" class="text-gray-400 hover:text-white">My Orders</a>
+                <a href="/Pages/My Account/account.html" class="text-gray-400 changeBtnClr">My Orders</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white"
+                <a href="#" class="text-gray-400 changeBtnClr"
                   >Track My Order</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white"
+                <a href="#" class="text-gray-400 changeBtnClr"
                   >Recent Saved Designs</a
                 >
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white">Reorder</a>
+                <a href="#" class="text-gray-400 changeBtnClr">Reorder</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-gray-400 hover:text-white"
+                <a href="#" class="text-gray-400 changeBtnClr"
                   >Help Center</a
                 >
               </li>
@@ -2415,13 +2738,13 @@
           class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm pt-6"
         >
           <div class="flex flex-wrap space-x-4 mb-4 md:mb-0">
-            <a href="#" class="hover:text-white">Accessibility</a>
-            <a href="#" class="hover:text-white">User Agreement</a>
-            <a href="#" class="hover:text-white">Privacy Policy</a>
-            <a href="#" class="hover:text-white">CCPA</a>
-            <a href="#" class="hover:text-white">Copyright Infringement</a>
-            <a href="#" class="hover:text-white">IP Policy</a>
-            <a href="#" class="hover:text-white">Sitemap</a>
+            <a href="#" class="changeBtnClr">Accessibility</a>
+            <a href="#" class="changeBtnClr">User Agreement</a>
+            <a href="#" class="changeBtnClr">Privacy Policy</a>
+            <a href="#" class="changeBtnClr">CCPA</a>
+            <a href="#" class="changeBtnClr">Copyright Infringement</a>
+            <a href="#" class="changeBtnClr">IP Policy</a>
+            <a href="#" class="changeBtnClr">Sitemap</a>
           </div>
           <div class="flex space-x-4 mb-4 md:mb-0 text-gray-700">
             <a href="#" class="text-blue-600"

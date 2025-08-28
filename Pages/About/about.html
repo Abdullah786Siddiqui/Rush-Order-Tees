@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rush UI</title>
     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
     <!-- Gooogle fonts -->
     <link
       rel="stylesheet"
@@ -28,36 +32,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .top-bar {
-        background-color: #f8fafd;
-        font-size: 0.9rem;
-      }
-      .custom-height {
-        height: 42px;
-      }
-      .search-icon {
-        pointer-events: none;
-        font-size: 1rem;
-      }
-      .clear-icon {
-        cursor: pointer;
-        display: none;
-      }
-      /* Custom styles for the verified icon */
-      .verified-icon {
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        vertical-align: middle;
-        margin-right: 0.25rem;
-      }
-      .filter-blue {
-        filter: invert(35%) sepia(90%) saturate(5000%) hue-rotate(180deg)
-          brightness(95%) contrast(90%);
-      }
+     
     </style>
   </head>
-  <body style="background-color: #F1F5F9;">
+  <body>
   <nav
   style="background-color: #f1f5f9"
   class="navbar navbar-expand-lg top-bar py-2"
@@ -91,7 +69,181 @@
       </div>
 
       <!-- Account -->
-     <div class="relative"> <button id="my-account-button" class="flex items-center space-x-2 text-black-600 hover:text-blue-700 transition-colors duration-200" > <!-- Account icon from Lucide React --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user" > <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="10" r="3" /> <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" /> </svg> <span class="font-medium">My Account</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Dropdown menu content --> <div id="dropdown-menu" class="z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200" > <!-- Dropdown Title --> <h2 class="text-lg font-semibold mb-4 text-center text-gray-800"> Login to Your Account </h2> <!-- Features List --> <ul class="space-y-3 mb-4"> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Access your saved designs</span > </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm">Track your orders</span> </li> <li class="flex items-center gap-2"> <div class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center" > <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" > <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z" clip-rule="evenodd" /> </svg> </div> <span class="text-gray-700 text-sm" >Easily place a reorder</span > </li> </ul> <!-- Sign In Button --> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Sign In </button> </div> </div> <!-- Cart --> <div class="relative"> <button id="cart-button" class="flex items-center space-x-2 text-gray-700 hover:text-blue-700 transition-colors duration-200" > <!-- Cart Icon as SVG --> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart" > <circle cx="8" cy="21" r="1" /> <circle cx="19" cy="21" r="1" /> <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /> </svg> <span class="font-medium">Cart (0)</span> <!-- Dropdown arrow icon --> <svg id="dropdown-arrow-cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transform transition-transform duration-200" > <path d="m6 9 6 6 6-6" /> </svg> </button> <!-- Cart Dropdown menu content --> <div id="dropdown-menu-cart" class="z-[9999] absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300" > <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2> <div class="text-center text-gray-500 mb-4"> Your Cart is Empty!<br /> Let's Create something great. Click below to get started. </div> <button class="w-full bg-blue-600 text-white text-sm font-semibold py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1" > Start Designing </button> </div> </div>
+     <div class="relative">
+  <button
+    id="my-account-button"
+    class="flex items-center space-x-2 text-black-600 hover:text-blue-700 transition-colors duration-200"
+  >
+    <!-- Account icon from Lucide React -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-circle-user"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="10" r="3" />
+      <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+    </svg>
+    <span class="font-medium">My Account</span>
+    <!-- Dropdown arrow icon -->
+    <svg
+      id="dropdown-arrow"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-chevron-down transform transition-transform duration-200"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <!-- Dropdown menu content -->
+  <div
+    id="dropdown-menu"
+    class="z-[9999] absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white p-4 rounded-xl shadow-lg hidden transition-all duration-300 ring-1 ring-gray-200"
+  >
+    <!-- Dropdown Title -->
+    <h2 class="text-lg font-semibold mb-4 text-center text-gray-800">
+      Login to Your Account
+    </h2>
+
+    <!-- Features List -->
+    <ul class="space-y-3 mb-4">
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Access your saved designs</span>
+      </li>
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Track your orders</span>
+      </li>
+      <li class="flex items-center gap-2">
+        <div
+          class="flex-shrink-0 w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"
+        >
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span class="text-gray-700 text-sm">Easily place a reorder</span>
+      </li>
+    </ul>
+
+    <!-- Sign In Button -->
+     <div class="flex justify-center">
+ <a 
+  href="./Pages/Authentication/login.html"
+  class="px-16 py-2 bg-blue-600  text-white text-sm font-semibold rounded-full 
+         hover:bg-blue-700 transition-colors duration-200 
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1">
+  Sign In
+</a>
+</div>
+
+
+  </div>
+</div>
+
+<!-- Cart -->
+<div class="relative">
+  <button
+    id="cart-button"
+    class="flex items-center space-x-2 text-gray-700 hover:text-blue-700 transition-colors duration-200"
+  >
+    <!-- Cart Icon as SVG -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-shopping-cart"
+    >
+      <circle cx="8" cy="21" r="1" />
+      <circle cx="19" cy="21" r="1" />
+      <path
+        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+      />
+    </svg>
+    <span class="font-medium">Cart (0)</span>
+    <!-- Dropdown arrow icon -->
+    <svg
+      id="dropdown-arrow-cart"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-chevron-down transform transition-transform duration-200"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <!-- Cart Dropdown menu content -->
+  <div
+    id="dropdown-menu-cart"
+    class="z-[9999] absolute top-full right-0 mt-2 w-72 bg-white p-6 rounded-xl shadow-2xl hidden transition-all duration-300"
+  >
+    <h2 class="text-2xl font-semibold mb-2 text-center">Your Cart</h2>
+    <div class="text-center text-gray-500 mb-4">
+      Your Cart is Empty!<br />
+      Let's Create something great. Click below to get started.
+    </div>
+   <a 
+  href="./Pages/designing.html"
+  class="px-16 py-2 bg-blue-600  text-white text-sm font-semibold rounded-full 
+         hover:bg-blue-700 transition-colors duration-200 
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1">
+  Start Designing
+</a>
+  </div>
+</div>
 
 
     <!-- 🔥 Fixed Search Dropdown -->
@@ -123,7 +275,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         T-Shirts
@@ -131,7 +283,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                     href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Short Sleeve T-Shirts
@@ -139,7 +291,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Performance Shirts
@@ -147,7 +299,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                    href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Hoodies
@@ -155,7 +307,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                         href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         All T-Shirts
@@ -163,7 +315,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                       href="/Pages/product.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Hats
@@ -171,7 +323,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                   href="/Pages/product.html"
                         class="font-semibold text-blue-600 hover:underline"
                       >
                         View All Categories
@@ -190,7 +342,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         My Account
@@ -198,7 +350,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                          href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Saved Designs
@@ -206,7 +358,7 @@
                     </li>
                     <li>
                       <a
-                        href="#"
+                          href="./Pages/My Account/account.html"
                         class="transition-all duration-200 hover:text-blue-600 hover:pl-1 hover:font-medium"
                       >
                         Order History
@@ -224,92 +376,108 @@
                     class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
                   >
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Tee"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        RushOrderTees Classic Tee
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        2,832 reviews
-                      </p>
-                    </div>
+                 <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Tee"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Bella + Canvas Tri-Blend T-Shirt
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        391 reviews
-                      </p>
-                    </div>
+                  <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Long Sleeve"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Gildan Long Sleeve Ultra Cotton
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        674 reviews
-                      </p>
-                    </div>
+                  <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
 
                     <!-- Product Card -->
-                    <div
-                      class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
-                    >
-                      <img
-                        src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
-                        alt="Hoodie"
-                        class="mx-auto mb-2"
-                      />
-                      <p class="text-sm font-medium text-center">
-                        Gildan Heavy Blend Hoodie
-                      </p>
-                      <div
-                        class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
-                      >
-                        ★★★★☆
-                      </div>
-                      <p class="text-xs text-gray-500 text-center">
-                        1,072 reviews
-                      </p>
-                    </div>
+                   <div
+  class="bg-white shadow rounded-lg p-3 hover:shadow-md transition"
+>
+  <a href="./Pages/detailProduct.html">
+    <img
+      src="https://cdn.sanity.io/images/2ahps9jc/production/0558f2f294e5980178ce37597e8404eb5377d945-800x900.jpg?w=640&q=75&fit=min&auto=format"
+      alt="Tee"
+      class="mx-auto mb-2 cursor-pointer"
+    />
+  </a>
+
+  <p class="text-sm font-medium text-center">
+    RushOrderTees Classic Tee
+  </p>
+  <div
+    class="flex items-center justify-center mt-1 text-yellow-400 text-sm"
+  >
+    ★★★★☆
+  </div>
+  <p class="text-xs text-gray-500 text-center">
+    2,832 reviews
+  </p>
+</div>
+
                   </div>
                 </div>
               </div>
@@ -347,23 +515,23 @@
 
     <!-- Navbar 2 -->
 
-    <nav class="relative bg-white shadow-sm">
+    <nav class="relative bg-white shadow-md lg:px-8 ">
       <div
-        class="container-fluid mx-auto flex items-center justify-between px-6 py-3"
+        class="container-fluid mx-auto flex items-center justify-between px-6 py-2"
       >
-        <div class="flex items-center">
+        <div class="flex items-center  ">
   <a href="/index.html" class="mr-8">
     <img
-      src="https://cdn.sanity.io/images/2ahps9jc/production/3ae1c16d3ec64699ef9fe2b86e6fbda1b358cade-300x120.png"
+      src="/Assets/logo/logo.png"
       class="h-10"
       alt="Logo"
     />
   </a>
 
-<div class="dropdowns  xl:block hidden   ">
+<div class="dropdowns flex justify-start  hidden lg:block mt-2  ">
 <div class="relative group inline-block">
   <!-- Main Link -->
-  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50  mb-1 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
     Custom T-Shirts
     <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -455,9 +623,9 @@
 
   </div>
 </div>
-<div class="relative group inline-block">
+<div class="relative group inline-block"> 
   <!-- Main Link -->
-  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
+  <div class="group text-gray-700 hover:text-blue-700 hover:bg-blue-50 mb-1 rounded-md cursor-pointer px-3 py-1.5 flex items-center gap-1.5 whitespace-nowrap text-sm transition-all duration-300 font-semibold">
     Custom Apparel
     <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -749,9 +917,9 @@
 </div>
 
         <div class="hidden xl:flex items-center gap-4">
-          <button class="btn btn-outline-primary font-bold rounded-4 px-3 py-2">
+          <a href="/Pages/designing.html" class="btn btn-outline-primary font-bold rounded-4 px-2 py-2">
             Design Now
-          </button>
+          </a>
           <div class="flex flex-col text-sm">
             <div class="flex items-center gap-1.5 font-bold text-primary">
               <img
@@ -841,30 +1009,48 @@
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/product.html" class="font-bold text-gray-800 hover:text-blue-600"
               >Custom Apparial</a
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/product.html" class="font-bold text-gray-800 hover:text-blue-600"
               >Promo Products</a
             >
           </li>
           <li>
-            <a href="#" class="font-bold text-gray-800 hover:text-blue-600"
+            <a href="./Pages/brand.html"class="font-bold text-gray-800 hover:text-blue-600"
               >Brands</a
             >
           </li>
         </ul>
         <div class="flex flex-col mt-8 gap-4">
-          <button
+          <a href="./Pages/designing.html"
             class="btn btn-outline-primary w-full py-2 rounded-5 hover:blue-500"
           >
             Design Now
-          </button>
+        </a>
         </div>
       </div>
     </nav>
+    <script>
+  // Select buttons and menu
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-mobile-menu');
+
+  // Open menu
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+  });
+
+  // Close menu
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('translate-x-full');
+  });
+</script>
 
   <!-- Section Title -->
   <section class="py-12">
